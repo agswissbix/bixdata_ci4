@@ -24,6 +24,11 @@ class Bixcontroller extends BaseController
         return view('BixView/Results.php');
     }
 
+    public function Test_template()
+    {
+        return view('BixView/Test_template.php');
+    }
+
     
 
 
