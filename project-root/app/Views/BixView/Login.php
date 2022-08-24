@@ -18,8 +18,9 @@
         <p> Login </p>
 </div>
 </br>
-    <input type="text" name="username" id="username-field" placeholder="Username">
-    <input type="password" name="password" id="password-field" placeholder="Password">
+<form class="d-flex" role="search">
+        <input class="form-control me-2 shadow-lg" type="username" placeholder="Username" aria-label="Username">
+        <input class="form-control me-2 shadow-lg" type="password" placeholder="Password" aria-label="Password">
     </div>
     <div class="col">
       
@@ -30,8 +31,8 @@
       
     </div>
     <div class="col-5">
-    </br>
-    <button type="button" class="btn btn-primary" font size: 12px >Accedi</button>
+</br>
+    <button type="button" class="btn btn-outline-secondary shadow-lg" style="margin-right:12px" >Accedi</button>
     </div>
     <div class="col">
       
@@ -44,5 +45,3 @@
 
 
 
-
-  
