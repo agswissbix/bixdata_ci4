@@ -8,6 +8,25 @@
 
 <div class="card shadow-lg" style="width: 40rem; margin-top:175px; margin-left:325px">
 
+<script type="text/javascript">
+    var controller_url="<?php echo base_url('project-root/public/Bixcontroller/'); ?>/"; 
+
+    function ajax_login()
+    {
+        var complete_url=controller_url + 'ajax_login';
+        $.ajax( {
+            
+            dataType: 'html',
+            url: complete_url,
+            success: function( response ) {
+                document.write(response);
+            },
+            error:function(){
+                alert('errore');
+            }
+        } ); 
+    }
+</script>
 
     <div style=" margin-top:10px">
 <div class="container text-center">
@@ -34,7 +53,7 @@
     </div>
     <div class="col-5">
 </br>
-    <button type="button" class="btn btn-outline-secondary shadow-lg" style="margin-right:12px" >Accedi</button>
+    <button id="accedi" type="button" class="btn btn-outline-secondary shadow-lg" style="margin-right:12px" onclick="ajax_login();">Accedi</button>
     </div>
     <div class="col">
       
