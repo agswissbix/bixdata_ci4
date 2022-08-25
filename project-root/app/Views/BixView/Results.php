@@ -15,6 +15,44 @@
 <!--Font google-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+<script type="text/javascript">
+    var controller_url="<?php echo base_url('project-root/public/Bixcontroller/'); ?>/"; 
+
+    function ajax_results()
+    {
+        var complete_url=controller_url + 'ajax_results';
+        $.ajax( {
+            
+            dataType: 'html',
+            url: complete_url,
+            success: function( response ) {
+                document.write(response);
+            },
+            error:function(){
+                alert('errore');
+            }
+        } ); 
+    }
+
+    function ajax_results2()
+    {
+        var complete_url=controller_url + 'ajax_results2';
+        $.ajax( {
+            
+            dataType: 'html',
+            url: complete_url,
+            success: function( response ) {
+                document.write(response);
+            },
+            error:function(){
+                alert('errore');
+            }
+        } ); 
+    }
+
+</script>
+
+
 <div class="bg-secondary " style="--bs-bg-opacity: .1;">
 
 <nav class="navbar navbar-expand-lg bg-light">
@@ -26,10 +64,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Login</a>
+          <a class="nav-link active" aria-current="page" onclick="ajax_results()">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link active" aria-current="page" onclick="ajax_results2()">Dashboard</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

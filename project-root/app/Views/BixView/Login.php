@@ -28,43 +28,40 @@
     }
 </script>
 
-    <div style=" margin-top:10px">
-<div class="container text-center">
-  <div class="row">
-    <div class="col">
-      
+  <div style=" margin-top:10px; margin-bottom:20px">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-3">
+          
+        </div>
+        <div class="col-6">
+            <div style="font-size:40px">
+              <p> Login </p>
+            </div>
+            </br>
+            <form class="d-flex" role="search">
+            <input class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
+            <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+        </div>
+        <div class="col-3">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          
+        </div>
+        <div class="col-5">
+          </br>
+          <button id="accedi" type="button" class="btn btn-outline-secondary" style="margin-right:12px" onclick="ajax_login();">Accedi</button>
+        </div>
+        <div class="col">
+          
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-        <div style="font-size:40px">
-        <p> Login </p>
-</div>
-</br>
-<form class="d-flex" role="search">
-        <input class="form-control me-2 shadow-lg" type="username" placeholder="Username" aria-label="Username">
-        <input class="form-control me-2 shadow-lg" type="password" placeholder="Password" aria-label="Password">
-    </div>
-    <div class="col">
-      
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      
-    </div>
-    <div class="col-5">
-</br>
-    <button id="accedi" type="button" class="btn btn-outline-secondary shadow-lg" style="margin-right:12px" onclick="ajax_login();">Accedi</button>
-    </div>
-    <div class="col">
-      
-    </div>
-  </div>
-</div>
-
-    
 
 
-    </p>
   </div>
 </div>
 
