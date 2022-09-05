@@ -6,7 +6,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 
-<div class="card shadow-lg" style="width: 40rem; margin-top:175px; margin-left:325px">
+
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center vh-100">
+
+
+
+<div class="card shadow-lg" style="width: 40rem;">
 
 <script type="text/javascript">
     var controller_url="<?php echo base_url('project-root/public/Bixcontroller/'); ?>/"; 
@@ -45,7 +51,7 @@
             <input class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
             <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
         </div>
-        <div class="col-3">
+        <div class="col-3"> 
           
         </div>
       </div>
@@ -67,6 +73,13 @@
   </div>
 </div>
 
+
+
+
+  </div>
+
+
+</div>
 
 
 
