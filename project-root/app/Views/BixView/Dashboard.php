@@ -18,7 +18,9 @@
             dataType: 'html',
             url: complete_url,
             success: function( response ) {
+                document.open();
                 document.write(response);
+                document.close();
             },
             error:function(){
                 alert('errore');
@@ -34,7 +36,9 @@
             dataType: 'html',
             url: complete_url,
             success: function( response ) {
+                document.open();
                 document.write(response);
+                document.close();
             },
             error:function(){
                 alert('errore');
