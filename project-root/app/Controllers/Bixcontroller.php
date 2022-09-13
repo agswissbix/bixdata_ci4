@@ -1,17 +1,35 @@
 <?php
-
 namespace App\Controllers;
+
+use App\Controllers\BaseController;
+use App\Models\Bixmodel;
 
 class Bixcontroller extends BaseController
 {
+    public function load_base($content)
+    {
+        $data['content']=$content;
+        return view('BixView/Base.php',$data);
+    }
+
     public function index()
+    {
+        $data=array();
+        $content=$this->get_page_login();
+        return $this->load_base($content);
+    }
+
+    public function get_page_login()
     {
         return view('BixView/Login.php');
     }
 
-    public function Login()
+    public function ajax_login()
     {
-        return view('BixView/Login.php');
+        $post=$_POST;
+        $bixModel = new BixModel();
+        $result= $bixModel->get_user($post['username']);
+        var_dump($result);
     }
 
     public function Dashboard()
@@ -27,11 +45,6 @@ class Bixcontroller extends BaseController
     public function Test_template()
     {
         return view('BixView/Test_template.php');
-    }
-
-    public function ajax_login()
-    {
-        return view('BixView/Dashboard.php');
     }
 
     public function  ajax_dashboard()

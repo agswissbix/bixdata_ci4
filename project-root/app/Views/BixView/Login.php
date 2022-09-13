@@ -19,20 +19,22 @@
 
     function ajax_login()
     {
-        var complete_url=controller_url + 'ajax_login';
-        $.ajax( {
-            
-            dataType: 'html',
-            url: complete_url,
-            success: function( response ) {
-                document.open();
-                document.write(response);
-                document.close();
-            },
-            error:function(){
-                alert('errore');
-            }
-        } ); 
+      var serialized_data=[];
+      serialized_data.push({name: 'username', value: 'a.galli'});
+      var complete_url=controller_url + 'ajax_login';
+      $.ajax( {
+          type: "POST",
+          url: complete_url,
+          data: serialized_data,
+          success: function( response ) {
+              document.open();
+              document.write(response);
+              document.close();
+          },
+          error:function(){
+              alert('errore');
+          }
+      } ); 
     }
 </script>
 
