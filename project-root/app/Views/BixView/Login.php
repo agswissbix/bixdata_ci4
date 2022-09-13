@@ -12,77 +12,80 @@
 
 
 
-<div class="card shadow-lg" style="width: 40rem;">
+    <div class="card shadow-lg" style="width: 40rem;">
 
-<script type="text/javascript">
-    var controller_url="<?php echo base_url('project-root/public/Bixcontroller/'); ?>/"; 
+      <script type="text/javascript">
+        var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
 
-    function ajax_login()
-    {
-      var serialized_data=[];
-      serialized_data.push({name: 'username', value: 'a.galli'});
-      var complete_url=controller_url + 'ajax_login';
-      $.ajax( {
-          type: "POST",
-          url: complete_url,
-          data: serialized_data,
-          success: function( response ) {
+        function ajax_login() {
+
+          var serialized_data = [];
+          serialized_data.push({
+            name: 'username',
+            value: $('#username').val()
+          });
+          serialized_data.push({
+            name: 'password',
+            value: $('#password').val()
+          });
+          var complete_url = controller_url + 'ajax_login';
+          $.ajax({
+            type: "POST",
+            url: complete_url,
+            data: serialized_data,
+            success: function(response) {
               document.open();
               document.write(response);
               document.close();
-          },
-          error:function(){
+            },
+            error: function() {
               alert('errore');
-          }
-      } ); 
-    }
-</script>
+            }
+          });
+        }
+      </script>
 
-  <div style=" margin-top:10px; margin-bottom:20px">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-3">
-          
-        </div>
-        <div class="col-6">
-            <div style="font-size:40px">
-              <p> Login </p>
+      <div style=" margin-top:10px; margin-bottom:20px">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-3">
+
             </div>
-            </br>
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
-            <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+            <div class="col-6">
+              <div style="font-size:40px">
+                <p> Login </p>
+              </div>
+              </br>
+              <form class="d-flex" role="search">
+                <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
+                <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+            </div>
+            <div class="col-3">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-5">
+              </br>
+              <button id="accedi" type="button" class="btn btn-outline-secondary" style="margin-right:12px" onclick="ajax_login();">Accedi</button>
+            </div>
+            <div class="col">
+
+            </div>
+          </div>
         </div>
-        <div class="col-3"> 
-          
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          
-        </div>
-        <div class="col-5">
-          </br>
-          <button id="accedi" type="button" class="btn btn-outline-secondary" style="margin-right:12px" onclick="ajax_login();">Accedi</button>
-        </div>
-        <div class="col">
-          
-        </div>
+
+
       </div>
     </div>
 
 
-  </div>
-</div>
-
-
 
 
   </div>
 
 
 </div>
-
-
-
-

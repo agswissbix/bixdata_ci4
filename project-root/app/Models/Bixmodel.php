@@ -10,16 +10,19 @@ class Bixmodel extends Model
     function select($sql)
     {
         $db = db_connect();
-        $query=$db->query($sql);
+        $query = $db->query($sql);
         $rows = $query->getResultArray();
         return $rows;
     }
 
     function get_user($username)
     {
-        $sql="select * from sys_user WHERE username='$username'";
+        $sql = "select * from sys_user WHERE username='$username'";
+        return $this->select($sql);
+    }
+    function get_password($password)
+    {
+        $sql = "select * from sys_user WHERE password='$password'";
         return $this->select($sql);
     }
 }
-
-?>

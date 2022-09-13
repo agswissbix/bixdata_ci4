@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
@@ -8,14 +9,14 @@ class Bixcontroller extends BaseController
 {
     public function load_base($content)
     {
-        $data['content']=$content;
-        return view('BixView/Base.php',$data);
+        $data['content'] = $content;
+        return view('BixView/Base.php', $data);
     }
 
     public function index()
     {
-        $data=array();
-        $content=$this->get_page_login();
+        $data = array();
+        $content = $this->get_page_login();
         return $this->load_base($content);
     }
 
@@ -26,10 +27,17 @@ class Bixcontroller extends BaseController
 
     public function ajax_login()
     {
-        $post=$_POST;
         $bixModel = new BixModel();
-        $result= $bixModel->get_user($post['username']);
-        var_dump($result);
+        $post = $_POST;
+        $results = $bixModel->get_user($post['username']);
+        if (count($results) == 1) {
+            $result = $results[0];
+            if ($post['password'] == $result['password']) {
+                echo 'ok';
+            } else {
+                echo 'password sbagliata';
+            }
+        }
     }
 
     public function Dashboard()
@@ -64,14 +72,6 @@ class Bixcontroller extends BaseController
 
     public function ajax_results2()
     {
-        return view ('BixView/Dashboard');
+        return view('BixView/Dashboard');
     }
-
-    
-
-
-    
 }
-
-
-?>
