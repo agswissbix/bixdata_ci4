@@ -39,7 +39,6 @@ class Bixcontroller extends BaseController
             }
         }
     }
-
     public function Dashboard()
     {
         return view('BixView/Dashboard.php');
