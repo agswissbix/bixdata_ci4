@@ -1,0 +1,14 @@
+CRITICAL - 2022-09-15 03:28:52 --> Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP)
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\xampp\\htdocs...', 30, Array)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_login()
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-15 03:28:58 --> Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP)
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\xampp\\htdocs...', 30, Array)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_login()
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
