@@ -35,7 +35,7 @@ class Bixcontroller extends BaseController
             if ($post['password'] == $result['password']) {
                 echo 'ok';
             } else {
-                echo 'password sbagliata';
+                echo 'password sbagliata.';
             }
         }
     }
