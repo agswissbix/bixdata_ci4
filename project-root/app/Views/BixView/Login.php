@@ -5,51 +5,60 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+<script type="text/javascript">
+
+    var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
+
+    $( "#login" ).ready(function(){
+      $( "input" ).keypress(function() {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+          ajax_login(); 
+        }
+      });
+    });
+
+    function ajax_login() {
+
+      var serialized_data = [];
+      serialized_data.push({
+        name: 'username',
+        value: $('#username').val()
+      });
+      serialized_data.push({
+        name: 'password',
+        value: $('#password').val()
+      });
+      var complete_url = controller_url + 'ajax_login';
+      $.ajax({
+        type: "POST",
+        url: complete_url,
+        data: serialized_data,
+        success: function(response) {
+          document.open();
+          document.write(response);
+          document.close();
+        },
+        error: function() {
+          alert('errore');
+        }
+      });
+    }
 
 
-<div class="container">
+    
+    
+    
+  </script>
+
+<div id="login" class="container">
   <div class="d-flex justify-content-center align-items-center vh-100">
 
 
 
     <div class="card shadow-lg" style="width: 40rem;">
 
-      <script type="text/javascript">
-        var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
-
-        function ajax_login() {
-
-          var serialized_data = [];
-          serialized_data.push({
-            name: 'username',
-            value: $('#username').val()
-          });
-          serialized_data.push({
-            name: 'password',
-            value: $('#password').val()
-          });
-          var complete_url = controller_url + 'ajax_login';
-          $.ajax({
-            type: "POST",
-            url: complete_url,
-            data: serialized_data,
-            success: function(response) {
-              document.open();
-              document.write(response);
-              document.close();
-            },
-            error: function() {
-              alert('errore');
-            }
-          });
-        }
-        $('#username').keypress(function(event) {
-          var keycode = (event.keyCode ? event.keyCode : event.which);
-          if (keycode == '13') {
-            alert('You pressed a "enter" key in textbox');
-          }
-        })
-      </script>
+      
 
 
       <div style=" margin-top:10px; margin-bottom:20px">
@@ -87,6 +96,7 @@
 
       </div>
     </div>
+
 
 
 
