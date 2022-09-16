@@ -43,7 +43,14 @@
             }
           });
         }
+        $('#username').keypress(function(event) {
+          var keycode = (event.keyCode ? event.keyCode : event.which);
+          if (keycode == '13') {
+            alert('You pressed a "enter" key in textbox');
+          }
+        })
       </script>
+
 
       <div style=" margin-top:10px; margin-bottom:20px">
         <div class="container text-center">
