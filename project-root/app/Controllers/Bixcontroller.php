@@ -16,13 +16,18 @@ class Bixcontroller extends BaseController
     public function index()
     {
         $data = array();
-        $content = $this->get_page_login();
+        $content = $this->get_view_login();
         return $this->load_base($content);
     }
 
-    public function get_page_login()
+    public function get_view_login()
     {
         return view('BixView/Login.php');
+    }
+
+    public function get_view_dashboard()
+    {
+        return view('BixView/Dashboard.php');
     }
 
     public function ajax_login()
@@ -40,10 +45,7 @@ class Bixcontroller extends BaseController
         }
     }
 
-    public function Dashboard()
-    {
-        return view('BixView/Dashboard.php');
-    }
+    
 
     public function Results()
     {
