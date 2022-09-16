@@ -43,7 +43,14 @@
             }
           });
         }
+        $('#username').keypress(function(event) {
+          var keycode = (event.keyCode ? event.keyCode : event.which);
+          if (keycode == '13') {
+            alert('You pressed a "enter" key in textbox');
+          }
+        })
       </script>
+
 
       <div style=" margin-top:10px; margin-bottom:20px">
         <div class="container text-center">
@@ -56,9 +63,8 @@
                 <p> Login </p>
               </div>
               </br>
-              <form class="d-flex" role="search">
-                <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username"  >
-                <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
+              <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
+              <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
             </div>
             <div class="col-3">
 
