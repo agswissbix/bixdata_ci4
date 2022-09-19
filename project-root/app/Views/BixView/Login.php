@@ -6,51 +6,45 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+  var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
 
-    var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
+  $("#login").ready(function() {
+    $("input").keypress(function() {
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if (keycode == '13') {
+        ajax_login();
+      }
+    });
+  });
 
-    $( "#login" ).ready(function(){
-      $( "input" ).keypress(function() {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-          ajax_login(); 
-        }
-      });
+  function ajax_login() {
+
+    var serialized_data = [];
+    serialized_data.push({
+      name: 'username',
+      value: $('#username').val()
+    });
+    serialized_data.push({
+      name: 'password',
+      value: $('#password').val()
     });
 
-    function ajax_login() {
-
-      var serialized_data = [];
-      serialized_data.push({
-        name: 'username',
-        value: $('#username').val()
-      });
-      serialized_data.push({
-        name: 'password',
-        value: $('#password').val()
-      });
-
-      $("#base_container").load('Loading.php');      
-      $.ajax({
-        type: "POST",
-        url: controller_url + 'ajax_login', 
-        data: serialized_data,
-        success: function(response) {
-          $("#base_container").html(response);
-        },
-        error: function() {
-          $("#base_container").html(response);
-        }
-      });
-      
-      
-    }
+    $("#base_container").load('Loading.php');
+    $.ajax({
+      type: "POST",
+      url: controller_url + 'ajax_login',
+      data: serialized_data,
+      success: function(response) {
+        $("#base_container").html(response);
+      },
+      error: function() {
+        $("#base_container").html(response);
+      }
+    });
 
 
-    
-    
-    
-  </script>
+  }
+</script>
 
 <div id="login" class="container">
   <div class="d-flex justify-content-center align-items-center vh-100">
@@ -59,7 +53,7 @@
 
     <div class="card shadow-lg" style="width: 40rem;">
 
-      
+
 
 
       <div style=" margin-top:10px; margin-bottom:20px">
@@ -73,7 +67,7 @@
                 <p> Login </p>
               </div>
               </br>
-              <?=$message?>
+              <?= $message ?>
               <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
               <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
             </div>
