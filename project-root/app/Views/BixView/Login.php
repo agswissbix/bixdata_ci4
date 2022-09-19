@@ -29,20 +29,21 @@
         name: 'password',
         value: $('#password').val()
       });
-      var complete_url = controller_url + 'ajax_login';
+      
+      $("#base_container").load('Loading.php');      
       $.ajax({
         type: "POST",
-        url: complete_url,
+        url: controller_url + 'ajax_login',
         data: serialized_data,
         success: function(response) {
-          document.open();
-          document.write(response);
-          document.close();
+          $("#base_container").html(response);
         },
         error: function() {
-          alert('errore');
+          $("#base_container").html(response);
         }
       });
+      
+      
     }
 
 
@@ -72,6 +73,7 @@
                 <p> Login </p>
               </div>
               </br>
+              <?=$message?>
               <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
               <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
             </div>
