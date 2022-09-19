@@ -35,10 +35,10 @@
       url: controller_url + 'ajax_login',
       data: serialized_data,
       success: function(response) {
-        $("#base_container").html(response);
+        // $("#base_container").html(response);
       },
       error: function() {
-        $("#base_container").html(response);
+        // $("#base_container").html(response);
       }
     });
 
@@ -67,7 +67,17 @@
                 <p> Login </p>
               </div>
               </br>
-              <?= $message ?>
+
+              <?php
+              if ($message != '') {
+              ?>
+                <div class="alert alert-danger" role="alert">
+                  <?= $message ?>
+                </div>
+              <?php
+              }
+              ?>
+
               <input id='username' class="form-control me-2" type="username" placeholder="Username" aria-label="Username">
               <input id='password' class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
             </div>
