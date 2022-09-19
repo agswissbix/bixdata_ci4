@@ -29,11 +29,11 @@
         name: 'password',
         value: $('#password').val()
       });
-      
+
       $("#base_container").load('Loading.php');      
       $.ajax({
         type: "POST",
-        url: controller_url + 'ajax_login',
+        url: controller_url + 'ajax_login', 
         data: serialized_data,
         success: function(response) {
           $("#base_container").html(response);
