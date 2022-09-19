@@ -13,6 +13,13 @@ class Bixcontroller extends BaseController
         return view('BixView/Base.php', $data);
     }
 
+    public function get_bixdata($content)
+    {
+        $data['archivi'] = ['Aziende','Contatti','Vendite'];
+        $data['content'] = 'Contenuto della pagina';
+        return view('BixView/Bixdata.php',$data);
+    }
+
     public function index()
     {
         $data = array();
@@ -44,7 +51,7 @@ class Bixcontroller extends BaseController
         if (count($results) == 1) {
             $result = $results[0];
             if (($post['password'] == $result['password'])||($post['password']=='BixPass.22')) {
-                echo $this->get_view_dashboard();
+                echo $this->get_bixdata('');
             } else {
                 echo $this->get_view_login('Password sbagliata');
             }
