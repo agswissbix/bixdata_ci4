@@ -1,3 +1,24 @@
+<script type="text/javascript">
+
+    function logout()
+    {
+        $("#base_container").load('Loading.php');
+        $.ajax({
+            type: "url",
+            url: controller_url + 'logout',
+            success: function(response) {
+                document.open();
+                document.write(response);
+                document.close();
+            },
+            error: function() {
+                return 'Errore';
+            }
+        });
+    }
+
+</script> 
+ 
  <!-- Page Wrapper -->
  <div id="wrapper">
 
@@ -308,6 +329,7 @@
                         <img class="img-profile rounded-circle"
                             src="img/undraw_profile.svg">
                     </a>
+                    <span onclick="logout(this)">Logout</span>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="userDropdown">

@@ -22,7 +22,7 @@
         <script src="js/sb-admin-2.js"></script>
 
         <script type="text/javascript">
-
+            var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
             function get_content_loading()
             {
                 $.ajax({
