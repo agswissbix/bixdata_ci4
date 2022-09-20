@@ -17,6 +17,23 @@
         });
     }
 
+    function ajax_get_tables()
+    {
+        var serialized_data = [];
+        $("#base_container").load('Loading.php');
+        $.ajax({
+        type: "POST",
+        url: controller_url + 'ajax_login',
+        data: serialized_data,
+        success: function(response) {
+            $("#base_container").html(response);
+        },
+        error: function() {
+            $("#base_container").html(response);
+        }
+        });
+    }
+
 </script> 
  
  <!-- Page Wrapper -->
@@ -111,6 +128,13 @@
                 <h6 class="collapse-header">Other Pages:</h6>
                 <a class="collapse-item" href="404.html">404 Page</a>
                 <a class="collapse-item" href="blank.html">Blank Page</a>
+                <?php
+                foreach ($archivi as $key => $archivio) {
+                ?>
+                    <a class="collapse-item" href="blank.html"><?=$archivio?></a>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </li>
@@ -137,12 +161,7 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 
-    <!-- Sidebar Message -->
-    <div class="sidebar-card d-none d-lg-flex">
-        <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-        <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-        <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-    </div>
+
 
 </ul>
 <!-- End of Sidebar -->
@@ -269,8 +288,7 @@
                         </h6>
                         <a class="dropdown-item d-flex align-items-center" href="#">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                    alt="...">
+                               
                                 <div class="status-indicator bg-success"></div>
                             </div>
                             <div class="font-weight-bold">
@@ -281,8 +299,7 @@
                         </a>
                         <a class="dropdown-item d-flex align-items-center" href="#">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                    alt="...">
+                               
                                 <div class="status-indicator"></div>
                             </div>
                             <div>
@@ -293,8 +310,7 @@
                         </a>
                         <a class="dropdown-item d-flex align-items-center" href="#">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                    alt="...">
+                              
                                 <div class="status-indicator bg-warning"></div>
                             </div>
                             <div>
@@ -326,8 +342,6 @@
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                        <img class="img-profile rounded-circle"
-                            src="img/undraw_profile.svg">
                     </a>
                     <span onclick="logout(this)">Logout</span>
                     <!-- Dropdown - User Information -->
@@ -357,7 +371,36 @@
 
         </nav>
         <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            </div>
+            <!-- Content Row -->
+            <div class="row">
 
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Earnings (Monthly)</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
        
 
     <!-- Footer -->
