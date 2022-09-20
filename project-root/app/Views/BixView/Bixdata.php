@@ -17,20 +17,20 @@
         });
     }
 
-    function ajax_get_tables()
+    function open_tables()
     {
         var serialized_data = [];
-        $("#base_container").load('Loading.php');
+        $("#bixdata_results_container").load('Loading.php');
         $.ajax({
-        type: "POST",
-        url: controller_url + 'ajax_login',
-        data: serialized_data,
-        success: function(response) {
-            $("#base_container").html(response);
-        },
-        error: function() {
-            $("#base_container").html(response);
-        }
+            type: "POST",
+            url: controller_url + 'ajax_get_tables',
+            data: serialized_data,
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
         });
     }
 
@@ -148,9 +148,9 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" onclick="open_tables(this)">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+        <span>Tables</span></a>
     </li>
 
     <!-- Divider -->
@@ -343,7 +343,6 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                     </a>
-                    <span onclick="logout(this)">Logout</span>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="userDropdown">
@@ -372,46 +371,20 @@
         </nav>
         <!-- End of Topbar -->
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-            </div>
-            <!-- Content Row -->
+        <div id="bixdata_container" class="container-fluid">
             <div class="row">
-
-                <!-- Earnings (Monthly) Card Example -->
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                        Earnings (Monthly)</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="bixdata_results_container" class="col-xl-9 col-md-8 mb-4">
+                    
+                </div>
+                <div id="bixdata_recordcard_container" class="col-xl-3 col-md-4 mb-4">
+                   
                 </div>
             </div>
+          
         </div>
        
 
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Your Website 2021</span>
-            </div>
-        </div>
-    </footer>
-    <!-- End of Footer -->
+
 
 </div>
 <!-- End of Content Wrapper -->
@@ -438,7 +411,7 @@ aria-hidden="true">
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" onclick="logout(this)">Logout</a>
         </div>
     </div>
 </div>

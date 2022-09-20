@@ -59,6 +59,16 @@ class Bixcontroller extends BaseController
         return view('BixView/Login.php', $data);
     }
 
+    public function ajax_get_tables()
+    {
+        return view('BixView/Tables.php');
+    }
+
+    public function ajax_get_recordcard()
+    {
+        return view('BixView/RecordCard.php');
+    }
+
     public function get_view_dashboard()
     {
         return view('BixView/Dashboard.php');
