@@ -1,41 +1,13 @@
-<style type="text/css">
-    .loader {
-        border: 16px solid #f3f3f3;
-        /* Light grey */
-        border-top: 16px solid #048023;
-        /* Dark Green */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spinloader 2s linear infinite;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    .loader img {
-        height: 120px;
-        width: 120px;
-        animation: spinlogo 2s linear infinite;
-    }
+<body>
+    <div class="loader" style="margin-top: auto; margin-bottom: auto;">
+        <img src="swissbix.logo-removebg-preview.png">
+    </div>
+</body>
 
-    @keyframes spinloader {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes spinlogo {
-        0% {
-            transform: rotate(360deg);
-        }
-
-        100% {
-            transform: rotate(0deg);
-        }
-    }
-</style>
+</html>
 
 
 <!DOCTYPE html>
@@ -44,19 +16,21 @@
 <head>
     <style type="text/css">
         .loader {
-            border: 16px solid #f3f3f3;
+            border: 9px solid #f3f3f3;
             /* Light grey */
-            border-top: 16px solid #048023;
+            border-top: 9px solid #ec0928;
             /* Dark Green */
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
+            width: 50px;
+            height: 50px;
             animation: spinloader 2s linear infinite;
+            margin: auto;
+            justify-content: center;
         }
 
         .loader img {
-            height: 120px;
-            width: 120px;
+            height: 50px;
+            width: 0px;
             animation: spinlogo 2s linear infinite;
         }
 
@@ -81,11 +55,5 @@
         }
     </style>
 </head>
-
-<body>
-    <div class="loader">
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210610212340/gfglogo.png" />
-    </div>
-</body>
 
 </html>
