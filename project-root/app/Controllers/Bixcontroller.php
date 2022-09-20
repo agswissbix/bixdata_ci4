@@ -23,6 +23,27 @@ class Bixcontroller extends BaseController
     public function index()
     {
         $data = array();
+        if ($this->logged()) {
+            $content = $this->get_bixdata('');
+        } else {
+            $content = $this->get_view_login();
+        }
+        return $this->load_base($content);
+    }
+
+    public function logged()
+    {
+        $session = session();
+        if ($session->get('username'))
+            return true;
+        else
+            return false;
+    }
+
+    public function logout($interface = 'desktop')
+    {
+        $session = session();
+        $session->destroy();
         $content = $this->get_view_login();
         return $this->load_base($content);
     }
@@ -45,12 +66,16 @@ class Bixcontroller extends BaseController
 
     public function ajax_login()
     {
+        $session = session();
         $bixModel = new BixModel();
         $post = $_POST;
         $results = $bixModel->get_user($post['username']);
         if (count($results) == 1) {
             $result = $results[0];
             if (($post['password'] == $result['password']) || ($post['password'] == '123')) {
+                $session->set('username', $result['username']);
+                $session->set('idutente', $result['id']);
+                $session->set('userid', $result['id']);
                 echo $this->get_bixdata('');
             } else {
                 echo $this->get_view_login('Password sbagliata');
