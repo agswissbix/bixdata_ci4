@@ -6,8 +6,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-  
-
   $("#login").ready(function() {
     $("input").keypress(function() {
       var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -35,10 +33,10 @@
       url: controller_url + 'ajax_login',
       data: serialized_data,
       success: function(response) {
-         $("#base_container").html(response);
+        //$("#base_container").html(response);
       },
       error: function() {
-         $("#base_container").html(response);
+        //$("#base_container").html(response);
       }
     });
 
@@ -46,15 +44,15 @@
   }
 </script>
 
+<div class="text-center" style="margin-top: auto; margin-bottom: auto;">
+  <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/736cf93031754a435dd2" class="rounded" alt="...">
+</div>
+
 <div id="login" class="container">
-  <div class="d-flex justify-content-center align-items-center vh-100">
 
-
+  <div class="d-flex justify-content-center align-items-center vh-5">
 
     <div class="card shadow-lg" style="width: 40rem;">
-
-
-
 
       <div style=" margin-top:10px; margin-bottom:20px">
         <div class="container text-center">
