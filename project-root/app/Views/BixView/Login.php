@@ -35,10 +35,10 @@
       url: controller_url + 'ajax_login',
       data: serialized_data,
       success: function(response) {
-         $("#base_container").html(response);
+        $("#base_container").html(response);
       },
       error: function() {
-         $("#base_container").html(response);
+        $("#base_container").html(response);
       }
     });
 
@@ -47,14 +47,15 @@
 </script>
 
 <div id="login" class="container">
+  <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/736cf93031754a435dd2" class="center">
   <div class="d-flex justify-content-center align-items-center vh-100">
 
-
-
+    <style type="text/css">
+      .center {
+        width: 10%;
+      }
+    </style>
     <div class="card shadow-lg" style="width: 40rem;">
-
-
-
 
       <div style=" margin-top:10px; margin-bottom:20px">
         <div class="container text-center">

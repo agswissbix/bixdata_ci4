@@ -15,9 +15,9 @@ class Bixcontroller extends BaseController
 
     public function get_bixdata($content)
     {
-        $data['archivi'] = ['Aziende','Contatti','Vendite'];
+        $data['archivi'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['content'] = 'Contenuto della pagina';
-        return view('BixView/Bixdata.php',$data);
+        return view('BixView/Bixdata.php', $data);
     }
 
     public function index()
@@ -32,10 +32,10 @@ class Bixcontroller extends BaseController
         return view('BixView/Loading.php');
     }
 
-    public function get_view_login($message='')
+    public function get_view_login($message = '')
     {
-        $data['message']=$message;
-        return view('BixView/Login.php',$data);
+        $data['message'] = $message;
+        return view('BixView/Login.php', $data);
     }
 
     public function get_view_dashboard()
@@ -50,19 +50,17 @@ class Bixcontroller extends BaseController
         $results = $bixModel->get_user($post['username']);
         if (count($results) == 1) {
             $result = $results[0];
-            if (($post['password'] == $result['password'])||($post['password']=='BixPass.22')) {
+            if (($post['password'] == $result['password']) || ($post['password'] == '123')) {
                 echo $this->get_bixdata('');
             } else {
                 echo $this->get_view_login('Password sbagliata');
             }
-        }
-        else
-        {
+        } else {
             echo $this->get_view_login('Utente non esistente');
         }
     }
 
-    
+
 
     public function Results()
     {
