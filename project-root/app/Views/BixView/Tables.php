@@ -29,17 +29,32 @@
 </script>
 
 <div id="tables" class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%; margin-left: 10px">
-                    <button class="btn btn-outline-danger" type="submit" style="margin-left: 10px">Search</button>
-                </form>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
+                    <button class="btn btn-outline-danger me-md-2" type="button" style="margin-left: 3px">Refresh</button>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-danger me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Esporta
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Esporta dati excel</a></li>
+                            <li><a class="dropdown-item" href="#">Esporta elenco</a></li>
+                            <li><a class="dropdown-item" href="#">Esporta migrazione</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-block">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%; margin-left: 10px">
+                        <button class="btn btn-outline-danger" type="submit" style="margin-left: 10px">Search</button>
+                    </form>
+                </div>
+
 
                 <thead>
                     <tr>

@@ -40,10 +40,11 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+
+
+            <p class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 1px;">Bix</p>
+
+            <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;">Data</p>
         </a>
 
         <!-- Divider -->
