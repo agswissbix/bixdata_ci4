@@ -16,14 +16,14 @@
 <head>
     <style type="text/css">
         .loader {
-            border: 9px solid #f3f3f3;
+            border: 7px solid #f3f3f3;
             /* Light grey */
-            border-top: 9px solid #ec0928;
+            border-top: 7px solid #ec0928;
             /* Dark Green */
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            animation: spinloader 2s linear infinite;
+            animation: spinloader 1.5s linear infinite;
             margin: auto;
             justify-content: center;
         }
