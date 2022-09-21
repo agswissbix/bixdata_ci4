@@ -35,7 +35,7 @@
 
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
-                    <button class="btn btn-outline-danger me-md-2" type="button" style="margin-left: 3px">Refresh</button>
+                    <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
                     <div class="dropdown">
                         <button class="btn btn-outline-danger me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Esporta
