@@ -1494,11 +1494,9 @@
     border-bottom: 1px solid #ddd;
   }
   
-  tr:hover {background-color: rgb(224, 221, 221);}
-  
-  table:hover {
-    color: black;
-  }
+  tr:hover {background-color: #ddd}
+  tr:hover {color: black}
+
   
   
   .table th,
@@ -2370,8 +2368,8 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #e74a3b;
-    border-color: #e74a3b;
+    background-color: #ff4b3a;
+    border-color: #ff4b3a;
   }
   
   .btn-primary:hover {
@@ -2382,8 +2380,8 @@
   
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4;
+    background-color: #ff0000;
+    border-color: #ff0000;
     box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
   }
   
@@ -2396,8 +2394,8 @@
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #2653d4;
-    border-color: #244ec9;
+    background-color: #ff0000;
+    border-color: #ff0000;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -9913,8 +9911,8 @@
   }
   
   .bg-gradient-primary {
-    background-color: #ff1600;
-    background-image: linear-gradient(180deg, #ff1600 10%, #ff3927 100%);
+    background-color: #ff4b3a;
+    background-image: linear-gradient(180deg, #ff4b3a 10%, #ff4b3a 100%);
     background-size: cover;
   }
   
