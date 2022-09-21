@@ -16,10 +16,10 @@
             rel="stylesheet">
       
         <!-- Custom styles for this template-->
-        <link href="css/sb-admin-2.css" rel="stylesheet">
+        <link href="css/sb-admin-2.css?v=<?=time();?>" rel="stylesheet">
         
         <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.js"></script>
+        <script src="js/sb-admin-2.js?v=<?=time();?>"></script>
 
         <script type="text/javascript">
             var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
