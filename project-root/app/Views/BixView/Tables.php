@@ -1,19 +1,16 @@
-
-
 <script type="text/javascript">
-  $("#tables").ready(function() {
-    
-    $('tr').click(function(){
-         open_record();
-    })
+    $("#tables").ready(function() {
 
-    
-    }
+            $('tr').click(function() {
+                open_record();
+            })
+
+
+        }
 
     );
 
-    function open_record()
-    {
+    function open_record() {
         var serialized_data = [];
         $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
@@ -27,9 +24,8 @@
                 $("#bixdata_recordcard_container").html(response);
             }
         });
-        
-    }
 
+    }
 </script>
 
 <div id="tables" class="card shadow mb-4">
@@ -39,6 +35,12 @@
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%; margin-left: 10px">
+                    <button class="btn btn-outline-danger" type="submit" style="margin-left: 10px">Search</button>
+                </form>
+
                 <thead>
                     <tr>
                         <th>Name</th>
