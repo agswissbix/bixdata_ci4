@@ -44,7 +44,7 @@
   }
 </script>
 
-<div class="text-center" style="margin-top: auto; margin-bottom: auto;">
+<div class="text-center" style="margin-top: auto; margin-bottom: -80px">
   <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/736cf93031754a435dd2" class="rounded" alt="...">
 </div>
 
@@ -52,7 +52,7 @@
 
   <div class="d-flex justify-content-center align-items-center vh-5">
 
-    <div class="card shadow-lg" style="width: 40rem;">
+    <div class="card shadow-lg" style="width: 40rem; background-color: #00000017">
 
       <div style=" margin-top:10px; margin-bottom:20px">
         <div class="container text-center">
@@ -62,7 +62,7 @@
             </div>
             <div class="col-6">
               <div style="font-size:40px">
-                <p> Login </p>
+                <p>Login</p>
               </div>
               </br>
 
@@ -106,6 +106,3 @@
 
 
   </div>
-
-
-</div>
