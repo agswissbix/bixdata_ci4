@@ -1,13 +1,12 @@
-
 <script type="text/javascript">
     $("#tables").ready(function() {
 
-        
-        $('tr').click(function() {
-            open_record();
-        })
 
-            
+            $('tr').click(function() {
+                open_record();
+            })
+
+
 
 
         }
@@ -52,12 +51,12 @@
                     </div>
                 </div>
 
-                <div class="d-grid gap-2 d-md-block">
+                <div class="d-grid gap-2 d-md-block" style="margin-top: -54px; margin-left: -10px">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%; margin-left: 10px">
-                        <button class="btn btn-outline-danger" type="submit" style="margin-left: 10px">Search</button>
-                    </form>
+                        <button class="btn btn-outline-danger" type="submit" style="margin-left: 330px; margin-top: -38px">Search</button>
                 </div>
+                </form>
                 </br>
 
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
