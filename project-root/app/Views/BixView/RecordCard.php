@@ -4,35 +4,39 @@
 
     <div class="card-body">
 
-        <button type="button" class="btn btn-secondary btn-sm">
-            <span class="material-symbols-outlined">
-                content_copy
-            </span>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-        </button>
-        <button type="button" class="btn btn-danger btn-sm">
-            <span class="material-symbols-outlined">
-                delete
-            </span>
-        </button>
+            <button type="button" class="btn btn-secondary btn-sm">
+                <span class="material-symbols-outlined">
+                    content_copy
+                </span>
 
-        <button type="button" class="btn btn-secondary btn-sm">
-            <span class="material-symbols-outlined">
-                lock
-            </span>
-        </button>
+            </button>
+            <button type="button" class="btn btn-danger btn-sm">
+                <span class="material-symbols-outlined">
+                    delete
+                </span>
+            </button>
 
-        <button type="button" class="btn btn-secondary btn-sm">
-            <span class="material-symbols-outlined">
-                push_pin
-            </span>
-        </button>
+            <button type="button" class="btn btn-secondary btn-sm">
+                <span class="material-symbols-outlined">
+                    lock
+                </span>
+            </button>
 
-        <button type="button" class="btn btn-secondary btn-sm">
-            <span class="material-symbols-outlined">
-                close
-            </span>
-        </button>
+            <button type="button" class="btn btn-secondary btn-sm">
+                <span class="material-symbols-outlined">
+                    push_pin
+                </span>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-sm">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+
+        </div>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
@@ -40,7 +44,7 @@
             <button class="btn btn-outline-secondary me-md-2" type="button" style="margin-right: 10px;">Stampe</button>
             <button class="btn btn-outline-secondary" type="button">Funzioni</button>
         </div>
-
+        banlieu
         <div class="container text-center">
             <div class="row row-cols-3">
                 <div class="col"><b>Document nr
@@ -63,8 +67,6 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="nav-dati-tab" data-bs-toggle="tab" data-bs-target="#nav-dati" type="button" role="tab" aria-controls="nav-dati" aria-selected="true">Dati</button>
                 <button class="nav-link" id="nav-allegati-tab" data-bs-toggle="tab" data-bs-target="#nav-allegati" type="button" role="tab" aria-controls="nav-allegati" aria-selected="false">Allegati</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-company" aria-selected="false">Company</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Dati</button>
             </div>
         </nav>
 
@@ -77,6 +79,12 @@
                     </a>
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
                         Service and asset
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
+                        Company
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
+                        Dati
                     </button>
                 </p>
                 <div class="collapse" id="collapseExample">
