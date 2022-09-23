@@ -15,7 +15,7 @@
 
     function open_record() {
         var serialized_data = [];
-        $("#bixdata_recordcard_container").html('Loading.php');
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
             type: "POST",
             url: controller_url + 'ajax_get_recordcard',
