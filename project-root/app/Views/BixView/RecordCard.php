@@ -45,7 +45,7 @@
             <button class="btn btn-outline-secondary me-md-2" type="button" style="margin-right: 10px;">Stampe</button>
             <button class="btn btn-outline-secondary" type="button">Funzioni</button>
         </div>
-        banlieu
+
         <div class="container text-center">
             <div class="row row-cols-3">
                 <div class="col"><b>Document nr
