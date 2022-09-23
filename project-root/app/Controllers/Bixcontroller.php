@@ -16,7 +16,7 @@ class Bixcontroller extends BaseController
     public function get_bixdata($content)
     {
         $data['archivi'] = ['Aziende', 'Contatti', 'Vendite'];
-        $data['archivi_raggruppati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
+        $data['ggruparchivi_rapati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['project'] = ['Project', 'Task', 'Timesheet'];
         $data['content'] = 'Contenuto della pagina';
         return view('BixView/Bixdata.php', $data);
@@ -127,5 +127,10 @@ class Bixcontroller extends BaseController
     public function ajax_results2()
     {
         return view('BixView/Dashboard');
+    }
+
+    public function test_bootstrap()
+    {
+        return view('BixView/Testbootstrap');
     }
 }
