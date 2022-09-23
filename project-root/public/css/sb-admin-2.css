@@ -9913,7 +9913,7 @@
   
   .bg-gradient-primary {
     background-color: #36b9cc;
-    background-image: linear-gradient(180deg, #074048 30%, #ede4e4 100%);
+    background-image: linear-gradient(180deg, #074048 50%, #ede4e4 200%);
     background-size: cover;
   }
   
