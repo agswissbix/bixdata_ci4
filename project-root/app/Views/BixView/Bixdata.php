@@ -57,17 +57,16 @@
                 <span>Dashboard</span></a>
         </li>
 
+      
+        
         <!-- Divider -->
         <hr class="sidebar-divider">
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Interface
+            Preferiti
         </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-
-
+        
         <!-- Nav Item - Utilities Collapse Menu -->
         <!-- Nav Item - Tables -->
         <li class="nav-item">
@@ -75,105 +74,47 @@
                 <i class="fas fa-fw fa-table"></i>
                 <span>Tables</span></a>
         </li>
-        
         <!-- Divider -->
         <hr class="sidebar-divider">
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Addons
+            Dati
         </div>
         <?php
+        $counter_group=0;
         foreach ($archivi_raggruppati as $raggruppamento => $archivi) {
         ?>
-            <div style="color:blue"><?= $raggruppamento ?></div>
-
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" onclick="open_tables()"><?php
-                                                                                                foreach ($archivi as $key => $archivio) {
-                                                                                                ?>
-                        <?= $archivio ?><br />
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#group_<?=$counter_group?>" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span><?= strtoupper($raggruppamento) ?></span>
+                </a>
+                <div id="group_<?=$counter_group?>" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
                     <?php
-                                                                                                }
+                    foreach ($archivi as $key => $archivio) {
                     ?>
-                <?php
-            }
-                ?></a>
-
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>CRM</span>
-                </a>
-                <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="login.html">Aziende</a>
-                        <a class="collapse-item" href="register.html">Contatti</a>
+                            <a class="collapse-item" href="login.html"><?=$archivio?></a>
+                    <?php
+                    }
+                    ?>
                     </div>
                 </div>
             </li>
+        <?php
+        $counter_group++;
+        }
+        ?>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>PROJECT</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="login.html">PROJECT</a>
-                        <a class="collapse-item" href="register.html">Task</a>
-                    </div>
-                </div>
-            </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                        <?php
-                        foreach ($archivi as $key => $archivio) {
-                        ?>
-                            <a class="collapse-item" href="blank.html"><?= $archivio ?></a>
-                        <?php
-                        }
-                        ?>
-                        <?php
-                        var_dump($archivi_raggruppati);
-                        ?>
-                    </div>
-                </div>
-            </li>
-
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" onclick="open_tables(this)">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
-        
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
 
 
@@ -375,6 +316,23 @@
             <div id="bixdata_container" class="container-fluid">
                 <div class="row">
                     <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Earnings (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4">
