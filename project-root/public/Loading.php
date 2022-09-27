@@ -3,7 +3,7 @@
 
 <body>
     <div class="loader" style="margin-top: auto; margin-bottom: auto;">
-        <img src="swissbix.logo-removebg-preview.png">
+        <img src="./swissbix.logo-removebg-preview.png">
     </div>
 </body>
 
@@ -29,9 +29,9 @@
         }
 
         .loader img {
-            height: 50px;
-            width: 0px;
-            animation: spinlogo 2s linear infinite;
+            height: 25px;
+            width: 25px;
+            animation: spinlogo 1.5s linear infinite;
         }
 
         @keyframes spinloader {
