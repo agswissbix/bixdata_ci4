@@ -10,7 +10,7 @@ class Bixcontroller extends BaseController
     public function load_base($content)
     {
         $data['content'] = $content;
-        return view('BixView/Base.php', $data);
+        return view('BixView/Base2.php', $data);
     }
 
     public function get_bixdata($content)
