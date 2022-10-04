@@ -55,6 +55,11 @@ class Bixcontroller extends BaseController
         return view('BixView/Loading.php');
     }
 
+    public function get_test()
+    {
+        return view('BixView/Test.php');
+    }
+
     public function get_view_login($message = '')
     {
         $data['message'] = $message;

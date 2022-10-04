@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
-    <div class="loader" style="margin-top: auto; margin-bottom: auto;">
-        <img src="./swissbix.logo-removebg-preview.png">
-    </div>
-</body>
-
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <style type="text/css">
-        .loader {
+        .loaderBix {
             border: 7px solid #f3f3f3;
-            /* Light grey */
-            border-top: 7px solid #ec0928;
-            /* Dark Green */
+            border-top: 7px solid #ff1a1a;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             animation: spinloader 1.5s linear infinite;
-            margin: auto;
-            justify-content: center;
+            box-sizing: content-box;
         }
 
-        .loader img {
-            height: 25px;
-            width: 25px;
+        .loaderBix img {
+            height: 60px;
+            width: 60px;
             animation: spinlogo 1.5s linear infinite;
+            box-sizing: content-box;
         }
 
         @keyframes spinloader {
@@ -55,5 +41,16 @@
         }
     </style>
 </head>
+
+<body>
+    <p style="text-align: center">
+
+    <div class="loaderBix" style="margin: auto; margin-top: 20%">
+        <img src="./swissbix.logo-removebg-preview.png" />
+    </div>
+
+    </p>
+
+</body>
 
 </html>
