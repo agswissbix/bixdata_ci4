@@ -13,7 +13,8 @@
                 </span>
 
             </button>
-            <button type="button" class="btn btn-outline btn-sm" style="color: red">
+            <button type="button" class="btn btn-outline
+             btn-sm" style="color: red">
                 <span class="material-symbols-outlined">
                     delete
                 </span>
@@ -93,26 +94,41 @@
             <div class="tab-pane fade show active" id="dati-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
                 <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Sales order line
-                    </a>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
-                        Service and asset
-                    </button>
-                    </br>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
-                        Company
-                    </button>
-                    </br>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style=" margin-top: 5px">
-                        Dati
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <div class="d-grid gap-2">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Sales order line</a>
+
+                    <div class="collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            1
+                        </div>
                     </div>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Service and asset</button>
+
+                    <div class="collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            2
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Company</button>
+
+                    <div class="collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+                            3
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Dati</button>
+
+                    <div class="collapse" id="multiCollapseExample4">
+                        <div class="card card-body">
+                            4
+                        </div>
+                    </div>
+
                 </div>
+                </p>
 
             </div>
             <div class="tab-pane fade" id="allegati-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>

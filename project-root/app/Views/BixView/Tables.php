@@ -40,7 +40,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
                     <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
                     <div class="dropdown">
-                        <button class="btn btn-outline-danger me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-primary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Esporta
                         </button>
                         <ul class="dropdown-menu">
@@ -58,6 +58,67 @@
                 </div>
                 </form>
                 </br>
+
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+
+                            <div>
+                                <form class=" d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                            </form>
+
+                        </div>
+                        <div class="col">
+
+                            <div>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                            </form>
+
+                        </div>
+                        <div class="col">
+
+                            <div>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                            </form>
+
+                        </div>
+                        <div class="col">
+
+                            <div>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                </br>
+
+                <button type="button" class="btn btn-primary" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
+
+                </br>
+                </br>
+
+                <div id="hiddenCard" style="display: none;">
+                    <div class="card" style="width: 37rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    </br>
+                </div>
+
+
 
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
