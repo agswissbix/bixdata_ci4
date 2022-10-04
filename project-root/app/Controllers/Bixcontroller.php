@@ -19,7 +19,8 @@ class Bixcontroller extends BaseController
         $data['archivi_raggruppati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['project'] = ['Project', 'Task', 'Timesheet'];
         $data['content'] = 'Contenuto della pagina';
-        return view('BixView/Bixdata.php', $data);
+        //return view('BixView/Bixdata.php', $data);
+        return view('BixView/Bixdata2.php', $data);
     }
 
     public function index()
@@ -98,6 +99,10 @@ class Bixcontroller extends BaseController
     }
 
 
+    public function load_block_results()
+    {
+        return view('BixView/Results.php');
+    }
 
     public function Results()
     {
