@@ -7,10 +7,25 @@ use App\Models\Bixmodel;
 
 class Bixcontroller extends BaseController
 {
+    public function load_baseOLD($content)
+    {
+        $data['content'] = $content;
+        return view('BixView/Base.php', $data);
+    }
+
     public function load_base($content)
     {
         $data['content'] = $content;
         return view('BixView/Base2.php', $data);
+    }
+
+    public function get_bixdataOLD($content)
+    {
+        $data['archivi'] = ['Aziende', 'Contatti', 'Vendite'];
+        $data['archivi_raggruppati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
+        $data['archivi_raggruppati']['project'] = ['Project', 'Task', 'Timesheet'];
+        $data['content'] = 'Contenuto della pagina';
+        return view('BixView/Bixdata.php', $data);
     }
 
     public function get_bixdata($content)
@@ -19,19 +34,35 @@ class Bixcontroller extends BaseController
         $data['archivi_raggruppati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['project'] = ['Project', 'Task', 'Timesheet'];
         $data['content'] = 'Contenuto della pagina';
-        //return view('BixView/Bixdata.php', $data);
         return view('BixView/Bixdata2.php', $data);
+    }
+
+    public function get_old()
+    {
+        
+        $content = $this->get_bixdataOLD('');
+        return $this->load_baseOLD($content);
+    }
+
+    public function get_new()
+    {
+        
+        $content = $this->get_bixdata('');
+        
+        return $this->load_base($content);
     }
 
     public function index()
     {
         $data = array();
         if ($this->logged()) {
-            $content = $this->get_bixdata('');
+            $content = $this->get_bixdataOLD('');
+            //$content = $this->get_bixdata('');
         } else {
             $content = $this->get_view_login();
         }
-        return $this->load_base($content);
+        return $this->load_baseOLD($content);
+        //return $this->load_base($content);
     }
 
     public function logged()
