@@ -39,16 +39,16 @@ class Bixcontroller extends BaseController
 
     public function get_old()
     {
-        
+
         $content = $this->get_bixdataOLD('');
         return $this->load_baseOLD($content);
     }
 
     public function get_new()
     {
-        
+
         $content = $this->get_bixdata('');
-        
+
         return $this->load_base($content);
     }
 
