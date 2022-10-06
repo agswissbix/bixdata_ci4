@@ -3,7 +3,7 @@ helper('base_helper');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-layout-mode="detached" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true">
+<html lang="en" data-layout-mode="fluid" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true">
 
 <head>
     <meta charset="utf-8" />
