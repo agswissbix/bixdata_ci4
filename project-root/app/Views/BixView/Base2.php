@@ -1,64 +1,75 @@
-<?php
-helper('base_helper');
-?>
-
 <!DOCTYPE html>
 <html lang="en" data-layout-mode="detached" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true">
 
-    <head>
-        <meta charset="utf-8" />
-        <title>Analytics Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+<head>
+    <meta charset="utf-8" />
+    <title>Analytics Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
 
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="<?=assets_url()?>/images/favicon.ico">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-        <!-- Plugin css -->
-        <link rel="stylesheet" href="<?=assets_url()?>/vendor/daterangepicker/daterangepicker.css">
-        <link rel="stylesheet" href="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="assets/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
 
-        <!-- Theme Config Js -->
-        <script src="<?=assets_url()?>/js/hyper-config.js"></script>
+    <!-- Theme Config Js -->
+    <script src="assets/js/hyper-config.js"></script>
 
-        <!-- Icons css -->
-        <link href="<?=assets_url()?>/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-        <!-- App css -->
-        <link href="<?=assets_url()?>/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
-    </head>
+    <!-- App css -->
+    <link href="assets/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-    <body>
-        <!-- Begin page -->
-        <div class="wrapper">
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" id="app-style" />
+</head>
 
-           
-            <!-- ========== Topbar Start ========== -->
-            <div class="navbar-custom topnav-navbar">
-                <div class="container-fluid detached-nav">
+<body>
+    <!-- Begin page -->
+    <div class="wrapper">
 
-                    <!-- Topbar Logo -->
-                    <div class="logo-topbar">
-                        <!-- Logo light -->
-                        <a href="index.html" class="logo-light">
-                            <span class="logo-lg">
-                                <img src="<?=assets_url()?>/images/logo.png" alt="logo" height="22">
-                            </span>
-                            <span class="logo-sm">
-                                <img src="<?=assets_url()?>/images/logo-sm.png" alt="small logo" height="22">
-                            </span>
-                        </a>
 
-                        <!-- Logo Dark -->
-                        <a href="index.html" class="logo-dark">
-                            <span class="logo-lg">
-                                <img src="<?=assets_url()?>/images/logo-dark.png" alt="dark logo" height="22">
-                            </span>
-                            <span class="logo-sm">
-                                <img src="<?=assets_url()?>/images/logo-dark-sm.png" alt="small logo" height="22">
-                            </span>
-                        </a>
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom topnav-navbar">
+            <div class="container-fluid detached-nav">
+
+                <!-- Topbar Logo -->
+                <div class="logo-topbar">
+                    <!-- Logo light -->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+
+
+                        <p class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 1px;"><b>BIX</b></p>
+
+                        <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATA</b></p>
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="logo-dark">
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-dark.png" alt="dark logo" height="22">
+                        </span>
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-dark-sm.png" alt="small logo" height="22">
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Sidebar Menu Toggle Button -->
+                <button class="button-toggle-menu">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+
+                <!-- Horizontal Menu Toggle Button -->
+                <button class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </button>
 
@@ -81,32 +92,25 @@ helper('base_helper');
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
-                        <li class="dropdown notification-list topbar-dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="<?=assets_url()?>/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12"> 
-                                <span class="align-middle d-none d-lg-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="<?=assets_url()?>/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                                </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                            </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="<?=assets_url()?>/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                                </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="<?=assets_url()?>/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="<?=assets_url()?>/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                                </a>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                            </a>
 
                         </div>
                     </li>
@@ -152,21 +156,14 @@ helper('base_helper');
                                     </div>
                                 </a>
 
-                                    <h5 class="text-muted font-13 fw-normal mt-0">Yesterday</h5>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
-                                        <div class="card-body">
-                                            <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>   
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="notify-icon">
-                                                        <img src="<?=assets_url()?>/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                    <h5 class="noti-item-title fw-semibold font-14">Cristina Pride <small class="fw-normal text-muted ms-1">1 day ago</small></h5>
-                                                    <small class="noti-item-subtitle text-muted">Hi, How are you? What about our next meeting</small>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon bg-info">
+                                                    <i class="mdi mdi-account-plus"></i>
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
@@ -197,19 +194,16 @@ helper('base_helper');
                                     </div>
                                 </a>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
-                                        <div class="card-body">
-                                            <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>   
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="notify-icon">
-                                                        <img src="<?=assets_url()?>/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                    <h5 class="noti-item-title fw-semibold font-14">Karen Robinson</h5>
-                                                    <small class="noti-item-subtitle text-muted">Wow ! this admin looks good and awesome design</small>
+                                <h5 class="text-muted font-13 fw-normal mt-0">30 Dec 2021</h5>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon bg-primary">
+                                                    h <i class="mdi mdi-comment-account-outline"></i>
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
@@ -220,58 +214,26 @@ helper('base_helper');
                                     </div>
                                 </a>
 
-                            </div>
-                        </li>
-
-                        <li class="dropdown notification-list d-none d-sm-inline-block">
-                            <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="ri-apps-2-line noti-icon"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
-
-                                <div class="p-2">
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/slack.png" alt="slack">
-                                                <span>Slack</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/github.png" alt="Github">
-                                                <span>GitHub</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/dribbble.png" alt="dribbble">
-                                                <span>Dribbble</span>
-                                            </a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
+                                    <div class="card-body">
+                                        <span class="float-end noti-close-btn text-muted"><i class="mdi mdi-close"></i></span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="notify-icon">
+                                                    <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 text-truncate ms-2">
+                                                <h5 class="noti-item-title fw-semibold font-14">Karen Robinson</h5>
+                                                <small class="noti-item-subtitle text-muted">Wow ! this admin looks good and awesome design</small>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
 
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/bitbucket.png" alt="bitbucket">
-                                                <span>Bitbucket</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/dropbox.png" alt="dropbox">
-                                                <span>Dropbox</span>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a class="dropdown-icon-item" href="#">
-                                                <img src="<?=assets_url()?>/images/brands/g-suite.png" alt="G Suite">
-                                                <span>G Suite</span>
-                                            </a>
-                                        </div>
-                                    </div> <!-- end row-->
+                                <div class="text-center">
+                                    <i class="mdi mdi-dots-circle mdi-spin text-muted h3 mt-0"></i>
                                 </div>
                             </div>
 
@@ -283,27 +245,32 @@ helper('base_helper');
                         </div>
                     </li>
 
-                        <li class="notification-list d-none d-md-inline-block">
-                            <a class="nav-link" href="" data-toggle="fullscreen">
-                                <i class="ri-fullscreen-line noti-icon"></i>
-                            </a>
-                        </li>
+                    <li class="dropdown notification-list d-none d-sm-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="ri-apps-2-line noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
 
-                        <li class="dropdown notification-list">
-                            <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
-                                aria-expanded="false">
-                                <span class="account-user-avatar"> 
-                                    <img src="<?=assets_url()?>/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
-                                </span>
-                                <span>
-                                    <span class="account-user-name">Dominic Keller</span>
-                                    <span class="account-position">Founder</span>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
-                                <!-- item-->
-                                <div class=" dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
+                            <div class="p-2">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/slack.png" alt="slack">
+                                            <span>Slack</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/github.png" alt="Github">
+                                            <span>GitHub</span>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="#">
+                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                            <span>Dribbble</span>
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <div class="row g-0">
@@ -391,27 +358,73 @@ helper('base_helper');
                                 <span>Lock Screen</span>
                             </a>
 
-                            <div class="notification-list">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="<?=assets_url()?>/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
-                                        <div class="w-100">
-                                            <h5 class="m-0 font-14">Erwin Brown</h5>
-                                            <span class="font-12 mb-0">UI Designer</span>
-                                        </div>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="mdi mdi-logout me-1"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Topbar Search Form -->
+                <div class="app-search dropdown">
+                    <form>
+                        <div class="input-group">
+                            <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
+                            <span class="mdi mdi-magnify search-icon"></span>
+                            <button class="input-group-text btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+
+                    <div class="dropdown-menu dropdown-menu-animated dropdown-lg" id="search-dropdown">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h5 class="text-overflow mb-2">Found <span class="text-danger">17</span> results</h5>
+                        </div>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-notes font-16 me-1"></i>
+                            <span>Analytics Report</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-life-ring font-16 me-1"></i>
+                            <span>How can I help you?</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="uil-cog font-16 me-1"></i>
+                            <span>User profile settings</span>
+                        </a>
+
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                            <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                        </div>
+
+                        <div class="notification-list">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex">
+                                    <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Erwin Brown</h5>
+                                        <span class="font-12 mb-0">UI Designer</span>
                                     </div>
                                 </div>
                             </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="<?=assets_url()?>/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
-                                        <div class="w-100">
-                                            <h5 class="m-0 font-14">Jacob Deo</h5>
-                                            <span class="font-12 mb-0">Developer</span>
-                                        </div>
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <div class="d-flex">
+                                    <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                    <div class="w-100">
+                                        <h5 class="m-0 font-14">Jacob Deo</h5>
+                                        <span class="font-12 mb-0">Developer</span>
                                     </div>
                                 </div>
                             </a>
@@ -419,44 +432,78 @@ helper('base_helper');
                     </div>
                 </div>
             </div>
-            <!-- ========== Topbar End ========== -->
+        </div>
+        <!-- ========== Topbar End ========== -->
 
-            <!-- ========== Left Sidebar Start ========== -->
-            <div class="leftside-menu">
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="leftside-menu">
 
-                <!-- Logo Light -->
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-lg">
-                        <img src="<?=assets_url()?>/images/logo.png" alt="logo" height="22">
-                    </span>
-                    <span class="logo-sm">
-                        <img src="<?=assets_url()?>/images/logo-sm.png" alt="small logo" height="22">
-                    </span>
-                </a>
+            <!-- Logo Light -->
+            <a href="index.html" class="logo logo-light">
+                <span class="logo-lg">
+                    <img src="assets/images/logo.png" alt="logo" height="22">
+                </span>
+                <span class="logo-sm">
+                    <img src="assets/images/logo-sm.png" alt="small logo" height="22">
+                </span>
+            </a>
 
-                <!-- Logo Dark -->
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-lg">
-                        <img src="<?=assets_url()?>/images/logo-dark.png" alt="dark logo" height="22">
-                    </span>
-                    <span class="logo-sm">
-                        <img src="<?=assets_url()?>/images/logo-dark-sm.png" alt="small logo" height="22">
-                    </span>
-                </a>
+            <!-- Logo Dark -->
+            <a href="index.html" class="logo logo-dark">
+                <span class="logo-lg">
+                    <img src="assets/images/logo-dark.png" alt="dark logo" height="22">
+                </span>
+                <span class="logo-sm">
+                    <img src="assets/images/logo-dark-sm.png" alt="small logo" height="22">
+                </span>
+            </a>
 
-                <!-- Sidebar Hover Menu Toggle Button -->
-                <button type="button" class="bg-transparent button-sm-hover p-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
-                    <i class="ri-checkbox-blank-circle-line align-middle"></i>
-                </button>
+            <!-- Sidebar Hover Menu Toggle Button -->
+            <button type="button" class="bg-transparent button-sm-hover p-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
+                <i class="ri-checkbox-blank-circle-line align-middle"></i>
+            </button>
 
-                <!-- Sidebar -left -->
-                <div class="h-100" id="leftside-menu-container" data-simplebar>
-                    <!-- Leftbar User -->
-                    <div class="leftbar-user">
-                        <a href="pages-profile.html">
-                            <img src="<?=assets_url()?>/images/users/avatar-1.jpg" alt="user-image" height="42"
-                                class="rounded-circle shadow-sm">
-                            <span class="leftbar-user-name">Dominic Keller</span>
+            <!-- Sidebar -left -->
+            <div class="h-100" id="leftside-menu-container" data-simplebar>
+
+                <!--- Sidemenu -->
+                <ul class="side-nav">
+
+                    <li class="side-nav-title side-nav-item">Navigation</li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                            <i class="uil-home-alt"></i>
+                            <span class="badge bg-success float-end">5</span>
+                            <span> Dashboards </span>
+                        </a>
+                        <div class="collapse" id="sidebarDashboards">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="dashboard-analytics.html">Analytics</a>
+                                </li>
+                                <li>
+                                    <a href="index.html">Ecommerce</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard-projects.html">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard-crm.html">CRM</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard-wallet.html">E-Wallet</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-title side-nav-item">Apps</li>
+
+                    <li class="side-nav-item">
+                        <a href="apps-calendar.html" class="side-nav-link">
+                            <i class="uil-calender"></i>
+                            <span> Calendar </span>
                         </a>
                     </li>
 
@@ -756,12 +803,246 @@ helper('base_helper');
                             <span> Base UI </span>
                             <span class="menu-arrow"></span>
                         </a>
-                        <img src="<?=assets_url()?>/images/svg/help-icon.svg" height="90" alt="Helper Icon Image" />
-                        <h5 class="mt-3">Unlimited Access</h5>
-                        <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
-                        <a href="javascript: void(0);" class="btn btn-soft-dark btn-sm">Upgrade</a>
-                    </div>
-                    <!-- end Help Box -->
+                        <div class="collapse" id="sidebarBaseUI">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="ui-accordions.html">Accordions</a>
+                                </li>
+                                <li>
+                                    <a href="ui-alerts.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="ui-avatars.html">Avatars</a>
+                                </li>
+                                <li>
+                                    <a href="ui-badges.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="ui-breadcrumb.html">Breadcrumb</a>
+                                </li>
+                                <li>
+                                    <a href="ui-buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="ui-cards.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="ui-carousel.html">Carousel</a>
+                                </li>
+                                <li>
+                                    <a href="ui-dropdowns.html">Dropdowns</a>
+                                </li>
+                                <li>
+                                    <a href="ui-embed-video.html">Embed Video</a>
+                                </li>
+                                <li>
+                                    <a href="ui-grid.html">Grid</a>
+                                </li>
+                                <li>
+                                    <a href="ui-list-group.html">List Group</a>
+                                </li>
+                                <li>
+                                    <a href="ui-modals.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="ui-notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="ui-offcanvas.html">Offcanvas</a>
+                                </li>
+                                <li>
+                                    <a href="ui-placeholders.html">Placeholders</a>
+                                </li>
+                                <li>
+                                    <a href="ui-pagination.html">Pagination</a>
+                                </li>
+                                <li>
+                                    <a href="ui-popovers.html">Popovers</a>
+                                </li>
+                                <li>
+                                    <a href="ui-progress.html">Progress</a>
+                                </li>
+                                <li>
+                                    <a href="ui-ribbons.html">Ribbons</a>
+                                </li>
+                                <li>
+                                    <a href="ui-spinners.html">Spinners</a>
+                                </li>
+                                <li>
+                                    <a href="ui-tabs.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="ui-tooltips.html">Tooltips</a>
+                                </li>
+                                <li>
+                                    <a href="ui-typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="ui-utilities.html">Utilities</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarExtendedUI" aria-expanded="false" aria-controls="sidebarExtendedUI" class="side-nav-link">
+                            <i class="uil-package"></i>
+                            <span> Extended UI </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarExtendedUI">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="extended-dragula.html">Dragula</a>
+                                </li>
+                                <li>
+                                    <a href="extended-range-slider.html">Range Slider</a>
+                                </li>
+                                <li>
+                                    <a href="extended-ratings.html">Ratings</a>
+                                </li>
+                                <li>
+                                    <a href="extended-scrollbar.html">Scrollbar</a>
+                                </li>
+                                <li>
+                                    <a href="extended-scrollspy.html">Scrollspy</a>
+                                </li>
+                                <li>
+                                    <a href="extended-treeview.html">Treeview</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a href="widgets.html" class="side-nav-link">
+                            <i class="uil-layer-group"></i>
+                            <span> Widgets </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarIcons" aria-expanded="false" aria-controls="sidebarIcons" class="side-nav-link">
+                            <i class="uil-streering"></i>
+                            <span> Icons </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarIcons">
+                            <ul class="side-nav-second-level">
+                                <li>
+                                    <a href="icons-remixicons.html">Remix Icons</a>
+                                </li>
+                                <li>
+                                    <a href="icons-mdi.html">Material Design</a>
+                                </li>
+                                <li>
+                                    <a href="icons-unicons.html">Unicons</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarCharts" aria-expanded="false" aria-controls="sidebarCharts" class="side-nav-link">
+                            <i class="uil-chart"></i>
+                            <span> Charts </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarCharts">
+                            <ul class="side-nav-second-level">
+                                <li class="side-nav-item">
+                                    <a data-bs-toggle="collapse" href="#sidebarApexCharts" aria-expanded="false" aria-controls="sidebarApexCharts">
+                                        <span> Apex Charts </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <div class="collapse" id="sidebarApexCharts">
+                                        <ul class="side-nav-third-level">
+                                            <li>
+                                                <a href="charts-apex-area.html">Area</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-bar.html">Bar</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-bubble.html">Bubble</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-candlestick.html">Candlestick</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-column.html">Column</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-heatmap.html">Heatmap</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-line.html">Line</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-mixed.html">Mixed</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-timeline.html">Timeline</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-boxplot.html">Boxplot</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-treemap.html">Treemap</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-pie.html">Pie</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-radar.html">Radar</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-radialbar.html">RadialBar</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-scatter.html">Scatter</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-polar-area.html">Polar Area</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-apex-sparklines.html">Sparklines</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a data-bs-toggle="collapse" href="#sidebarChartJSCharts" aria-expanded="false" aria-controls="sidebarChartJSCharts">
+                                        <span> ChartJS </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <div class="collapse" id="sidebarChartJSCharts">
+                                        <ul class="side-nav-third-level">
+                                            <li>
+                                                <a href="charts-chartjs-area.html">Area</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-chartjs-bar.html">Bar</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-chartjs-line.html">Line</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts-chartjs-other.html">Other</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="charts-brite.html">Britecharts</a>
+                                </li>
+                                <li>
+                                    <a href="charts-sparkline.html">Sparklines</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
 
                     <li class="side-nav-item">
                         <a data-bs-toggle="collapse" href="#sidebarForms" aria-expanded="false" aria-controls="sidebarForms" class="side-nav-link">
@@ -901,26 +1182,24 @@ helper('base_helper');
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
-        <!-- Vendor js -->
-        <script src="<?=assets_url()?>/js/vendor.min.js"></script>
+    <!-- Daterangepicker js -->
+    <script src="assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
 
-        <!-- Daterangepicker js -->
-        <script src="<?=assets_url()?>/vendor/daterangepicker/moment.min.js"></script>
-        <script src="<?=assets_url()?>/vendor/daterangepicker/daterangepicker.js"></script>
+    <!-- Charts js -->
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
 
-        <!-- Charts js -->
-        <script src="<?=assets_url()?>/vendor/chart.js/chart.min.js"></script>
-        <script src="<?=assets_url()?>/vendor/apexcharts/apexcharts.min.js"></script>
+    <!-- Vector Map js -->
+    <script src="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 
-        <!-- Vector Map js -->
-        <script src="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- Analytics Dashboard App js -->
+    <script src="assets/js/pages/demo.dashboard-analytics.js"></script>
 
-        <!-- Analytics Dashboard App js -->
-        <script src="<?=assets_url()?>/js/pages/demo.dashboard-analytics.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
 
-        <!-- App js -->
-        <script src="<?=assets_url()?>/js/app.min.js"></script>
 
 </body>
 

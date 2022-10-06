@@ -135,10 +135,17 @@ html[data-sidenav-color=light] {
     text-decoration: underline;
 }
 
-.form-control {
-    color: red;
-    background-color: red;
+.input-group-text {
+  border: 1px solid rgb(253, 36, 36);
+    background-color: rgb(253, 36, 36);
 }
+
+.input-group-text:hover {
+background-color: red;
+border: 1px solid red;
+}
+
+
 
 
 
