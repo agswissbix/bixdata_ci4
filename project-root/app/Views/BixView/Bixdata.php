@@ -1,3 +1,7 @@
+<?php
+helper('base_helper');
+?>
+
 <script type="text/javascript">
     function logout() {
         $("#base_container").load('Loading.php');
@@ -20,7 +24,7 @@
         $("#bixdata_results_container").load('Loading.php');
         $.ajax({
             type: "POST",
-            url: controller_url + 'ajax_get_tables',
+            url: controller_url + 'ajax_get_tablesOLD',
             data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
@@ -682,23 +686,6 @@
         </div>
     </div>
 </div>
-
-<!-- Bootstrap core JavaScript-->
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="../js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="../vendor/chart.js/Chart.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="../js/demo/chart-area-demo.js"></script>
-<script src="../js/demo/chart-pie-demo.js"></script>
 
 
 
