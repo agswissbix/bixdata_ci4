@@ -31,6 +31,7 @@
 
   body {
     margin: 0;
+    padding: 0%;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
@@ -95,13 +96,13 @@
 
 
 .simplebar-mask{
-    background-color: #36b9cc;
+    background-color: black;
     background-image: linear-gradient(180deg, #074048 50%, #ede4e4 200%);
     background-size: cover;
 }
 
 .navbar-custom {
-        background-color: #36b9cc;
+    background-color: black;
         background-image: linear-gradient(90deg, #074048 50%, #ede4e4 200%);
         background-size: cover;
 }
@@ -145,8 +146,14 @@ background-color: red;
 border: 1px solid red;
 }
 
+#logo-leftside {
+    background-color: #074048 !important;
+    
+}
 
-
+#logo-leftside-bix {
+    line-height: normal !important;
+}
 
 
 
