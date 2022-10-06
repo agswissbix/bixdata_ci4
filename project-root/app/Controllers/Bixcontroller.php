@@ -48,7 +48,6 @@ class Bixcontroller extends BaseController
     {
 
         $content = $this->get_bixdata('');
-
         return $this->load_base($content);
     }
 
