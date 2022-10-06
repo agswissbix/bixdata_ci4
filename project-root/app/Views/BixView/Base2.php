@@ -322,8 +322,10 @@
                                 <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                             </span>
                             <span>
-                                <span class="account-user-name">Dominic Keller</span>
-                                <span class="account-position">Founder</span>
+                                <span class="user-hover">
+                                    <span class="account-user-name">Dominic Keller</span>
+                                    <span class="account-position">Founder</span>
+                                </span>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
@@ -1168,15 +1170,7 @@
                 <!--- End Sidemenu -->
 
                 <!-- Help Box -->
-                <div class="help-box text-white text-center">
-                    <a href="javascript: void(0);" class="float-end close-btn text-white">
-                        <i class="mdi mdi-close"></i>
-                    </a>
-                    <img src="assets/images/svg/help-icon.svg" height="90" alt="Helper Icon Image" />
-                    <h5 class="mt-3">Unlimited Access</h5>
-                    <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
-                    <a href="javascript: void(0);" class="btn btn-soft-dark btn-sm">Upgrade</a>
-                </div>
+
                 <!-- end Help Box -->
 
                 <div class="clearfix"></div>
