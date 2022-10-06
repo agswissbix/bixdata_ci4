@@ -39,14 +39,14 @@ class Bixcontroller extends BaseController
 
     public function get_old()
     {
-        
+
         $content = $this->get_bixdataOLD('');
         return $this->load_baseOLD($content);
     }
 
     public function get_new()
     {
-        
+
         $content = $this->get_bixdata('');
         return $this->load_base($content);
     }
@@ -55,13 +55,13 @@ class Bixcontroller extends BaseController
     {
         $data = array();
         if ($this->logged()) {
-            $content = $this->get_bixdataOLD('');
-            //$content = $this->get_bixdata('');
+            //$content = $this->get_bixdataOLD('');
+            $content = $this->get_bixdata('');
         } else {
             $content = $this->get_view_login();
         }
-        return $this->load_baseOLD($content);
-        //return $this->load_base($content);
+        //return $this->load_baseOLD($content);
+        return $this->load_base($content);
     }
 
     public function logged()
