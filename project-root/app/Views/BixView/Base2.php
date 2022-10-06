@@ -1,6 +1,7 @@
 <?php
 helper('base_helper');
 ?>
+
 <!DOCTYPE html>
 <html lang="en" data-layout-mode="detached" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true">
 
