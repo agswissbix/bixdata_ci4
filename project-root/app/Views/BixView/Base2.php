@@ -1,3 +1,7 @@
+<?php
+helper('base_helper');
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-layout-mode="detached" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true">
 
@@ -9,27 +13,27 @@
         <meta content="Coderthemes" name="author" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?=assets_url()?>/images/favicon.ico">
 
         <!-- Plugin css -->
-        <link rel="stylesheet" href="assets/vendor/daterangepicker/daterangepicker.css">
-        <link rel="stylesheet" href="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
+        <link rel="stylesheet" href="<?=assets_url()?>/vendor/daterangepicker/daterangepicker.css">
+        <link rel="stylesheet" href="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
 
         <!-- Theme Config Js -->
-        <script src="assets/js/hyper-config.js"></script>
+        <script src="<?=assets_url()?>/js/hyper-config.js"></script>
 
         <!-- Icons css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?=assets_url()?>/css/icons.min.css" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-        <link href="assets/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
+        <link href="<?=assets_url()?>/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
     </head>
 
     <body>
         <!-- Begin page -->
         <div class="wrapper">
 
-            
+           
             <!-- ========== Topbar Start ========== -->
             <div class="navbar-custom topnav-navbar">
                 <div class="container-fluid detached-nav">
@@ -39,20 +43,20 @@
                         <!-- Logo light -->
                         <a href="index.html" class="logo-light">
                             <span class="logo-lg">
-                                <img src="assets/images/logo.png" alt="logo" height="22">
+                                <img src="<?=assets_url()?>/images/logo.png" alt="logo" height="22">
                             </span>
                             <span class="logo-sm">
-                                <img src="assets/images/logo-sm.png" alt="small logo" height="22">
+                                <img src="<?=assets_url()?>/images/logo-sm.png" alt="small logo" height="22">
                             </span>
                         </a>
 
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="assets/images/logo-dark.png" alt="dark logo" height="22">
+                                <img src="<?=assets_url()?>/images/logo-dark.png" alt="dark logo" height="22">
                             </span>
                             <span class="logo-sm">
-                                <img src="assets/images/logo-dark-sm.png" alt="small logo" height="22">
+                                <img src="<?=assets_url()?>/images/logo-dark-sm.png" alt="small logo" height="22">
                             </span>
                         </a>
                     </div>
@@ -85,29 +89,29 @@
 
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12"> 
+                                <img src="<?=assets_url()?>/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12"> 
                                 <span class="align-middle d-none d-lg-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                    <img src="<?=assets_url()?>/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                    <img src="<?=assets_url()?>/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                    <img src="<?=assets_url()?>/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                    <img src="<?=assets_url()?>/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                                 </a>
 
                             </div>
@@ -181,7 +185,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
                                                     <div class="notify-icon">
-                                                        <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                        <img src="<?=assets_url()?>/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 text-truncate ms-2">
@@ -219,7 +223,7 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
                                                     <div class="notify-icon">
-                                                        <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+                                                        <img src="<?=assets_url()?>/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 text-truncate ms-2">
@@ -253,19 +257,19 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/slack.png" alt="slack">
+                                                <img src="<?=assets_url()?>/images/brands/slack.png" alt="slack">
                                                 <span>Slack</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/github.png" alt="Github">
+                                                <img src="<?=assets_url()?>/images/brands/github.png" alt="Github">
                                                 <span>GitHub</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                                <img src="<?=assets_url()?>/images/brands/dribbble.png" alt="dribbble">
                                                 <span>Dribbble</span>
                                             </a>
                                         </div>
@@ -274,19 +278,19 @@
                                     <div class="row g-0">
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                <img src="<?=assets_url()?>/images/brands/bitbucket.png" alt="bitbucket">
                                                 <span>Bitbucket</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                <img src="<?=assets_url()?>/images/brands/dropbox.png" alt="dropbox">
                                                 <span>Dropbox</span>
                                             </a>
                                         </div>
                                         <div class="col">
                                             <a class="dropdown-icon-item" href="#">
-                                                <img src="assets/images/brands/g-suite.png" alt="G Suite">
+                                                <img src="<?=assets_url()?>/images/brands/g-suite.png" alt="G Suite">
                                                 <span>G Suite</span>
                                             </a>
                                         </div>
@@ -318,7 +322,7 @@
                             <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                 aria-expanded="false">
                                 <span class="account-user-avatar"> 
-                                    <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                    <img src="<?=assets_url()?>/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 </span>
                                 <span>
                                     <span class="account-user-name">Dominic Keller</span>
@@ -407,7 +411,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle" src="<?=assets_url()?>/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 font-14">Erwin Brown</h5>
                                             <span class="font-12 mb-0">UI Designer</span>
@@ -418,7 +422,7 @@
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="d-flex">
-                                        <img class="d-flex me-2 rounded-circle" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                        <img class="d-flex me-2 rounded-circle" src="<?=assets_url()?>/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
                                         <div class="w-100">
                                             <h5 class="m-0 font-14">Jacob Deo</h5>
                                             <span class="font-12 mb-0">Developer</span>
@@ -438,20 +442,20 @@
                 <!-- Logo Light -->
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-lg">
-                        <img src="assets/images/logo.png" alt="logo" height="22">
+                        <img src="<?=assets_url()?>/images/logo.png" alt="logo" height="22">
                     </span>
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="small logo" height="22">
+                        <img src="<?=assets_url()?>/images/logo-sm.png" alt="small logo" height="22">
                     </span>
                 </a>
 
                 <!-- Logo Dark -->
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="dark logo" height="22">
+                        <img src="<?=assets_url()?>/images/logo-dark.png" alt="dark logo" height="22">
                     </span>
                     <span class="logo-sm">
-                        <img src="assets/images/logo-dark-sm.png" alt="small logo" height="22">
+                        <img src="<?=assets_url()?>/images/logo-dark-sm.png" alt="small logo" height="22">
                     </span>
                 </a>
 
@@ -465,7 +469,7 @@
                     <!-- Leftbar User -->
                     <div class="leftbar-user">
                         <a href="pages-profile.html">
-                            <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42"
+                            <img src="<?=assets_url()?>/images/users/avatar-1.jpg" alt="user-image" height="42"
                                 class="rounded-circle shadow-sm">
                             <span class="leftbar-user-name">Dominic Keller</span>
                         </a>
@@ -1201,7 +1205,7 @@
                         <a href="javascript: void(0);" class="float-end close-btn text-white">
                             <i class="mdi mdi-close"></i>
                         </a>
-                        <img src="assets/images/svg/help-icon.svg" height="90" alt="Helper Icon Image" />
+                        <img src="<?=assets_url()?>/images/svg/help-icon.svg" height="90" alt="Helper Icon Image" />
                         <h5 class="mt-3">Unlimited Access</h5>
                         <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
                         <a href="javascript: void(0);" class="btn btn-soft-dark btn-sm">Upgrade</a>
@@ -1215,25 +1219,25 @@
         </div>
 
         <!-- Vendor js -->
-        <script src="assets/js/vendor.min.js"></script>
+        <script src="<?=assets_url()?>/js/vendor.min.js"></script>
 
         <!-- Daterangepicker js -->
-        <script src="assets/vendor/daterangepicker/moment.min.js"></script>
-        <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
+        <script src="<?=assets_url()?>/vendor/daterangepicker/moment.min.js"></script>
+        <script src="<?=assets_url()?>/vendor/daterangepicker/daterangepicker.js"></script>
 
         <!-- Charts js -->
-        <script src="assets/vendor/chart.js/chart.min.js"></script>
-        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="<?=assets_url()?>/vendor/chart.js/chart.min.js"></script>
+        <script src="<?=assets_url()?>/vendor/apexcharts/apexcharts.min.js"></script>
 
         <!-- Vector Map js -->
-        <script src="assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="<?=assets_url()?>/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 
         <!-- Analytics Dashboard App js -->
-        <script src="assets/js/pages/demo.dashboard-analytics.js"></script>
+        <script src="<?=assets_url()?>/js/pages/demo.dashboard-analytics.js"></script>
 
         <!-- App js -->
-        <script src="assets/js/app.min.js"></script>
+        <script src="<?=assets_url()?>/js/app.min.js"></script>
 
     </body>
 
