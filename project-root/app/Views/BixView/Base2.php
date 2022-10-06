@@ -19,8 +19,7 @@ helper('base_helper');
     <link rel="stylesheet" href="<?= assets_url() ?>/vendor/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
 
-    <!-- Theme Config Js -->
-    <script src="<?= assets_url() ?>/js/hyper-config.js"></script>
+    
 
     <!-- Icons css -->
     <link href="<?= assets_url() ?>/css/icons.min.css" rel="stylesheet" type="text/css" />
