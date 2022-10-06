@@ -87,7 +87,7 @@
 
                     <li class="dropdown notification-list topbar-dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
+                            <img src="<?= assets_url() ?>/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
                             <span class="align-middle d-none d-lg-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
@@ -183,7 +183,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <div class="notify-icon">
-                                                    <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                    <img src="<?= assets_url() ?>/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1 text-truncate ms-2">
@@ -276,19 +276,19 @@
                                 <div class="row g-0">
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                            <img src="<?= assets_url() ?>/images/brands/bitbucket.png" alt="bitbucket">
                                             <span>Bitbucket</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                            <img src="<?= assets_url() ?>/images/brands/dropbox.png" alt="dropbox">
                                             <span>Dropbox</span>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/g-suite.png" alt="G Suite">
+                                            <img src="<?= assets_url() ?>/images/brands/g-suite.png" alt="G Suite">
                                             <span>G Suite</span>
                                         </a>
                                     </div>
@@ -319,7 +319,7 @@
                     <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <span class="account-user-avatar">
-                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                <img src="<?= assets_url() ?>/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                             </span>
                             <span>
                                 <span class="user-hover">
@@ -1180,7 +1180,7 @@
     </div>
 
     <!-- Vendor js -->
-    <script src="assets/js/vendor.min.js"></script>
+    <script src="<?= assets_url() ?>/js/vendor.min.js"></script>
 
     <!-- Daterangepicker js -->
     <script src="assets/vendor/daterangepicker/moment.min.js"></script>
