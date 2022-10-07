@@ -1,5 +1,10 @@
 <?php
 
+function root_url($suburl='')
+{
+    return base_url('project-root/'.$suburl);
+}
+
 function public_url($suburl='')
 {
     return base_url('project-root/public/'.$suburl);

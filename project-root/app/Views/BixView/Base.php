@@ -20,10 +20,10 @@ helper('base_helper');
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.css?v=<?= time(); ?>" rel="stylesheet">
+    <link href="<?=public_url()?>/css/sb-admin-2.css?v=<?= time(); ?>" rel="stylesheet">
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.js?v=<?= time(); ?>"></script>
+    <script src="<?=public_url()?>/js/sb-admin-2.js?v=<?= time(); ?>"></script>
 
     <script type="text/javascript">
         var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";

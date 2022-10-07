@@ -15,7 +15,7 @@ class Bixcontroller extends BaseController
 
     public function load_base($content)
     {
-        $data['content'] = $content;
+        $data['wrapped_content'] = $content;
         return view('BixView/Base2.php', $data);
     }
 
@@ -33,7 +33,7 @@ class Bixcontroller extends BaseController
         $data['archivi'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['crm'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['project'] = ['Project', 'Task', 'Timesheet'];
-        $data['content'] = 'Contenuto della pagina';
+        $data['content'] = $content;
         return view('BixView/Bixdata2.php', $data);
     }
 
@@ -47,7 +47,8 @@ class Bixcontroller extends BaseController
     public function get_new()
     {
 
-        $content = $this->get_bixdata('');
+        $content= $this->get_view_dashboard();
+        $content = $this->get_bixdata($content);
         return $this->load_base($content);
     }
 
@@ -55,12 +56,11 @@ class Bixcontroller extends BaseController
     {
         $data = array();
         if ($this->logged()) {
-            //$content = $this->get_bixdataOLD('');
-            $content = $this->get_bixdata('');
+            $content= $this->get_view_dashboard();
+            $content = $this->get_bixdata($content);
         } else {
             $content = $this->get_view_login();
         }
-        //return $this->load_baseOLD($content);
         return $this->load_base($content);
     }
 
@@ -93,13 +93,18 @@ class Bixcontroller extends BaseController
 
     public function get_view_login($message = '')
     {
-        $data['message'] = $message;
-        return view('BixView/Login.php', $data);
+        $content = $this->get_bixdata('');
+        return $this->load_base($content);
     }
 
     public function ajax_get_tables()
     {
         return view('BixView/Tables.php');
+    }
+
+    public function ajax_get_tablesOLD()
+    {
+        return view('BixView/TablesOLD.php');
     }
 
     public function ajax_get_recordcard()
