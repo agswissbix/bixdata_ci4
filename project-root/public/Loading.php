@@ -4,19 +4,19 @@
 <head>
     <style type="text/css">
         .loaderBix {
-            border: 7px solid #f3f3f3;
+            border: 7px solid white;
             border-top: 7px solid #ff1a1a;
             border-radius: 50%;
             width: 60px;
             height: 60px;
-            animation: spinloader 1.5s linear infinite;
+            animation: spinloader 1.3s linear infinite;
             box-sizing: content-box;
         }
 
         .loaderBix img {
             height: 60px;
             width: 60px;
-            animation: spinlogo 1.5s linear infinite;
+            animation: spinlogo 1.3s linear infinite;
             box-sizing: content-box;
         }
 
