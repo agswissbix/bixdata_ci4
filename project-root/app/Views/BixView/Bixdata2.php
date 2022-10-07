@@ -437,9 +437,9 @@ helper('base_helper');
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
 
-                <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 1px;"><b>BIX</b></p>
+                <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 3px; font-size: 20px;"><b>BIX</b></p>
 
-                <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATA</b></p>
+                <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px; font-size: 20px;"><b>DATA</b></p>
             </a>
         </div>
 
@@ -1180,16 +1180,16 @@ helper('base_helper');
         <!-- Start Content-->
         <div id="bixdata_container" class="container-fluid">
             <div class="row">
-                <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" >
+                <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4">
                     <?= $content ?>
                 </div>
-                <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" >
+                <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4">
 
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
 </div>
 

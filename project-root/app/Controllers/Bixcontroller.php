@@ -62,7 +62,7 @@ class Bixcontroller extends BaseController
             $content = $this->get_view_login();
         }
         $content = $this->get_view_dashboard();
-            $content = $this->get_bixdata($content);
+        $content = $this->get_bixdata($content);
         return $this->load_base($content);
     }
 
