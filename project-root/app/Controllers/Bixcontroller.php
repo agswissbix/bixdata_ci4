@@ -47,7 +47,7 @@ class Bixcontroller extends BaseController
     public function get_new()
     {
 
-        $content= $this->get_view_dashboard();
+        $content = $this->get_view_dashboard();
         $content = $this->get_bixdata($content);
         return $this->load_base($content);
     }
@@ -56,7 +56,7 @@ class Bixcontroller extends BaseController
     {
         $data = array();
         if ($this->logged()) {
-            $content= $this->get_view_dashboard();
+            $content = $this->get_view_dashboard();
             $content = $this->get_bixdata($content);
         } else {
             $content = $this->get_view_login();
