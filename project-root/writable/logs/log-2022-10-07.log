@@ -18,3 +18,10 @@ CRITICAL - 2022-10-07 03:17:13 --> Call to undefined function assets_url()
 #6 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-10-07 07:17:32 --> Undefined property: App\Controllers\Bixcontroller::$get_view_dashboard
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 64, Array)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->index()
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

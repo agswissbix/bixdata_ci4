@@ -428,7 +428,7 @@ helper('base_helper');
 <div class="leftside-menu">
 
     <!-- Logo Light -->
-    <div class="logo-topbar">
+    <div class="logo-topbar" style="height: 100%;">
         <!-- Logo light -->
 
 
@@ -1181,7 +1181,7 @@ helper('base_helper');
         <div id="bixdata_container" class="container-fluid">
             <div class="row">
                 <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" >
-                <?= $content ?>
+                    <?= $content ?>
                 </div>
                 <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" >
 
