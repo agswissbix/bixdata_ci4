@@ -167,7 +167,7 @@
                                 <th>Salary</th>
                             </tr>
                         </tfoot>
-                        <tbody>
+                        <tbody style="height: 50%; overflow: scroll;">
                             <tr>
                                 <td>Tiger Nixon</td>
                                 <td>System Architect</td>
