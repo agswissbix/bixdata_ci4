@@ -1142,7 +1142,7 @@ helper('base_helper');
                                             <div class="collapse" id="sidebarFourthLevel">
                                                 <ul class="side-nav-forth-level">
                                                     <li>
-                                                        <a href="javascript: void(0);">Item 2.1</a>
+                                                        <a href="javascript: void(0);">Item 2.11</a>
                                                     </li>
                                                     <li>
                                                         <a href="javascript: void(0);">Item 2.2</a>
