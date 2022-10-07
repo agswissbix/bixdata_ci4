@@ -28,12 +28,12 @@ helper('base_helper');
     <link href="<?= assets_url() ?>/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Custom css -->
-    <link href="<?= assets_url() ?>/css/custom.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="<?= assets_url() ?>/css/custom.css?v=<?=time();?>" rel="stylesheet" type="text/css" id="app-style" />
 
     <script type="text/javascript">
         var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
     </script>
-    
+
 </head>
 
 <body>

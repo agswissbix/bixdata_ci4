@@ -13,7 +13,7 @@
 
     );
 
-    function open_recordd() {
+    function open_record() {
         var serialized_data = [];
         $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({

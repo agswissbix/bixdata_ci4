@@ -5,16 +5,16 @@ helper('base_helper');
 <script type="text/javascript">
     function open_tables() {
         var serialized_data = [];
-        $("#bixdata_container").load('Loading.php');
+        $("#bixdata_results_container").load('Loading.php');
         $.ajax({
             type: "POST",
             url: controller_url + 'ajax_get_tables',
             data: serialized_data,
             success: function(response) {
-                $("#bixdata_container").html(response);
+                $("#bixdata_results_container").html(response);
             },
             error: function() {
-                $("#bixdata_container").html(response);
+                $("#bixdata_results_container").html(response);
             }
         });
     }
@@ -1177,8 +1177,17 @@ helper('base_helper');
 
         <!-- Start Content-->
         <div id="bixdata_container" class="container-fluid">
-            <?= $content ?>
+            <div class="row">
+                <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" >
+                <?= $content ?>
+                </div>
+                <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" >
+
+                </div>
+            </div>
+            
         </div>
+        
     </div>
 </div>
 

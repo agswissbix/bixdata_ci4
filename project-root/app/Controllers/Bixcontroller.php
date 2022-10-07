@@ -107,6 +107,11 @@ class Bixcontroller extends BaseController
         return view('BixView/TablesOLD.php');
     }
 
+    public function ajax_get_recordcardOLD()
+    {
+        return view('BixView/RecordCardOLD.php');
+    }
+
     public function ajax_get_recordcard()
     {
         return view('BixView/RecordCard.php');

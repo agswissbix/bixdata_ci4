@@ -18,7 +18,7 @@
         $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
             type: "POST",
-            url: controller_url + 'ajax_get_recordcard',
+            url: controller_url + 'ajax_get_recordcardOLD',
             data: serialized_data,
             success: function(response) {
                 $("#bixdata_recordcard_container").html(response);
