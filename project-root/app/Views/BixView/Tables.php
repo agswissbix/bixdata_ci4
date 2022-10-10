@@ -43,7 +43,7 @@
                             <div class="d-grid gap-2 d-md-block">
                                 <form class="d-flex" role="search">
                                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
-                                    <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px">Search</button>
+                                    <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
                             </div>
 
 

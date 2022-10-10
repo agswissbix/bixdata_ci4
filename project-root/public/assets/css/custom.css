@@ -460,7 +460,7 @@ tr:hover {color: black}
 
 .btn-group-sm>.btn, .btn-sm {
   margin-top: -30px;
-  --ct-btn-padding-y: 2;
+  --ct-btn-padding-y: 0.6rem;
   --ct-btn-padding-x: 0.8rem;
   --ct-btn-font-size: 0.875rem;
   --ct-btn-border-radius: 0.15rem;
@@ -472,5 +472,15 @@ tr:hover {color: black}
   min-height: 100vh;
   padding: 0px 12px 0px;
   margin-top: -20px;
+}
+
+.btn .mdi:before {
+  line-height: initial;
+  font-size: 20px;
+}
+
+.btn {
+    --ct-btn-padding-x: 0.6rem;
+
 }
 

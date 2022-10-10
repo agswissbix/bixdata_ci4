@@ -9,36 +9,15 @@
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-            <button type="button" class="btn btn-outline btn-sm">
-                <span class="material-symbols-outlined">
-                    content_copy
-                </span>
+            <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
 
-            </button>
-            <button type="button" class="btn btn-outline
-         btn-sm" style="color: red">
-                <span class="material-symbols-outlined">
-                    delete
-                </span>
-            </button>
+            <button type="button" class="btn btn-danger" style="background-color: red; border: red"><i class="mdi mdi-delete-outline"></i> </button>
 
-            <button type="button" class="btn btn-outline btn-sm">
-                <span class="material-symbols-outlined">
-                    lock
-                </span>
-            </button>
+            <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
 
-            <button type="button" class="btn btn-outline btn-sm">
-                <span class="material-symbols-outlined">
-                    push_pin
-                </span>
-            </button>
+            <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
 
-            <button type="button" class="btn btn-outline btn-sm">
-                <span class="material-symbols-outlined">
-                    close
-                </span>
-            </button>
+            <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
 
         </div>
 
@@ -101,15 +80,45 @@
 
                 <p>
                 <div class="d-grid gap-2">
-                    <a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Sales order line</a>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="background-color: red; border: red;">Sales order line</a>
 
                     <div class="collapse" id="multiCollapseExample1">
                         <div class="card card-body">
-                            1
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Larry the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
 
-                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Service and asset</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" style="background-color: red; border: red">Service and asset</button>
 
                     <div class="collapse" id="multiCollapseExample2">
                         <div class="card card-body">
@@ -117,7 +126,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Company</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" style="background-color: red; border: red">Company</button>
 
                     <div class="collapse" id="multiCollapseExample3">
                         <div class="card card-body">
@@ -125,7 +134,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Dati</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4" style="background-color: red; border: red">Dati</button>
 
                     <div class="collapse" id="multiCollapseExample4">
                         <div class="card card-body">
@@ -142,4 +151,8 @@
 
 
             </div>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-secondary">Chiudi</button>
         </div>
