@@ -436,10 +436,22 @@ helper('base_helper');
         <div id="logo-leftside" href="index.html" class="logo logo-dark">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
+                <span class="logo-lg sidebar-brand d-flex align-items-center justify-content-center">
+                    <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 3px; font-size: 20px;"><b>BIX</b></p>
 
-                <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 3px; font-size: 20px;"><b>BIX</b></p>
+                    <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px; font-size: 20px;"><b>DATA</b></p>
+                </span>
+            </a>
+        </div>
 
-                <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px; font-size: 20px;"><b>DATA</b></p>
+        <div id="logo-leftside" href="index.html" class="logo logo-dark">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+
+                <span class="logo-sm sidebar-brand d-flex align-items-center justify-content-center">
+                    <p id="logo-leftside-bix" style="width: 50px; color: red; margin-right: -30px; margin-top: 16px; font-size: 20px;"><b>B</b></p>
+
+                    <p class=" mb-0" style="width: 50px; color: white; margin-left: -5px; font-size: 20px;"><b>D</b></p>
+                </span>
             </a>
         </div>
 
