@@ -70,13 +70,13 @@
 
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-dati-tab" data-bs-toggle="tab" data-bs-target="#nav-dati" type="button" role="tab" aria-controls="nav-dati" aria-selected="true">Dati</button>
-                <button class="nav-link" id="nav-allegati-tab" data-bs-toggle="tab" data-bs-target="#nav-allegati" type="button" role="tab" aria-controls="nav-allegati" aria-selected="false">Allegati</button>
+                <button class="nav-link active" id="dati-tab" data-bs-toggle="tab" data-bs-target="#dati-tab-pane" type="button" role="tab" aria-controls="dati-tab-pane" aria-selected="true">Dati</button>
+                <button class="nav-link" id="allegati-tab" data-bs-toggle="tab" data-bs-target="#allegati-tab-pane" type="button" role="tab" aria-controls="allegati-tab-pane" aria-selected="false">Allegati</button>
             </div>
         </nav>
         </br>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="dati-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="tab-pane fade show active" id="dati-tab-pane" role="tabpanel" aria-labelledby="dati-tab" tabindex="0">
 
                 <p>
                 <div class="d-grid gap-2">

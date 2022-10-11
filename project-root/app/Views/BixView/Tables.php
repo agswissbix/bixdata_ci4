@@ -627,9 +627,10 @@
                         </tbody>
             </table>
         </div>
+
     </div>
+    <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">...</div>
 </div>
 
 </div>
-<div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">...</div>
 </div>

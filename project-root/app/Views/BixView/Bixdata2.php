@@ -33,7 +33,7 @@ helper('base_helper');
 
                     <p class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 1px;"><b>BIX</b></p>
 
-                    <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATA</b></p>
+                    <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATa</b></p>
                 </a>
 
                 <!-- Logo Dark -->
