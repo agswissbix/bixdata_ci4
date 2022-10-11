@@ -31,121 +31,121 @@
     }
 </script>
 
-<div id="tables" class="card shadow mb-4">
+<!--Content tables start-->
+<div id="content-tables" class="card shadow mb-4" style="height: 37%; overflow: hidden;">
     <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <!-- Filters start-->
+        <div id="filters">
+            <div class="text-center">
+                <div class="row">
+                    <div class="col">
 
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-
-                            <div class="d-grid gap-2 d-md-block">
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
-                                    <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
-                            </div>
-
-
+                        <div class="d-grid gap-2 d-md-block">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
+                            <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
                         </div>
-                        <div class="col">
 
 
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
-                                <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-primary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Esporta
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Esporta dati excel</a></li>
-                                        <li><a class="dropdown-item" href="#">Esporta elenco</a></li>
-                                        <li><a class="dropdown-item" href="#">Esporta migrazione</a></li>
-                                    </ul>
+                    </div>
+                    <div class="col">
+
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
+                            <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-primary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Esporta
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Esporta dati excel</a></li>
+                                    <li><a class="dropdown-item" href="#">Esporta elenco</a></li>
+                                    <li><a class="dropdown-item" href="#">Esporta migrazione</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <button type="button" class="btn btn-primary" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
+
+            </br>
+            </br>
+
+            <div id="hiddenCard" style="display: none;">
+                <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="margin-left: 30px;margin-right: 30px;">
+                    <p class="card-text">
+
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+
+                                <div>
+                                    <form class=" d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 </div>
-                            </div>
+                                </form>
 
+                            </div>
+                            <div class="col">
+
+                                <div>
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                </form>
+
+                            </div>
+                            <div class="col">
+
+                                <div>
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                </form>
+
+                            </div>
+                            <div class="col">
+
+                                <div>
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
+
+                    </p>
                 </div>
-
-
-
-
-                </form>
                 </br>
+            </div>
+        </div>
+        <!-- Filters end-->
 
-
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-
-                            <div>
-                                <form class=" d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                            </form>
-
-                        </div>
-                        <div class="col">
-
-                            <div>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                            </form>
-
-                        </div>
-                        <div class="col">
-
-                            <div>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                            </form>
-
-                        </div>
-                        <div class="col">
-
-                            <div>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </div>
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-
-                </br>
-
-                <button type="button" class="btn btn-primary" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
-
-                </br>
-                </br>
-
-                <div id="hiddenCard" style="display: none;">
-                    <div class="card" style="width: 37rem;">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
-                    </br>
-                </div>
-
-
-
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Tutti</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
-
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0">
+        <!-- Results start-->
+        <div id="results">
+            <!-- Nav menu start -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Tutti</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
+                </li>
+            </ul>
+            <!-- Nav menu end -->
+            <!-- Nav content start-->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0">
+                    <!-- Table results start -->
+                    <table class="table table-bordered" id="dataTable" width="100%" style="height: 100%;" cellspacing="0">
 
                         <thead>
                             <tr>
@@ -625,12 +625,14 @@
                                 <td>$112,000</td>
                             </tr>
                         </tbody>
-            </table>
+                    </table>
+                    <!-- Table results end -->
+                </div>
+
+                <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">...</div>
+            </div>
+            <!-- nav content end-->
         </div>
-
+        <!-- Results end-->
     </div>
-    <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">...</div>
-</div>
-
-</div>
 </div>

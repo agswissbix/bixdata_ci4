@@ -3,11 +3,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 
-<div class="card" style="width: 18rem;">
+<div class="card" style=" height: 37%">
     <div class="card-body">
         <p class="card-text">
 
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div id="btnRecordCard" class="d-grid gap-2 d-md-flex justify-content-md-end">
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
 
@@ -20,7 +20,6 @@
             <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
 
         </div>
-
         </br>
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -32,34 +31,18 @@
 
         </br>
 
-        <div class="container text-center">
+        <div class="container text-left">
             <div class="row row-cols-2">
-                <div class="col"><b>Document nr
-
-                    </b>
-                    </br>
+                <div class="col"><b>Document nr: </b>
                     123456
                 </div>
-                <div class="col"><b>Company
-
-                    </b>
-                    </br>
+                <div class="col"><b>Company: </b>
                     Swissbix SA
                 </div>
-                <div class="col">
-                    </br>
-                    <b>
-                        Title
-
-                    </b>
-                    </br>
+                <div class="col"><b>Title: </b>
                     abc
                 </div>
-                <div class="col">
-                    </br>
-                    <b>Total net yearly
-                    </b>
-                    </br>
+                <div class="col"><b>Total net yearly: </b>
                     123456
                 </div>
 
