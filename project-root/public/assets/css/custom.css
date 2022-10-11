@@ -176,8 +176,11 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
-tr:hover {background-color: rgb(236, 236, 236)}
+tr:hover {background-color:#e3e6f0}
 tr:hover {color: black}
+.table-bordered:hover {
+  border: 1px solid #e3e6f0;
+}
 
 
 .table th,
@@ -479,8 +482,18 @@ tr:hover {color: black}
   font-size: 20px;
 }
 
-.btn {
+#btnRecordCard .btn {
     --ct-btn-padding-x: 0.6rem;
 
 }
 
+html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-lg {
+  display: none;
+}
+
+
+html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
+  display: block;
+  line-height: 70px;.
+  color: #536de6;
+}
