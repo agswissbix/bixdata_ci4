@@ -18,6 +18,10 @@ helper('base_helper');
             }
         });
     }
+
+    $("toggle-menu").click(function() {
+        $("toggle-menu").attr("width", "500px");
+    });
 </script>
 
 <!-- ========== Topbar Start ========== -->
@@ -33,7 +37,7 @@ helper('base_helper');
 
                     <p class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 1px;"><b>BIX</b></p>
 
-                    <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATa</b></p>
+                    <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px;"><b>DATA</b></p>
                 </a>
 
                 <!-- Logo Dark -->
@@ -48,7 +52,7 @@ helper('base_helper');
             </div>
 
             <!-- Sidebar Menu Toggle Button -->
-            <button class="button-toggle-menu">
+            <button class="button-toggle-menu" id="toggle-menu">
                 <i class="mdi mdi-menu"></i>
             </button>
 
@@ -361,7 +365,7 @@ helper('base_helper');
                     <div class="input-group">
                         <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
                         <span class="mdi mdi-magnify search-icon"></span>
-                        <button class="input-group-text btn btn-primary" type="submit">Search</button>
+                        <button class="input-group-text btn btn-primary" type="submit" style="background-color: #ff5b5b; border: #ff5b5b">Search</button>
                     </div>
                 </form>
 

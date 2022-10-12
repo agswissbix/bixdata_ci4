@@ -494,6 +494,7 @@ html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-lg {
 
 html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
   display: block;
-  line-height: 70px;.
+  line-height: 70px;
   color: #536de6;
 }
+
