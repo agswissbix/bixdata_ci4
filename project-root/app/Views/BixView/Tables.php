@@ -45,6 +45,7 @@
                             <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
                         </div>
 
+                        <button type="button" class="btn btn-primary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
 
                     </div>
                     <div class="col">
@@ -70,15 +71,8 @@
 
 
 
-
-
-            <button type="button" class="btn btn-primary" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
-
-            </br>
-            </br>
-
             <div id="hiddenCard" style="display: none;">
-                <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="margin-left: 30px;margin-right: 30px;">
+                <div class="card shadow-sm p-3 mb-5 bg-body rounded" style="margin-left: 30px;margin-right: 30px;">
                     <p class="card-text">
 
                     <div class="container text-center">

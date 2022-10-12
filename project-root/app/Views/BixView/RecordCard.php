@@ -9,9 +9,13 @@
 
         <div id="btnRecordCard" class="d-grid gap-2 d-md-flex justify-content-md-end">
 
+            <button class="btn btn-outline-secondary me-md-2" type="button">Stampe</button>
+
+            <button class="btn btn-outline-secondary" type="button">Funzioni</button>
+
             <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
 
-            <button type="button" class="btn btn-danger" style="background-color: red; border: red"><i class="mdi mdi-delete-outline"></i> </button>
+            <button type="button" class="btn btn-danger" style="background-color: #ff5b5b; border: #ff5b5b"><i class="mdi mdi-delete-outline"></i> </button>
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
 
@@ -19,14 +23,6 @@
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
 
-        </div>
-        </br>
-
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-
-            <button class="btn btn-outline-secondary me-md-2" type="button">Stampe</button>
-            <button class="btn btn-outline-secondary" type="button" style="margin-right: 10px">Funzioni</button>
         </div>
 
         </br>
@@ -63,7 +59,7 @@
 
                 <p>
                 <div class="d-grid gap-2">
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="background-color: red; border: red;">Sales order line</a>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="background-color: #ff5b5b; border: #ff5b5b;">Sales order line</a>
 
                     <div class="collapse" id="multiCollapseExample1">
                         <div class="card card-body">
@@ -101,7 +97,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" style="background-color: red; border: red">Service and asset</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" style="background-color: #ff5b5b; border: #ff5b5b">Service and asset</button>
 
                     <div class="collapse" id="multiCollapseExample2">
                         <div class="card card-body">
@@ -109,7 +105,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" style="background-color: red; border: red">Company</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" style="background-color: #ff5b5b; border: #ff5b5b">Company</button>
 
                     <div class="collapse" id="multiCollapseExample3">
                         <div class="card card-body">
@@ -117,7 +113,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4" style="background-color: red; border: red">Dati</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4" style="background-color: #ff5b5b; border: #ff5b5b">Dati</button>
 
                     <div class="collapse" id="multiCollapseExample4">
                         <div class="card card-body">
@@ -134,8 +130,4 @@
 
 
             </div>
-        </div>
-
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-secondary">Chiudi</button>
         </div>
