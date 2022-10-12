@@ -149,6 +149,16 @@
 
                         <thead>
                             <tr>
+                               
+                               <?php
+                               /*
+                                foreach ($nomicolonne as $key => $colonna) {
+                                ?>
+                                    <th><?=$colonna?></th>
+                                <?php    # code...
+                                }
+                                */
+                                ?>
                                 <th>Name</th>
                                 <th>Position</th>
                                 <th>Office</th>

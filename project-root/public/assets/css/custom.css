@@ -488,12 +488,13 @@ tr:hover {color: black}
 }
 
 html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-lg {
-  display: none;
+  display: none !important;
 }
 
 
 html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
-  display: block;
-  line-height: 70px;.
+  display: block !important;
+  line-height: 70px;
   color: #536de6;
 }
+
