@@ -12,6 +12,9 @@ helper('base_helper');
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
 
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?= assets_url() ?>/images/favicon.ico">
 

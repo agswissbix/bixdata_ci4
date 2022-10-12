@@ -3,6 +3,24 @@ helper('base_helper');
 ?>
 
 <script type="text/javascript">
+    $("#bixdata2").ready(function() {
+        
+        $("#toggle-menu").click(function() {
+            var current_sidenav_size=$("html").attr("data-sidenav-size");
+            if(current_sidenav_size=='default')
+            {
+                $("html").attr("data-sidenav-size","condensed");
+            }
+            else
+            {
+                $("html").attr("data-sidenav-size","default");
+            }
+            
+        });
+        
+
+    });
+
     function open_tables() {
         var serialized_data = [];
         $("#bixdata_results_container").load('Loading.php');
@@ -19,11 +37,16 @@ helper('base_helper');
         });
     }
 
-    $("toggle-menu").click(function() {
-        $("toggle-menu").attr("width", "500px");
-    });
+    
+    
+
+    function sidebarmenu_toggle(el)
+    {
+
+    }
 </script>
 
+<div id="bixdata2">
 <!-- ========== Topbar Start ========== -->
 <div class="shadow-lg p-3 mb-5 bg-body rounded">
     <div class="navbar-custom topnav-navbar">
@@ -52,7 +75,7 @@ helper('base_helper');
             </div>
 
             <!-- Sidebar Menu Toggle Button -->
-            <button class="button-toggle-menu" id="toggle-menu">
+            <button   class="button-toggle-menu" id="toggle-menu">
                 <i class="mdi mdi-menu"></i>
             </button>
 
@@ -438,25 +461,26 @@ helper('base_helper');
 
         <!-- Logo Dark -->
         <div id="logo-leftside" href="index.html" class="logo logo-dark">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <span class="logo-lg sidebar-brand d-flex align-items-center justify-content-center">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-                <span class="logo-lg sidebar-brand d-flex align-items-center justify-content-center">
+                
                     <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 3px; font-size: 20px;"><b>BIX</b></p>
 
                     <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px; font-size: 20px;"><b>DATA</b></p>
-                </span>
-            </a>
-        </div>
+                </a>
+            </span>
 
-        <div id="logo-leftside" href="index.html" class="logo logo-dark">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <span class="logo-sm sidebar-brand d-flex align-items-center justify-content-center">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-                <span class="logo-sm sidebar-brand d-flex align-items-center justify-content-center">
-                    <p id="logo-leftside-bix" style="width: 50px; color: red; margin-right: -30px; margin-top: 16px; font-size: 20px;"><b>B</b></p>
+                    
+                        <p id="logo-leftside-bix" style="width: 50px; color: red; margin-right: -30px; margin-top: 16px; font-size: 20px;"><b>B</b></p>
 
-                    <p class=" mb-0" style="width: 50px; color: white; margin-left: -5px; font-size: 20px;"><b>D</b></p>
-                </span>
-            </a>
+                        <p class=" mb-0" style="width: 50px; color: white; margin-left: -5px; font-size: 20px;"><b>D</b></p>
+                    
+                </a>
+            </span>
         </div>
 
         <!-- Sidebar Hover Menu Toggle Button -->
@@ -500,13 +524,25 @@ helper('base_helper');
                 </li>
 
                 <li class="side-nav-title side-nav-item">Apps</li>
-
                 <li class="side-nav-item">
                     <a onclick="open_tables()" class="side-nav-link">
                         <i class="uil-calender"></i>
                         <span> Table example </span>
                     </a>
                 </li>
+
+                <?php
+                foreach ($archivi as $key => $archivio) {
+                ?>
+                    <li class="side-nav-item">
+                        <a onclick="open_tables()" class="side-nav-link">
+                            <i class="uil-calender"></i>
+                            <span> <?=$archivio?> </span>
+                        </a>
+                    </li>
+                <?php
+                }
+                ?>
 
                 <li class="side-nav-item">
                     <a href="apps-calendar.html" class="side-nav-link">
@@ -1212,3 +1248,5 @@ helper('base_helper');
 <!-- ============================================================== -->
 <!-- End Page content -->
 <!-- ============================================================== -->
+
+</div>
