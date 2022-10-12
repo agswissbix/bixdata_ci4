@@ -3,6 +3,24 @@ helper('base_helper');
 ?>
 
 <script type="text/javascript">
+    $("#bixdata2").ready(function() {
+        
+        $("#toggle-menu").click(function() {
+            var current_sidenav_size=$("html").attr("data-sidenav-size");
+            if(current_sidenav_size=='default')
+            {
+                $("html").attr("data-sidenav-size","condensed");
+            }
+            else
+            {
+                $("html").attr("data-sidenav-size","default");
+            }
+            
+        });
+        
+
+    });
+
     function open_tables() {
         var serialized_data = [];
         $("#bixdata_results_container").load('Loading.php');
@@ -19,11 +37,16 @@ helper('base_helper');
         });
     }
 
-    $("toggle-menu").click(function() {
-        $("toggle-menu").attr("width", "500px");
-    });
+    
+    
+
+    function sidebarmenu_toggle(el)
+    {
+
+    }
 </script>
 
+<div id="bixdata2">
 <!-- ========== Topbar Start ========== -->
 <div class="shadow-lg p-3 mb-5 bg-body rounded">
     <div class="navbar-custom topnav-navbar">
@@ -52,7 +75,7 @@ helper('base_helper');
             </div>
 
             <!-- Sidebar Menu Toggle Button -->
-            <button class="button-toggle-menu" id="toggle-menu">
+            <button   class="button-toggle-menu" id="toggle-menu">
                 <i class="mdi mdi-menu"></i>
             </button>
 
@@ -1225,3 +1248,5 @@ helper('base_helper');
 <!-- ============================================================== -->
 <!-- End Page content -->
 <!-- ============================================================== -->
+
+</div>

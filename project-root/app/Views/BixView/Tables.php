@@ -33,9 +33,9 @@
 
 <!--Content tables start-->
 <div id="content-tables" class="card shadow mb-4" style="height: 37%; overflow: hidden;">
-    <div class="card-body">
+    <div class="card-body" style="height: 100%">
         <!-- Filters start-->
-        <div id="filters">
+        <div id="filters" style="">
             <div class="text-center">
                 <div class="row">
                     <div class="col">
@@ -124,7 +124,7 @@
         <!-- Filters end-->
 
         <!-- Results start-->
-        <div id="results">
+        <div id="results" style="height: 80%">
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -136,10 +136,10 @@
             </ul>
             <!-- Nav menu end -->
             <!-- Nav content start-->
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0">
+            <div class="tab-content" id="myTabContent" style="height: 100%">
+                <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
                     <!-- Table results start -->
-                    <table class="table table-bordered" id="dataTable" width="100%" style="height: 100%;" cellspacing="0">
+                    <table class="table table-bordered" id="dataTable"  style="width: 100%;" cellspacing="0">
 
                         <thead>
                             <tr>
