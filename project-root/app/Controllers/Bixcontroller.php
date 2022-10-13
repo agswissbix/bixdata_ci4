@@ -139,7 +139,7 @@ class Bixcontroller extends BaseController
         ];
 
         $data['records'][0]=['00000000000000000000000000000001','','background-color:#c6fbc6','1','Swissbix'];
-        $data['records'][0]=['00000000000000000000000000000002','','background-color:#c6fbc6','2','About-x'];
+        $data['records'][1]=['00000000000000000000000000000002','','background-color:#c6fbc6','2','About-x'];
         
         return view('BixView/Tables.php',$data);
     }

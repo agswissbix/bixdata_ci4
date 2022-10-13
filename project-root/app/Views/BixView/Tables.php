@@ -138,6 +138,8 @@
             <!-- Nav content start-->
             <div class="tab-content" id="myTabContent" style="height: 100%">
                 <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
+                <?=var_dump($columns)?>
+                <?=var_dump($records)?>
                     <!-- Table results start -->
                     <table class="table table-bordered" id="dataTable" style="width: 100%;" cellspacing="0">
 
