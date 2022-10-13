@@ -148,9 +148,9 @@
 
                                 <?php
                                 /*
-                                foreach ($nomicolonne as $key => $colonna) {
+                                foreach ($columns as $key => $column) {
                                 ?>
-                                    <th><?=$colonna?></th>
+                                    <th><?=$column['desc']?></th>
                                 <?php    # code...
                                 }
                                 */
@@ -174,6 +174,24 @@
                             </tr>
                         </tfoot>
                         <tbody style="height: 50%; overflow: scroll;">
+                            <?php
+                                /*
+                                foreach ($records as $key => $record) {
+                                ?>
+                                    <tr>
+                                        <?php
+                                        foreach($record as $key_column => $column){
+                                        ?>
+                                        <td><?=$column?></td>
+                                        <?php    
+                                        }
+                                        ?>
+                                        
+                                    </tr>
+                                <?php    # code...
+                                }
+                                */
+                                ?>
                             <tr>
                                 <td>Tiger Nixon</td>
                                 <td>System Architect</td>
