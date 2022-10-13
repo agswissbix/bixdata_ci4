@@ -463,7 +463,7 @@ helper('base_helper');
 
                         <p id="logo-leftside-bix" class="shadow-sm p-0 mb-0 bg-white rounded" style="width: 50px; color: red; margin-right: 3px; font-size: 20px;"><b>BIX</b></p>
 
-                        <p class=" mb-0" style="width: 50px; color: white; margin-left: 0px; font-size: 20px;"><b>DATA</b></p>
+                        <p class=" mb-0" style="width: 50px; color: white; margin-top: 2px; font-size: 20px;"><b>DATA</b></p>
                     </a>
                 </span>
 
@@ -473,7 +473,7 @@ helper('base_helper');
 
                         <p id="logo-leftside-bix" style="width: 50px; color: red; margin-right: -30px; margin-top: 16px; font-size: 20px;"><b>B</b></p>
 
-                        <p class=" mb-0" style="width: 50px; color: white; margin-left: -5px; font-size: 20px;"><b>D</b></p>
+                        <p class=" mb-0" style="width: 50px; color: white; margin-left: -5px; margin-top: 1px; font-size: 20px;"><b>D</b></p>
 
                     </a>
                 </span>

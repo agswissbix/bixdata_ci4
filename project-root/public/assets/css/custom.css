@@ -516,3 +516,24 @@ html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
   background-color: #dadada;    
   border-radius: 20px;       
 }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #ff0000;
+  background-color: var(--ct-nav-tabs-link-active-bg);
+  border-color: var(--ct-nav-tabs-link-active-border-color);
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #000000;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--ct-nav-link-padding-y) var(--ct-nav-link-padding-x);
+  font-size: var(--ct-nav-link-font-size);
+  font-weight: var(--ct-nav-link-font-weight);
+  color: #8a969c;
+  -webkit-transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
+  transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
+}
+
