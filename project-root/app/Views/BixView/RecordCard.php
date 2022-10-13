@@ -2,20 +2,44 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+<style>
+    #card-menu .btn {
+        float: right;
+        margin-left: 5px;
+    }
+</style>
 
 <div class="card" style=" height: 37%">
     <div class="card-body">
         <p class="card-text">
 
-        <div id="btnRecordCard" class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div id="card-menu">
 
-            <button class="btn btn-outline-secondary me-md-2" type="button">Stampe</button>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Stampe
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
 
-            <button class="btn btn-outline-secondary" type="button">Funzioni</button>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Funzioni
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
 
-            <button type="button" class="btn btn-danger" style="background-color: #ff5b5b; border: #ff5b5b"><i class="mdi mdi-delete-outline"></i> </button>
+            <button type="button" class="btn btn-light" style="color: red"><i class=" mdi mdi-delete-outline"></i> </button>
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
 
@@ -23,11 +47,14 @@
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
 
+
+            <div style="clear:both;"></div>
         </div>
 
-        </br>
 
-        <div class="container text-left">
+
+
+        <div class="container text-left" style="margin-top: 20px">
             <div class="row row-cols-2">
                 <div class="col"><b>Document nr: </b>
                     123456

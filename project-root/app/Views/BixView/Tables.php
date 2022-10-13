@@ -45,7 +45,7 @@
                             <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
                         </div>
 
-                        <button type="button" class="btn btn-primary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
+                        <button type="button" class="btn btn-outline-secondary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
 
                     </div>
                     <div class="col">
@@ -54,7 +54,7 @@
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-top: 3px; margin-right: 3px">
                             <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
                             <div class="dropdown">
-                                <button class="btn btn-outline-primary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-outline-secondary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Esporta
                                 </button>
                                 <ul class="dropdown-menu">
@@ -139,13 +139,13 @@
             <div class="tab-content" id="myTabContent" style="height: 100%">
                 <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
                     <!-- Table results start -->
-                    <table class="table table-bordered" id="dataTable"  style="width: 100%;" cellspacing="0">
+                    <table class="table table-bordered" id="dataTable" style="width: 100%;" cellspacing="0">
 
                         <thead>
                             <tr>
-                               
-                               <?php
-                               /*
+
+                                <?php
+                                /*
                                 foreach ($nomicolonne as $key => $colonna) {
                                 ?>
                                     <th><?=$colonna?></th>
