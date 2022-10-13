@@ -101,7 +101,47 @@ class Bixcontroller extends BaseController
 
     public function ajax_get_tables()
     {
-        return view('BixView/Tables.php');
+        $data=array();
+        $data['columns'][0]=[
+            "id" => "recordid_",
+            "desc" => "recordid_",
+            "fieldtypeid" => "Sys",
+            "results_fieldtypeid" => "Sys",
+            "linkedtableid" => "Sys"
+        ];
+        $data['columns'][1]=[
+            "id" => "recordstatus_",
+            "desc" => "recordstatus_",
+            "fieldtypeid" => "Sys",
+            "results_fieldtypeid" => "Sys",
+            "linkedtableid" => ""
+        ];
+        $data['columns'][2]=[
+            "id" => "recordcss_",
+            "desc" => "recordcss_",
+            "fieldtypeid" => "Sys",
+            "results_fieldtypeid" => "Sys",
+            "linkedtableid" => ""
+        ];
+        $data['columns'][3]=[
+            "id" => "id",
+            "desc" => "ID",
+            "fieldtypeid" => "Seriale",
+            "results_fieldtypeid" => "Seriale",
+            "linkedtableid" => "Sys"
+        ];
+        $data['columns'][4]=[
+            "id" => "cliente",
+            "desc" => "Cliente",
+            "fieldtypeid" => "Parola",
+            "results_fieldtypeid" => "Parola",
+            "linkedtableid" => "Sys"
+        ];
+
+        $data['records'][0]=['00000000000000000000000000000001','','background-color:#c6fbc6','1','Swissbix'];
+        $data['records'][0]=['00000000000000000000000000000002','','background-color:#c6fbc6','2','About-x'];
+        
+        return view('BixView/Tables.php',$data);
     }
 
     public function ajax_get_tablesOLD()
