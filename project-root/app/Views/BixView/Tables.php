@@ -138,9 +138,72 @@
             <!-- Nav content start-->
             <div class="tab-content" id="myTabContent" style="height: 100%">
                 <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
-                <?=var_dump($columns)?>
-                <?=var_dump($records)?>
-                    <!-- Table results start -->
+
+                    <!-- Table results 1 start -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <?php
+
+                                foreach ($columns as $key => $column) {
+                                    $column_desc = $column['desc'];
+                                    if ($column_desc != 'recordid_' && $column_desc != 'recordstatus_' && $column_desc != 'recordcss_') {
+                                ?>
+                                        <th><?= $column_desc ?></th>
+                                <?php
+                                    }
+                                }
+
+                                ?>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+
+                            <tr>
+                                <?php
+
+                                foreach ($columns as $key => $column) {
+                                    $column_desc = $column['desc'];
+                                    if ($column_desc != 'recordid_' && $column_desc != 'recordstatus_' && $column_desc != 'recordcss_') {
+                                ?>
+                                        <th><?= $column_desc ?></th>
+                                <?php
+                                    }
+                                }
+
+                                ?>
+                            </tr>
+
+                        </tfoot>
+
+                        <tbody>
+                            <?php
+
+                            foreach ($records as $key => $record) {
+                            ?>
+                                <tr>
+                                    <?php
+                                    foreach ($record as $key_column => $column) {
+                                        if ($key_column > 2) {
+                                    ?>
+                                            <td><?= $column ?></td>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
+                                </tr>
+                            <?php
+                            }
+
+                            ?>
+                            <tr>
+                        </tbody>
+
+                    </table>
+                    <!-- Table results 1 stop -->
+                    <!-- Table results 2 start -->
                     <table class="table table-bordered" id="dataTable" style="width: 100%;" cellspacing="0">
 
                         <thead>
@@ -175,7 +238,7 @@
                         </tfoot>
                         <tbody style="height: 50%; overflow: scroll;">
                             <?php
-                                /*
+                            /*
                                 foreach ($records as $key => $record) {
                                 ?>
                                     <tr>
@@ -191,7 +254,7 @@
                                 <?php    # code...
                                 }
                                 */
-                                ?>
+                            ?>
                             <tr>
                                 <td>Tiger Nixon</td>
                                 <td>System Architect</td>
