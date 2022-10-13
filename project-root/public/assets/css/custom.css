@@ -126,11 +126,19 @@ html[data-sidenav-color=light] {
     --ct-menu-item-active: white;
 }
 
+html[data-sidenav-color=light] .side-nav .side-nav-link:active, html[data-sidenav-color=light] .side-nav .side-nav-link:focus, html[data-sidenav-color=light] .side-nav .side-nav-link:hover {
+  --ct-bg-leftbar: rgb(255, 255, 255);
+    --ct-menu-item: #d3cfcf;
+    color: rgb(240, 69, 69);
+    --ct-menu-item-active: white;
+}
+
 .side-nav-second-level li:hover{
     color: -webkit-link;
     cursor: pointer;
     text-decoration: underline;
 }
+
 
 .input-group-text {
   border: 1px solid rgb(253, 36, 36);
@@ -498,3 +506,13 @@ html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
   color: #536de6;
 }
 
+::-webkit-scrollbar {
+  width: 10px;               
+}
+::-webkit-scrollbar-track {
+  background: transparent;        
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dadada;    
+  border-radius: 20px;       
+}
