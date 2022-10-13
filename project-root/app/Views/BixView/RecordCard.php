@@ -15,6 +15,16 @@
 
         <div id="card-menu">
 
+            <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
+
+            <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
+
+            <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
+
+            <button type="button" class="btn btn-light" style="color: red"><i class=" mdi mdi-delete-outline"></i> </button>
+
+            <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
+
             <div class="dropdown">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Stampe
@@ -36,17 +46,6 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-
-            <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
-
-            <button type="button" class="btn btn-light" style="color: red"><i class=" mdi mdi-delete-outline"></i> </button>
-
-            <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
-
-            <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
-
-            <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
-
 
             <div style="clear:both;"></div>
         </div>
