@@ -22,6 +22,7 @@
             data: serialized_data,
             success: function(response) {
                 $("#bixdata_recordcard_container").html(response);
+                $('[data-toggle="tooltip"]').tooltip();
             },
             error: function() {
                 $("#bixdata_recordcard_container").html(response);
@@ -45,7 +46,7 @@
                             <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
                         </div>
 
-                        <button type="button" class="btn btn-outline-secondary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filtri</button>
+                        <button type="button" class="btn btn-outline-secondary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filters</button>
 
                     </div>
                     <div class="col">
@@ -55,7 +56,7 @@
                             <button class="btn btn-outline-danger me-md-2" type="button">Refresh</button>
                             <div class="dropdown">
                                 <button class="btn btn-outline-secondary me md-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Esporta
+                                    Export
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Esporta dati excel</a></li>
@@ -113,13 +114,46 @@
                                 </form>
 
                             </div>
+
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-secondary" onclick="$('#hiddenCardAF').toggle(100);">Advanced filters</button>
+                                </br>
+                            </div>
+
+
+
                         </div>
                     </div>
 
                     </p>
                 </div>
-                </br>
+
+                <div id="hiddenCardAF" style="display: none; margin-top: -40px">
+                    <div class="card shadow-sm p-3 mb-5 bg-body rounded" style="margin-left: 30px;margin-right: 30px;">
+                        <div class="card-body">
+
+                            <label for="birthday">inserisci una data</label>
+                            <input type="date" id="birthday" name="birthday">
+
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                <select class="form-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
         <!-- Filters end-->
 
@@ -128,7 +162,7 @@
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" style="color: grey" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Tutti</button>
+                    <button class="nav-link active" style="color: grey" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Results</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
@@ -143,6 +177,7 @@
                     <table class="table">
                         <thead>
                             <tr>
+
                                 <?php
 
                                 foreach ($columns as $key => $column) {

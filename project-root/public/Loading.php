@@ -5,7 +5,7 @@
     <style type="text/css">
         .loaderBix {
             border: 7px solid rgb(247, 247, 247, 1);
-            border-top: 7px solid #074048;
+            border-top: 7px solid black;
             border-radius: 50%;
             width: 60px;
             height: 60px;

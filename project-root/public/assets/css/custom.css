@@ -537,3 +537,11 @@ html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
   transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
 }
 
+#toggle-menu {
+  color: #a4a49f;
+}
+
+#toggle-menu:hover {
+  color: #70706f;
+}
+
