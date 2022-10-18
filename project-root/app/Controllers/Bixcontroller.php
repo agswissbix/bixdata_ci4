@@ -190,7 +190,7 @@ class Bixcontroller extends BaseController
         // curl_exec() executes the started curl session
         // $output contains the output string
         $output = curl_exec($curl);
-        $output_array=json_decode($output);
+        $output_array=json_decode($output,true);
         
         // close curl resource to free up system resources
         // (deletes the variable made by curl_init)
