@@ -154,9 +154,55 @@ class Bixcontroller extends BaseController
         return view('BixView/RecordCardOLD.php');
     }
 
+    public function test_restcall()
+    {
+        // create & initialize a curl session
+        $curl = curl_init();
+
+        // set our url with curl_setopt()
+        curl_setopt($curl, CURLOPT_URL, "http://localhost:8822/jdocweb/index.php/rest_controller/get_fissi");
+
+        // return the transfer as a string, also with setopt()
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+        // curl_exec() executes the started curl session
+        // $output contains the output string
+        $output = curl_exec($curl);
+        $output_array=json_decode($output);
+        var_dump($output_array);
+        // close curl resource to free up system resources
+        // (deletes the variable made by curl_init)
+        curl_close($curl);
+        //$json = file_get_contents('php://input');
+    }
+
+    public function get_fissi()
+    {
+        // create & initialize a curl session
+        $curl = curl_init();
+
+        // set our url with curl_setopt()
+        curl_setopt($curl, CURLOPT_URL, "http://localhost:8822/jdocweb/index.php/rest_controller/get_fissi");
+
+        // return the transfer as a string, also with setopt()
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+        // curl_exec() executes the started curl session
+        // $output contains the output string
+        $output = curl_exec($curl);
+        $output_array=json_decode($output);
+        
+        // close curl resource to free up system resources
+        // (deletes the variable made by curl_init)
+        curl_close($curl);
+        return $output_array;
+        //$json = file_get_contents('php://input');
+    }
+
     public function ajax_get_recordcard()
     {
-        return view('BixView/RecordCard.php');
+        $data['previewcard_fields']=$this->get_fissi();
+        return view('BixView/RecordCard.php',$data);
     }
 
     public function get_view_dashboard()
