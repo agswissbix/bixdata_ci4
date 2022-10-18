@@ -27,3 +27,29 @@ CRITICAL - 2022-10-18 09:43:39 --> Undefined variable: previewcard_fields
 #7 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-10-18 13:17:56 --> Undefined index: Name
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Views\BixView\Bixdata2.php(449): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\htdocs...', 449, Array)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/Bixdata...', Array, true)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(71): view('BixView/Bixdata...', Array)
+#5 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(132): App\Controllers\Bixcontroller->get_bixdata('')
+#6 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(96): App\Controllers\Bixcontroller->get_view_login()
+#7 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->index()
+#8 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#9 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-10-18 13:18:44 --> Undefined variable: archivio
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Views\BixView\Bixdata2.php(452): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 452, Array)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/Bixdata...', Array, true)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(71): view('BixView/Bixdata...', Array)
+#5 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(132): App\Controllers\Bixcontroller->get_bixdata('')
+#6 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(96): App\Controllers\Bixcontroller->get_view_login()
+#7 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->index()
+#8 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#9 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}

@@ -7,6 +7,39 @@ use App\Models\Bixmodel;
 
 class Bixcontroller extends BaseController
 {
+    function callAPI($method, $url, $data){
+        $data=json_encode($data);
+        $curl = curl_init();
+        switch ($method){
+           case "POST":
+              curl_setopt($curl, CURLOPT_POST, 1);
+              if ($data)
+                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+              break;
+           case "PUT":
+              curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+              if ($data)
+                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);			 					
+              break;
+           default:
+              if ($data)
+                 $url = sprintf("%s?%s", $url, http_build_query(json_decode($data,true)));
+        }
+        // OPTIONS:
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+           'APIKEY: 111111111111111111111',
+           'Content-Type: application/json',
+        ));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        // EXECUTE:
+        $result = curl_exec($curl);
+        if(!$result){die("Connection Failure");}
+        curl_close($curl);
+        return json_decode($result,true);
+     }
+
     public function load_baseOLD($content)
     {
         $data['content'] = $content;
@@ -34,6 +67,7 @@ class Bixcontroller extends BaseController
         $data['archivi_raggruppati']['Crm'] = ['Aziende', 'Contatti', 'Vendite'];
         $data['archivi_raggruppati']['Project'] = ['Project', 'Task', 'Timesheet'];
         $data['content'] = $content;
+        $data['tables_menu']=$this->get_tables_menu();
         return view('BixView/Bixdata2.php', $data);
     }
 
@@ -156,47 +190,44 @@ class Bixcontroller extends BaseController
 
     public function test_restcall()
     {
-        // create & initialize a curl session
-        $curl = curl_init();
+        
+        $results=$this->callAPI('POST','http://10.0.0.133:8822/jdocweb/index.php/rest_controller/get_fissi',array());
+        var_dump($results);
+    }
 
-        // set our url with curl_setopt()
-        curl_setopt($curl, CURLOPT_URL, "http://localhost:8822/jdocweb/index.php/rest_controller/get_fissi");
+    public function get_tables_menu()
+    {
+        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_tables_menu',array());
+  
+        return $output_array;
+    }
 
-        // return the transfer as a string, also with setopt()
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-        // curl_exec() executes the started curl session
-        // $output contains the output string
-        $output = curl_exec($curl);
-        $output_array=json_decode($output);
-        var_dump($output_array);
-        // close curl resource to free up system resources
-        // (deletes the variable made by curl_init)
-        curl_close($curl);
-        //$json = file_get_contents('php://input');
+    public function get_records()
+    {
+        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_records',array());
+  
+        return $output_array;
     }
 
     public function get_fissi()
     {
-        // create & initialize a curl session
-        $curl = curl_init();
-
-        // set our url with curl_setopt()
-        curl_setopt($curl, CURLOPT_URL, "http://localhost:8822/jdocweb/index.php/rest_controller/get_fissi");
-
-        // return the transfer as a string, also with setopt()
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-        // curl_exec() executes the started curl session
-        // $output contains the output string
-        $output = curl_exec($curl);
-        $output_array=json_decode($output);
-        
-        // close curl resource to free up system resources
-        // (deletes the variable made by curl_init)
-        curl_close($curl);
+        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_fissi',array());
+  
         return $output_array;
-        //$json = file_get_contents('php://input');
+    }
+
+    public function get_record_labels()
+    {
+        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_labels',array());
+  
+        return $output_array;
+    }
+
+    public function get_record_fields()
+    {
+        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields',array());
+  
+        var_dump($output_array);
     }
 
     public function ajax_get_recordcard()
