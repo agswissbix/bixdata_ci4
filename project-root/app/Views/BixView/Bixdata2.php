@@ -425,31 +425,24 @@ helper('base_helper');
                     </li>
 
 
-                    <li class="side-nav-item">
-                        <a onclick="open_tables()" class="side-nav-link">
-                            <i class="uil-calender"></i>
-                            <span> Table example </span>
-                        </a>
-                    </li>
-
                     <li class="side-nav-title side-nav-item">Tables</li>
 
                     <?php
-                    foreach ($archivi_raggruppati as $nome_raggruppamento => $archivio_raggruppato) {
+                    foreach ($tables_menu as $workspace_name => $workspace) {
                     ?>
                         <li class="side-nav-item">
-                            <a data-bs-toggle="collapse" href="#sidebar<?= $nome_raggruppamento ?>" aria-expanded="false" aria-controls="sidebarCrm" class="side-nav-link">
+                            <a data-bs-toggle="collapse" href="#sidebar<?= $workspace_name ?>" aria-expanded="false" aria-controls="sidebarCrm" class="side-nav-link">
                                 <i class="uil uil-tachometer-fast"></i>
                                 <span class="menu-arrow"></span>
-                                <span><?= $nome_raggruppamento ?><br /></span>
+                                <span><?= $workspace_name ?><br /></span>
                             </a>
                             <?php
-                            foreach ($archivio_raggruppato as $key => $archivio) {
+                            foreach ($workspace as $key => $table) {
                             ?>
-                                <div class="collapse" id="sidebar<?= $nome_raggruppamento ?>">
+                                <div class="collapse" id="sidebar<?= $workspace_name ?>">
                                     <ul class="side-nav-second-level">
                                         <li>
-                                            <a><?= $archivio ?><br /></a>
+                                            <a onclick="open_tables()"><?= $table['description'] ?><br /></a>
                                         </li>
                                     </ul>
                                 </div>
