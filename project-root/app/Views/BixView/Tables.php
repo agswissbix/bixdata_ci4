@@ -132,23 +132,38 @@
                     <div class="card shadow-sm p-3 mb-5 bg-body rounded" style="margin-left: 30px;margin-right: 30px;">
                         <div class="card-body">
 
-                            <label for="birthday">inserisci una data</label>
-                            <input type="date" id="birthday" name="birthday">
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col">
 
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Options</label>
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option selected>Choose...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                        <label for="birthday">inserisci una data</label>
+                                        <input type="date" id="birthday" name="birthday">
+
+                                    </div>
+                                    <div class="col">
+
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-
 
                         </div>
                     </div>
                 </div>
+
+
+
+
+
 
             </div>
 
@@ -174,7 +189,7 @@
                 <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
 
                     <!-- Table results 1 start -->
-                    <table class="table">
+                    <table class="table table-bordered" id="dataTable" style="width: 100%;" cellspacing="0">
                         <thead>
                             <tr>
 
