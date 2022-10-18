@@ -53,6 +53,7 @@
 
 
         <div class="container text-left" style="margin-top: 20px">
+        <?=var_dump($previewcard_fields)?>
             <div class="row row-cols-2">
                 <div class="col"><b>Document nr: </b>
                     123456
