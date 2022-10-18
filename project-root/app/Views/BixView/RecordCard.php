@@ -7,7 +7,7 @@
     }
 </style>
 
-<div class="card" style=" height: 37%">
+<div class="card" style=" height: 90%">
     <div class="card-body">
         <p class="card-text">
 
