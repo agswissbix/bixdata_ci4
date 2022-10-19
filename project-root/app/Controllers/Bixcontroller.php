@@ -302,4 +302,10 @@ class Bixcontroller extends BaseController
     {
         return view('BixView/Testbootstrap');
     }
+
+    public function test_array()
+    {
+        $data['arrays']=$this->get_fissi();
+        return view('BixView/test_array',$data);
+    }
 }
