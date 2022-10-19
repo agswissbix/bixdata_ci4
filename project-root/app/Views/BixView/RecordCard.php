@@ -54,7 +54,7 @@
 
 
         <?php
-        foreach ($arrays as $key => $array) {
+        foreach ($previewcard_fields as $key => $array) {
         ?>
             <span><?= $key ?></span>
 
