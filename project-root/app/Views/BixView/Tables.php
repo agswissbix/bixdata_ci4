@@ -36,7 +36,7 @@
 <div id="content-tables" class="card shadow mb-4" style="height: 90%; overflow: hidden;">
     <div class="card-body" style="height: 100%">
         <!-- Filters start-->
-        <div id="filters" style="">
+        <div id="filters">
             <div class="text-center">
                 <div class="row">
                     <div class="col">

@@ -52,24 +52,20 @@
 
 
 
-        <div class="container text-left" style="margin-top: 20px">
-        <?=var_dump($previewcard_fields)?>
-            <div class="row row-cols-2">
-                <div class="col"><b>Document nr: </b>
-                    123456
-                </div>
-                <div class="col"><b>Company: </b>
-                    Swissbix SA
-                </div>
-                <div class="col"><b>Title: </b>
-                    abc
-                </div>
-                <div class="col"><b>Total net yearly: </b>
-                    123456
-                </div>
 
-            </div>
-        </div>
+        <?php
+        foreach ($arrays as $key => $array) {
+        ?>
+            <span><?= $key ?></span>
+
+            <?php
+            foreach ($array as $key_column => $column) {
+            ?>
+                <span><?= $column ?></span>
+        <?php
+            }
+        }
+        ?>
 
 
 
@@ -159,3 +155,5 @@
 
             </div>
         </div>
+    </div>
+</div>
