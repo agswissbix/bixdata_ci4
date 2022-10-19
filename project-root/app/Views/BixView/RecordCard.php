@@ -51,21 +51,23 @@
 
 
 
+        <div class="container ">
+            <div class="row row-cols-3 row-cols-md-2 row-cols-sm-1">
 
+                <?php
+                foreach ($previewcard_fields as $key => $array) {
+                    if ($key != 'recordid_jdoc') {
+                ?>
+                        <div class="col">
+                            <span><b><?= $array['desc'] ?></b> : <?= $array['value'] ?></span><br />
+                        </div>
+                <?php
+                    }
+                }
+                ?>
 
-        <?php
-        foreach ($previewcard_fields as $key => $array) {
-        ?>
-            <span><?= $key ?></span>
-
-            <?php
-            foreach ($array as $key_column => $column) {
-            ?>
-                <span><?= $column ?></span>
-        <?php
-            }
-        }
-        ?>
+            </div>
+        </div>
 
 
 
