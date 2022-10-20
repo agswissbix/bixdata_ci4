@@ -7,37 +7,37 @@ use App\Models\Bixmodel;
 
 class Bixcontroller extends BaseController
 {
-    function callAPI($method, $url, $data){
-        $data=json_encode($data);
-        $curl = curl_init();
-        switch ($method){
-           case "POST":
-              curl_setopt($curl, CURLOPT_POST, 1);
-              if ($data)
-                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-              break;
-           case "PUT":
-              curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
-              if ($data)
-                 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);			 					
-              break;
-           default:
-              if ($data)
-                 $url = sprintf("%s?%s", $url, http_build_query(json_decode($data,true)));
-        }
-        // OPTIONS:
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-           'APIKEY: 111111111111111111111',
-           'Content-Type: application/json',
-        ));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-        // EXECUTE:
-        $result = curl_exec($curl);
-        if(!$result){die("Connection Failure");}
-        curl_close($curl);
-        return json_decode($result,true);
+    function callAPI($url, $postParameter){
+
+
+        $curlHandle = curl_init($url);
+        curl_setopt($curlHandle, CURLOPT_POSTFIELDS, $postParameter);
+        curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
+
+        $curlResponse = curl_exec($curlHandle);
+        curl_close($curlHandle);
+
+
+        return json_decode($curlResponse,true);
+     }
+
+     public function test_api_post()
+     {
+        $url = "http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_records";
+
+        $postParameter = array(
+            'table' => 'company',
+        );
+
+        $curlHandle = curl_init($url);
+        curl_setopt($curlHandle, CURLOPT_POSTFIELDS, $postParameter);
+        curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
+
+        $curlResponse = curl_exec($curlHandle);
+        curl_close($curlHandle);
+
+
+            var_dump($curlResponse);
      }
 
     public function load_baseOLD($content)
@@ -133,48 +133,13 @@ class Bixcontroller extends BaseController
         return $this->load_base($content);
     }
 
-    public function ajax_get_tables()
+    public function ajax_get_tables($table)
     {
         $data=array();
-        $data['columns'][0]=[
-            "id" => "recordid_",
-            "desc" => "recordid_",
-            "fieldtypeid" => "Sys",
-            "results_fieldtypeid" => "Sys",
-            "linkedtableid" => "Sys"
-        ];
-        $data['columns'][1]=[
-            "id" => "recordstatus_",
-            "desc" => "recordstatus_",
-            "fieldtypeid" => "Sys",
-            "results_fieldtypeid" => "Sys",
-            "linkedtableid" => ""
-        ];
-        $data['columns'][2]=[
-            "id" => "recordcss_",
-            "desc" => "recordcss_",
-            "fieldtypeid" => "Sys",
-            "results_fieldtypeid" => "Sys",
-            "linkedtableid" => ""
-        ];
-        $data['columns'][3]=[
-            "id" => "id",
-            "desc" => "ID",
-            "fieldtypeid" => "Seriale",
-            "results_fieldtypeid" => "Seriale",
-            "linkedtableid" => "Sys"
-        ];
-        $data['columns'][4]=[
-            "id" => "cliente",
-            "desc" => "Cliente",
-            "fieldtypeid" => "Parola",
-            "results_fieldtypeid" => "Parola",
-            "linkedtableid" => "Sys"
-        ];
-
-        $data['records'][0]=['00000000000000000000000000000001','','background-color:#c6fbc6','1','Swissbix'];
-        $data['records'][1]=['00000000000000000000000000000002','','background-color:#c6fbc6','2','About-x'];
         
+        $results=$this->get_records($table);
+        $data['columns']=$results['columns'];
+        $data['records']=$results['records'];
         return view('BixView/Tables.php',$data);
     }
 
@@ -191,41 +156,42 @@ class Bixcontroller extends BaseController
     public function test_restcall()
     {
         
-        $results=$this->callAPI('POST','http://10.0.0.133:8822/jdocweb/index.php/rest_controller/get_fissi',array());
+        $results=$this->callAPI('http://10.0.0.133:8822/jdocweb/index.php/rest_controller/get_fissi',array());
         var_dump($results);
     }
 
     public function get_tables_menu()
     {
-        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_tables_menu',array());
+        $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_tables_menu',array());
   
         return $output_array;
     }
 
-    public function get_records()
+    public function get_records($table)
     {
-        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_records',array());
+        $post['table']=$table;
+        $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_records',$post);
   
-        var_dump($output_array);
+        return $output_array;
     }
 
     public function get_fissi()
     {
-        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_fissi',array());
+        $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_fissi',array());
   
         return $output_array;
     }
 
     public function get_record_labels()
     {
-        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_labels',array());
+        $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_labels',array());
   
         return $output_array;
     }
 
     public function get_record_fields()
     {
-        $output_array=$this->callAPI('POST','http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields',array());
+        $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields',array());
   
         var_dump($output_array);
     }
