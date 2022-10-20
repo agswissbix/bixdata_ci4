@@ -33,8 +33,8 @@
 </script>
 
 <!--Content tables start-->
-<div id="content-tables" class="card shadow mb-4" style="height: 90%; overflow: hidden;">
-    <div class="card-body" style="height: 100%">
+<div id="content-tables" class="card shadow mb-4" style="height: 17%;">
+    <div class="card-body" style="height: 100%;">
         <!-- Filters start-->
         <div id="filters">
             <div class="text-center">
@@ -173,7 +173,7 @@
         <!-- Filters end-->
 
         <!-- Results start-->
-        <div id="results" style="height: 80%">
+        <div id="results" style="height: 75%">
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -236,9 +236,19 @@
                                     <?php
                                     foreach ($record as $key_column => $column) {
                                         if ($key_column > 2) {
+
+                                            $split = explode("|:|", $column);
+                                            $pt1 = $split[0];
+                                            if (count($split) == 1) {
+
                                     ?>
-                                            <td><?= $column ?></td>
+                                                <td onclick="$('').toggle(100);"><?= $pt1 ?></td>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <td><?= $pt1 ?></td>
                                     <?php
+                                            }
                                         }
                                     }
                                     ?>
