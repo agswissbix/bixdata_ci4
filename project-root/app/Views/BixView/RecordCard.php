@@ -7,7 +7,7 @@
     }
 </style>
 
-<div class="card" style=" height: 90%">
+<div class="card" style=" height: 90%; overflow: scroll">
     <div class="card-body">
         <p class="card-text">
 
@@ -85,67 +85,21 @@
 
                 <p>
                 <div class="d-grid gap-2">
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="background-color: #ff5b5b; border: #ff5b5b;">Sales order line</a>
 
-                    <div class="collapse" id="multiCollapseExample1">
-                        <div class="card card-body">
-
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+                    <?php
+                    foreach ($labels as $label_key => $label) {
+                    ?>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $label_key ?>" aria-expanded="false" aria-controls="<?= $label_key ?>" style="background-color: #ff5b5b; border: #ff5b5b"><?= $label['description'] ?></button>
+                        <div class="collapse" id="<?= $label_key ?>">
+                            <div class="card card-body">
+                                <?= $label['description'] ?>
+                            </div>
                         </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
 
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" style="background-color: #ff5b5b; border: #ff5b5b">Service and asset</button>
 
-                    <div class="collapse" id="multiCollapseExample2">
-                        <div class="card card-body">
-                            2
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" style="background-color: #ff5b5b; border: #ff5b5b">Company</button>
-
-                    <div class="collapse" id="multiCollapseExample3">
-                        <div class="card card-body">
-                            3
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4" style="background-color: #ff5b5b; border: #ff5b5b">Dati</button>
-
-                    <div class="collapse" id="multiCollapseExample4">
-                        <div class="card card-body">
-                            4
-                        </div>
-                    </div>
 
                 </div>
                 </p>
