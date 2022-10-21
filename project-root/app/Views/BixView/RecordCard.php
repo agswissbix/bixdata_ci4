@@ -7,7 +7,16 @@
     }
 </style>
 
-<div class="card" style=" height: 17%;">
+
+<script type="text/javascript">
+    $("#RecordCard").ready(function() {
+
+        $('[data-bs-toggle="tooltip"]').tooltip();
+        
+    })
+</script>
+
+<div id="RecordCard" class="card" style=" height: 17%;">
     <div class="card-body">
         <p class="card-text">
 
@@ -45,6 +54,9 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
+            <button id="testToolTip" type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+                Tooltip on bottom
+            </button>
 
             <div style="clear:both;"></div>
         </div>

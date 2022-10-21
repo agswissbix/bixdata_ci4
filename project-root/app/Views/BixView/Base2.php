@@ -22,7 +22,8 @@ helper('base_helper');
     <link rel="stylesheet" href="<?= assets_url() ?>/vendor/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
 
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <!-- Icons css -->
     <link href="<?= assets_url() ?>/css/icons.min.css" rel="stylesheet" type="text/css" />

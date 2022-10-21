@@ -288,6 +288,7 @@ helper('base_helper');
 
                 <!-- Topbar Search Form -->
                 <div class="app-search dropdown">
+
                     <form>
                         <div class="input-group">
                             <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">

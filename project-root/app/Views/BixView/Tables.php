@@ -3,8 +3,12 @@
 
 
             $('tr').click(function() {
-                open_record();
+                open_record ();
             })
+
+            $('[data-bs-toggle="popover"]').popover();
+
+
 
 
 
@@ -22,7 +26,6 @@
             data: serialized_data,
             success: function(response) {
                 $("#bixdata_recordcard_container").html(response);
-                $('[data-toggle="tooltip"]').tooltip();
             },
             error: function() {
                 $("#bixdata_recordcard_container").html(response);
@@ -242,11 +245,14 @@
                                             if (count($split) == 1) {
 
                                     ?>
-                                                <td onclick="$('').toggle(100);"><?= $pt1 ?></td>
+                                                <td onclick="$('').toggle(100);"><?= count($split).$pt1 ?></td>
                                             <?php
                                             } else {
                                             ?>
-                                                <td><?= $pt1 ?></td>
+                                                <td>
+                                                    <button id='testpopover' type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"><?=$pt1?></button>
+                                                </td>
+                                                
                                     <?php
                                             }
                                         }
@@ -274,4 +280,6 @@
         </div>
         <!-- Results end-->
     </div>
+    
+
 </div>
