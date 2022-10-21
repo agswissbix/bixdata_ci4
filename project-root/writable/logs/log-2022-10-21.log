@@ -163,3 +163,24 @@ CRITICAL - 2022-10-21 04:59:56 --> Array to string conversion
 #7 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-10-21 06:17:57 --> Cannot access offset of type string on string
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/RecordC...', Array, true)
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(205): view('BixView/RecordC...', Array)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_recordcard()
+#5 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#6 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-10-21 06:27:43 --> Undefined variable $field
+#0 D:\xampp\htdocs\bixdata_ci4\project-root\app\Views\BixView\RecordCard.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 71)
+#1 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/RecordC...', Array, true)
+#4 D:\xampp\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(205): view('BixView/RecordC...', Array)
+#5 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_recordcard()
+#6 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#7 D:\xampp\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

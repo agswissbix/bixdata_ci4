@@ -98,16 +98,17 @@
 
 
                 <?php
-                foreach ($record_fields as $record => $fields) {
+                foreach ($record_fields as $record => $field) {
+                    if ($field['value'] != null) {
+                        if ($record != 'recordid_jdoc') {
                 ?>
 
-                    <?php
-                    foreach ($fields as $field => $field_value) {
-                    ?>
 
-                        <span><b><?= $field ?></b></span>
+                            <br>
+                            <span><b><?= $field['description'] ?></b></span>: <span><?= $field['value'] ?></span>
 
                 <?php
+                        }
                     }
                 }
                 ?>
