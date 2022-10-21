@@ -248,7 +248,7 @@
                                             } else {
                                             ?>
                                                 <td>
-                                                    <button id='testpopover' type="button" class="btn btn-btn-outline" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="<?= $split[1] ?>-<?= $split[2] ?>"><?= $pt1 ?></button>
+                                                    <button id='testpopover' type="button" class="btn btn-btn-outline" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="<?= $split[1] ?> - <?= $split[2] ?>"><?= $pt1 ?></button>
                                                 </td>
 
                                     <?php
