@@ -12,7 +12,7 @@
     $("#RecordCard").ready(function() {
 
         $('[data-bs-toggle="tooltip"]').tooltip();
-        
+
     })
 </script>
 
@@ -22,15 +22,15 @@
 
         <div id="card-menu">
 
-            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="mdi mdi-close"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="close"><i class="mdi mdi-close"></i> </button>
 
-            <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="pin"><i class="mdi mdi-pin-outline"></i> </button>
 
-            <button type="button" class="btn btn-light"><i class="mdi mdi-lock-outline"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="permissions"><i class="mdi mdi-lock-outline"></i> </button>
 
-            <button type="button" class="btn btn-light" style="color: red"><i class=" mdi mdi-delete-outline"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="delete" style="color: red"><i class=" mdi mdi-delete-outline"></i> </button>
 
-            <button type="button" class="btn btn-light"><i class="mdi mdi-content-copy" data-bs-placement="top" data-bs-title="Tooltip on top"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="copy"><i class="mdi mdi-content-copy"></i> </button>
 
 
             <div class="dropdown">

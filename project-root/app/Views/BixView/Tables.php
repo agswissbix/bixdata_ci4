@@ -2,9 +2,7 @@
     $("#tables").ready(function() {
 
 
-            $('tr').click(function() {
-                open_record ();
-            })
+
 
             $('[data-bs-toggle="popover"]').popover();
 
@@ -245,14 +243,14 @@
                                             if (count($split) == 1) {
 
                                     ?>
-                                                <td onclick="$('').toggle(100);"><?= count($split).$pt1 ?></td>
+                                                <td onclick="open_record()"><?= count($split) . $pt1 ?></td>
                                             <?php
                                             } else {
                                             ?>
                                                 <td>
-                                                    <button id='testpopover' type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"><?=$pt1?></button>
+                                                    <button id='testpopover' type="button" class="btn btn-btn-outline" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="<?= $split[1] ?>-<?= $split[2] ?>"><?= $pt1 ?></button>
                                                 </td>
-                                                
+
                                     <?php
                                             }
                                         }
@@ -280,6 +278,6 @@
         </div>
         <!-- Results end-->
     </div>
-    
+
 
 </div>
