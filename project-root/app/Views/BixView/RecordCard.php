@@ -13,7 +13,7 @@
 
         <div id="card-menu">
 
-            <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="mdi mdi-close"></i> </button>
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
 
@@ -45,7 +45,7 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-            w
+
             <div style="clear:both;"></div>
         </div>
 
