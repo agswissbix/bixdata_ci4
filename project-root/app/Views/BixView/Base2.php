@@ -3,7 +3,7 @@ helper('base_helper');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-layout-mode="fluid" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true" data-sidenav-size="default" style="overflow: hidden">
+<html lang="en" data-layout-mode="fluid" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true" data-sidenav-size="default" style="overflow: hidden;min-height: 100%; height: 100%;">
 
 <head>
     <meta charset="utf-8" />
@@ -40,9 +40,9 @@ helper('base_helper');
 
 </head>
 
-<body>
+<body style="min-height: 100%; height: 100%;">
     <!-- Begin page -->
-    <div class="wrapper">
+    <div class="wrapper" style="height: 100%">
         <?= $wrapped_content ?>
     </div>
 

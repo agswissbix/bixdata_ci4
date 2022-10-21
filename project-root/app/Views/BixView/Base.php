@@ -49,7 +49,7 @@ helper('base_helper');
     <title>BixData</title>
 </head>
 
-<body>
+<body >
     <div id="base_container">
         <?= $content ?>
     </div>

@@ -16,7 +16,7 @@
     })
 </script>
 
-<div id="RecordCard" class="card" style=" height: 17%;">
+<div id="RecordCard" class="card" style=" height: 100%;">
     <div class="card-body">
         <p class="card-text">
 

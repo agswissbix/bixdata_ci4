@@ -43,7 +43,7 @@ helper('base_helper');
     }
 </script>
 
-<div id="bixdata2">
+<div id="bixdata2" style="height: 100%;">
     <!-- ========== Topbar Start ========== -->
     <div class="shadow-lg p-3 mb-5 bg-body rounded">
         <div class="navbar-custom topnav-navbar">
@@ -481,16 +481,16 @@ helper('base_helper');
     <!-- Start Page Content here -->
     <!-- ============================================================== -->
 
-    <div class="content-page">
-        <div class="content">
+    <div class="content-page" style="min-height: 80%;height: 80%;">
+        <div class="content" style="height: 100%;">
 
             <!-- Start Content-->
-            <div id="bixdata_container" class="container-fluid">
-                <div class="row">
-                    <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4">
+            <div id="bixdata_container" class="container-fluid" style="height: 100%">
+                <div class="row" style="height: 100%;">
+                    <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" style="height: 100%">
                         <?= $content ?>
                     </div>
-                    <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4">
+                    <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" style="height: 100%">
 
                     </div>
                 </div>

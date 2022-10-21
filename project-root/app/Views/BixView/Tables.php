@@ -34,7 +34,7 @@
 </script>
 
 <!--Content tables start-->
-<div id="content-tables" class="card shadow mb-4" style="height: 17%;">
+<div id="content-tables" class="card shadow mb-4" style="height: 100%;">
     <div class="card-body" style="height: 100%;">
         <!-- Filters start-->
         <div id="filters">
