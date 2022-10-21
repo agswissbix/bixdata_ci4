@@ -193,13 +193,15 @@ class Bixcontroller extends BaseController
     {
         $output_array=$this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields',array());
   
-        var_dump($output_array);
+        return $output_array;
     }
 
     public function ajax_get_recordcard()
     {
         $data['previewcard_fields']=$this->get_fissi();
         $data['labels']=$this->get_record_labels();
+        $data['record_fields']=$this->get_record_fields();
+        var_dump($data['record_fields']);
         return view('BixView/RecordCard.php',$data);
     }
 
