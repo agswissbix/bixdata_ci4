@@ -243,7 +243,7 @@
                                             if (count($split) == 1) {
 
                                     ?>
-                                                <td onclick="open_record()"><?= count($split) . $pt1 ?></td>
+                                                <td onclick="open_record()"><?= $pt1 ?></td>
                                             <?php
                                             } else {
                                             ?>
