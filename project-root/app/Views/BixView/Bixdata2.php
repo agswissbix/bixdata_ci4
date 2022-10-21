@@ -23,10 +23,11 @@ helper('base_helper');
         $("#bixdata_results_container").load('Loading.php');
         $.ajax({
             type: "POST",
-            url: controller_url + 'ajax_get_tables/'+tableid,
+            url: controller_url + 'ajax_get_tables/' + tableid,
             data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
+                $('[data-toggle="tooltip"]').tooltip();
             },
             error: function() {
                 $("#bixdata_results_container").html(response);
@@ -442,7 +443,7 @@ helper('base_helper');
                                 <div class="collapse" id="sidebar<?= $workspace_name ?>">
                                     <ul class="side-nav-second-level">
                                         <li>
-                                            <a onclick="open_tables('<?=$table['id']?>')"><?= $table['description'] ?><br /></a>
+                                            <a onclick="open_tables('<?= $table['id'] ?>')"><?= $table['description'] ?><br /></a>
                                         </li>
                                     </ul>
                                 </div>

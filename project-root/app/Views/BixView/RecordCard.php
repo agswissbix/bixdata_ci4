@@ -7,13 +7,13 @@
     }
 </style>
 
-<div class="card" style=" height: 90%; overflow: scroll">
+<div class="card" style=" height: 17%;">
     <div class="card-body">
         <p class="card-text">
 
         <div id="card-menu">
 
-            <button type="button" class="btn btn-light"><i class="mdi mdi-close"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="mdi mdi-close"></i> </button>
 
             <button type="button" class="btn btn-light"><i class="mdi mdi-pin-outline"></i> </button>
 
