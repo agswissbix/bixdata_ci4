@@ -35,7 +35,7 @@
     }
 </script>
 
-<div id="RecordCard" class="card" style=" height: 100%;">
+<div id="RecordCard" class="card" style=" height: 100%; overflow: scroll">
     <div class="card-body">
         <p class="card-text">
 
@@ -133,6 +133,13 @@
                 }
                 ?>
 
+
+
+
+            </div>
+
+            <div class="tab-pane fade" id="linked-tab-pane" role="tabpanel" aria-labelledby="linked-tab" tabindex="0">
+
                 <p>
                 <div class="d-grid gap-2">
 
@@ -156,10 +163,12 @@
 
 
 
-
             </div>
 
-            <div class="tab-pane fade" id="linked-tab-pane" role="tabpanel" aria-labelledby="linked-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="attachment-tab-pane" role="tabpanel" aria-labelledby="attachment-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="statistics-tab-pane" role="tabpanel" aria-labelledby="statistics-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="history-tab-pane" role="tabpanel" aria-labelledby="history-tab" tabindex="0">...</div>
+            <div class="tab-pane fade" id="workflow-tab-pane" role="tabpanel" aria-labelledby="workflow-tab" tabindex="0">...</div>
 
         </div>
     </div>
