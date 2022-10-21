@@ -85,6 +85,7 @@
 
         </br>
 
+
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="dati-tab" data-bs-toggle="tab" data-bs-target="#dati-tab-pane" type="button" role="tab" aria-controls="dati-tab-pane" aria-selected="true">Data</button>
@@ -94,6 +95,23 @@
         </br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="dati-tab-pane" role="tabpanel" aria-labelledby="dati-tab" tabindex="0">
+
+
+                <?php
+                foreach ($record_fields as $record => $field) {
+                    if ($field['value'] != null) {
+                        if ($record != 'recordid_jdoc') {
+                ?>
+
+
+                            <br>
+                            <span><b><?= $field['description'] ?></b></span>: <span><?= $field['value'] ?></span>
+
+                <?php
+                        }
+                    }
+                }
+                ?>
 
                 <p>
                 <div class="d-grid gap-2">
