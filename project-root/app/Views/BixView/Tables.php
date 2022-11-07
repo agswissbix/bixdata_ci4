@@ -178,10 +178,13 @@
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" style="color: grey" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Results</button>
+                    <button class="nav-link active" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Results</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">Calendar</button>
                 </li>
             </ul>
             <!-- Nav menu end -->
@@ -311,6 +314,32 @@
                             config
                         );
                     </script>
+
+                </div>
+
+                <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
+
+
+                    <script>
+                        import {
+                            Calendar
+                        } from '@fullcalendar/core';
+                        import dayGridPlugin from '@fullcalendar/daygrid';
+                        import timeGridPlugin from '@fullcalendar/timegrid';
+                        import listPlugin from '@fullcalendar/list';
+
+                        let calendar = new Calendar(calendarEl, {
+                            plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
+                            initialView: 'dayGridMonth',
+                            headerToolbar: {
+                                left: 'prev,next today',
+                                center: 'title',
+                                right: 'dayGridMonth,timeGridWeek,listWeek'
+                            }
+                        });
+                    </script>
+
+
 
                 </div>
             </div>
