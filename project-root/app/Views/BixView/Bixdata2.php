@@ -35,6 +35,20 @@ helper('base_helper');
         });
     }
 
+    function open_test_content() {
+        $.ajax({
+            url: controller_url + 'ajax_get_test_content',
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
+
+    
+
 
 
 
@@ -264,6 +278,7 @@ helper('base_helper');
                                 <i class="mdi mdi-account-edit me-1"></i>
                                 <span>Settings</span>
                             </a>
+                            
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
@@ -468,6 +483,12 @@ helper('base_helper');
                     <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
                         <i class="uil-home-alt"></i>
                         <span> Settings </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" onclick="open_test_content(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                        <i class="uil-home-alt"></i>
+                        <span> Test content </span>
                     </a>
                 </li>
 

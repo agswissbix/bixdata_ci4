@@ -277,4 +277,10 @@ class Bixcontroller extends BaseController
         $data['arrays'] = $this->get_fissi();
         return view('BixView/test_array', $data);
     }
+
+    public function ajax_get_test_content()
+    {
+        $data=array();
+        return view('BixView/test_content', $data);
+    }
 }

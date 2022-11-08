@@ -27,6 +27,10 @@ helper('base_helper');
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
+    <!--Fullcalendar-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
+    
     <!-- Icons css -->
     <link href="<?= assets_url() ?>/css/icons.min.css" rel="stylesheet" type="text/css" />
 
