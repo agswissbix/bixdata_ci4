@@ -280,7 +280,12 @@ class Bixcontroller extends BaseController
 
     public function ajax_get_test_content()
     {
-        $data=array();
+        $data = array();
         return view('BixView/test_content', $data);
+    }
+
+    public function testtab()
+    {
+        return view('BixView/testtab');
     }
 }

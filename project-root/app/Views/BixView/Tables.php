@@ -25,12 +25,7 @@
     });
 
     $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
-        var target = $(e.target).attr("href");
-        if ((target == '#messages')) {
-            alert('ok');
-        } else {
-            alert('not ok');
-        }
+        alert('tab');
     });
 
 
@@ -343,11 +338,11 @@
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
-                    
-               
 
 
-                    
+
+
+
 
                 </div>
             </div>
@@ -357,6 +352,6 @@
         <div id="calendar"></div>
     </div>
 
-    
-    
+
+
 </div>
