@@ -1,32 +1,34 @@
 <script type="text/javascript">
     $("#tables").ready(function() {
 
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
+            
 
 
             $('[data-bs-toggle="popover"]').popover();
 
+            
+
+       
+           
+                $("#nav-calendar")[0].addEventListener('shown.bs.tab', function(event) {
+                    var calendarEl = document.getElementById('calendar');
+                    var calendar = new FullCalendar.Calendar(calendarEl, {
+                        initialView: 'dayGridMonth'
+                    });
+                    calendar.render();
+                })
+        
+        })
 
 
 
 
-
-        }
-
-
-    );
 
     $(function() {
         $('#calendar-tab a:last').tab('show');
     });
 
-    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
-        alert('tab');
-    });
+ 
 
 
 
@@ -202,7 +204,7 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li id="nav-calendar" class="nav-item" role="presentation">
                     <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" href="#calendar" aria-selected="false">Calendar</button>
                 </li>
             </ul>
@@ -338,7 +340,7 @@
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
-
+                <div id="calendar"></div>
 
 
 
@@ -349,7 +351,7 @@
             <!-- nav content end-->
         </div>
         <!-- Results end-->
-        <div id="calendar"></div>
+        
     </div>
 
 
