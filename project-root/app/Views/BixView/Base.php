@@ -10,9 +10,6 @@ helper('base_helper');
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!--Chart.js-->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <!--Fullcalendar-->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
