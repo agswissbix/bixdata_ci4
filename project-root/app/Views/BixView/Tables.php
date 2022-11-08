@@ -1,7 +1,11 @@
 <script type="text/javascript">
     $("#tables").ready(function() {
 
-
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
 
 
             $('[data-bs-toggle="popover"]').popover();
@@ -280,7 +284,6 @@
                     <div>
                         <canvas id="myChart"></canvas>
                     </div>
-
                     <script>
                         const labels = [
                             'January',
@@ -315,17 +318,25 @@
                         );
                     </script>
 
+
                 </div>
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
+                    
+               
+
+
+                    
 
                 </div>
             </div>
             <!-- nav content end-->
         </div>
         <!-- Results end-->
+        <div id="calendar"></div>
     </div>
 
-
+    
+    
 </div>
