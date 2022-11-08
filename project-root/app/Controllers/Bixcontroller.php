@@ -141,6 +141,15 @@ class Bixcontroller extends BaseController
         $results = $this->get_records($table);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
+        $data['report']['datax']=[
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        ];
+        $data['report']['datay']=[0, 10, 5, 2, 20, 30, 45];
         return view('BixView/Tables.php', $data);
     }
 

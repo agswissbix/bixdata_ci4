@@ -297,11 +297,20 @@
                 </div>
 
                 <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
-
+                            
                     <div>
                         <canvas id="myChart"></canvas>
                     </div>
+
                     <script>
+                        <?php
+                        $labels_string="[";
+                        foreach ($report['datax'] as $key => $value) {
+                            $labels_string=$labels_string."'$value',";
+                        }
+                        $labels_string="]";
+                        ?>
+                        /*
                         const labels = [
                             'January',
                             'February',
@@ -310,6 +319,9 @@
                             'May',
                             'June',
                         ];
+                        */
+
+                        const labels = <?=$labels_string?>
 
                         const data = {
                             labels: labels,
