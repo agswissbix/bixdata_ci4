@@ -1,11 +1,7 @@
 <script type="text/javascript">
     $("#tables").ready(function() {
 
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
+
 
 
             $('[data-bs-toggle="popover"]').popover();
@@ -285,15 +281,44 @@
                         <canvas id="myChart"></canvas>
                     </div>
 
+                    <script>
+                        const labels = [
+                            'January',
+                            'February',
+                            'March',
+                            'April',
+                            'May',
+                            'June',
+                        ];
+
+                        const data = {
+                            labels: labels,
+                            datasets: [{
+                                label: 'My First dataset',
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: [0, 10, 5, 2, 20, 30, 45],
+                            }]
+                        };
+
+                        const config = {
+                            type: 'line',
+                            data: data,
+                            options: {}
+                        };
+                    </script>
+
+                    <script>
+                        const myChart = new Chart(
+                            document.getElementById('myChart'),
+                            config
+                        );
+                    </script>
 
                 </div>
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
-
-
-
-                    <div id="calendar"></div>
 
                 </div>
             </div>
