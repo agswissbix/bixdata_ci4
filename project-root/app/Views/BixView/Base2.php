@@ -59,6 +59,10 @@ helper('base_helper');
     <script src="<?= assets_url() ?>/vendor/chart.js/chart.min.js"></script>
     <script src="<?= assets_url() ?>/vendor/apexcharts/apexcharts.min.js"></script>
 
+    <!--Fullcalendar-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
+
     <!-- Vector Map js -->
     <script src="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
     <script src="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
