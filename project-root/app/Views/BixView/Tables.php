@@ -1,24 +1,24 @@
 <script type="text/javascript">
     $("#tables").ready(function() {
 
-            
 
 
-            $('[data-bs-toggle="popover"]').popover();
 
-            
+        $('[data-bs-toggle="popover"]').popover();
 
-       
-           
-                $("#nav-calendar")[0].addEventListener('shown.bs.tab', function(event) {
-                    var calendarEl = document.getElementById('calendar');
-                    var calendar = new FullCalendar.Calendar(calendarEl, {
-                        initialView: 'dayGridMonth'
-                    });
-                    calendar.render();
-                })
-        
+
+
+
+
+        $("#nav-calendar")[0].addEventListener('shown.bs.tab', function(event) {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
         })
+
+    })
 
 
 
@@ -28,7 +28,7 @@
         $('#calendar-tab a:last').tab('show');
     });
 
- 
+
 
 
 
@@ -296,10 +296,10 @@
                     <!-- Table results end -->
                 </div>
 
-                <div class="tab-pane fade" id="report-tab-pane" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
-                            
-                    <div>
-                        <canvas id="myChart"></canvas>
+                <div class="tab-pane fade" id="report-tab-pane" style="height: 100%; width: 100%" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
+
+                    <div class="chart-container" style="position: relative; height:100%; width:100%">
+                        <canvas style="height: 50%; width: 100%" id="myChart"></canvas>
                     </div>
 
                     <script>
@@ -336,7 +336,7 @@
                         const config = {
                             type: 'line',
                             data: data,
-                            options: {}
+                            options: {},
                         };
                     </script>
 
@@ -352,7 +352,7 @@
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
-                <div id="calendar"></div>
+                    <div id="calendar"></div>
 
 
 
@@ -363,7 +363,7 @@
             <!-- nav content end-->
         </div>
         <!-- Results end-->
-        
+
     </div>
 
 
