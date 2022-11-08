@@ -15,6 +15,15 @@
 
     });
 
+    function closeCard(vrbl) {
+        //$(vrbl).closest("#RecordCard").remove();
+        $(vrbl).closest("#RecordCard").slideToggle(200, function() {
+            $('#bixdata_recordcard_container').html('');
+        });
+
+    }
+
+
     function caricaRis(el) {
         $(el)
         var serialized_data = [];
@@ -41,7 +50,7 @@
 
         <div id="card-menu">
 
-            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="close"><i class="mdi mdi-close"></i> </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="close" onclick="closeCard(this)"><i class="mdi mdi-close"></i> </button>
 
             <button type="button" class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="pin"><i class="mdi mdi-pin-outline"></i> </button>
 
@@ -112,7 +121,7 @@
                 <button class="nav-link" id="workflow-tab" data-bs-toggle="tab" data-bs-target="#workflow-tab-pane" type="button" role="tab" aria-controls="workflow-tab-pane" aria-selected="false">Workflow</button>
             </div>
         </nav>
-        </br>
+
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="fields-tab-pane" role="tabpanel" aria-labelledby="fields-tab" tabindex="0">
 
