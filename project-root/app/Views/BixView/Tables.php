@@ -13,7 +13,27 @@
 
         }
 
+
     );
+
+    $(function() {
+        $('#calendar-tab a:last').tab('show');
+    });
+
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+        var target = $(e.target).attr("href");
+        if ((target == '#messages')) {
+            alert('ok');
+        } else {
+            alert('not ok');
+        }
+    });
+
+
+
+
+
+
 
     function open_record() {
         var serialized_data = [];
@@ -184,7 +204,7 @@
                     <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">Calendar</button>
+                    <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" href="#calendar" aria-selected="false">Calendar</button>
                 </li>
             </ul>
             <!-- Nav menu end -->
