@@ -47,7 +47,7 @@ helper('base_helper');
         });
     }
 
-    
+
 
 
 
@@ -278,7 +278,7 @@ helper('base_helper');
                                 <i class="mdi mdi-account-edit me-1"></i>
                                 <span>Settings</span>
                             </a>
-                            
+
 
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
