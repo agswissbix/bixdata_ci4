@@ -207,6 +207,12 @@
                 <li id="nav-calendar" class="nav-item" role="presentation">
                     <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" href="#calendar" aria-selected="false">Calendar</button>
                 </li>
+                <li id="nav-kanban" class="nav-item" role="presentation">
+                    <button class="nav-link" id="kanban-tab" data-bs-toggle="tab" data-bs-target="#kanban-tab-pane" type="button" role="tab" aria-controls="kanban-tab-pane" href="#kanban" aria-selected="false">Kanban</button>
+                </li>
+                <li id="nav-gantt" class="nav-item" role="presentation">
+                    <button class="nav-link" id="gantt-tab" data-bs-toggle="tab" data-bs-target="#gantt-tab-pane" type="button" role="tab" aria-controls="gantt-tab-pane" href="#gantt" aria-selected="false">Gantt</button>
+                </li>
             </ul>
             <!-- Nav menu end -->
             <!-- Nav content start-->
@@ -342,6 +348,107 @@
 
                     <div id="calendar"></div>
 
+
+
+
+
+                </div>
+
+                <div class="tab-pane fade" id="kanban-tab-pane" role="tabpanel" aria-labelledby="kanban-tab" tabindex="0">
+
+
+                </div>
+
+                <div class="tab-pane fade" id="gantt-tab-pane" role="tabpanel" aria-labelledby="gantt-tab" tabindex="0">
+
+                    <link rel="stylesheet" href="../dist/frappe-gantt.css" />
+                    <script src="../dist/frappe-gantt.js"></script>
+
+                    <svg id="gantt"></svg>
+
+
+
+                    <script type="text/javascript">
+                        var tasks = [
+
+                            {
+                                start: '2018-10-01',
+                                end: '2018-10-08',
+                                name: 'Redesign website',
+                                id: "Task 0",
+                                progress: 20
+                            },
+                            {
+                                start: '2018-10-03',
+                                end: '2018-10-06',
+                                name: 'Write new content',
+                                id: "Task 1",
+                                progress: 5,
+                                dependencies: 'Task 0'
+                            },
+                            {
+                                start: '2018-10-04',
+                                end: '2018-10-08',
+                                name: 'Apply new styles',
+                                id: "Task 2",
+                                progress: 10,
+                                dependencies: 'Task 1'
+                            },
+                            {
+                                start: '2018-10-08',
+                                end: '2018-10-09',
+                                name: 'Review',
+                                id: "Task 3",
+                                progress: 5,
+                                dependencies: 'Task 2'
+                            },
+                            {
+                                start: '2018-10-08',
+                                end: '2018-10-10',
+                                name: 'Deploy',
+                                id: "Task 4",
+                                progress: 0,
+                                dependencies: 'Task 2'
+                            },
+                            {
+                                start: '2018-10-11',
+                                end: '2018-10-11',
+                                name: 'Go Live!',
+                                id: "Task 5",
+                                progress: 0,
+                                dependencies: 'Task 4',
+                                custom_class: 'bar-milestone'
+                            },
+                            {
+                                start: '2014-01-05',
+                                end: '2019-10-12',
+                                name: 'Long term task',
+                                id: "Task 6",
+                                progress: 0
+                            }
+
+                        ]
+
+                        var gantt = new Gantt("#gantt", tasks);
+
+                        var gantt_chart = new Gantt(".gantt-target", tasks, {
+                            on_click: function(task) {
+                                console.log(task);
+                            },
+                            on_date_change: function(task, start, end) {
+                                console.log(task, start, end);
+                            },
+                            on_progress_change: function(task, progress) {
+                                console.log(task, progress);
+                            },
+                            on_view_change: function(mode) {
+                                console.log(mode);
+                            },
+                            view_mode: 'Month',
+                            language: 'en'
+                        });
+                        console.log(gantt_chart);
+                    </script>
 
 
 
