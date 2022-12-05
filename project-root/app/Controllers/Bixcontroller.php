@@ -137,9 +137,17 @@ class Bixcontroller extends BaseController
     public function ajax_get_searchrecords($table)
     {
         $data = array();
-        
-        $data['records_table']=$this->get_records_table($table);
+        $data['table'] = $table;
+        $data['records_table'] = $this->get_records_table($table);
         return view('BixView/SearchRecords.php', $data);
+    }
+
+    public function ajax_get_records_table()
+    {
+        var_dump($_POST);
+        //$table = $post['table'];
+        //echo $table;
+        //echo $this->get_records_table($table);
     }
 
     public function get_records_table($table)
@@ -155,7 +163,7 @@ class Bixcontroller extends BaseController
         $results = $this->get_records($table);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
-        $data['report']['datax']=[
+        $data['report']['datax'] = [
             'January',
             'February',
             'March',
@@ -163,7 +171,7 @@ class Bixcontroller extends BaseController
             'May',
             'June',
         ];
-        $data['report']['datay']=[0, 10, 5, 2, 20, 30, 45];
+        $data['report']['datay'] = [0, 10, 5, 2, 20, 30, 45];
     }
 
 
@@ -214,7 +222,7 @@ class Bixcontroller extends BaseController
     {
         $data['previewcard_fields'] = $this->get_fissi();
         $data['labels'] = $this->get_record_labels();
-        $data['record_fields'] = array();//$this->get_record_fields();
+        $data['record_fields'] = array(); //$this->get_record_fields();
         return view('BixView/RecordCard.php', $data);
     }
 

@@ -29,7 +29,24 @@
     });
 
 
-
+    function search() {
+        var serialized_data = ['test'];
+        serialized_data.push({
+            table: '<?= $table ?>',
+        });
+        $("#records_table_container").load('Loading.php');
+        $.ajax({
+            type: "POST",
+            url: controller_url + 'ajax_get_records_table',
+            data: serialized_data,
+            success: function(response) {
+                $("#records_table_container").html(response);
+            },
+            error: function() {
+                $("#records_table_container").html(response);
+            }
+        });
+    }
 
 
 
@@ -65,7 +82,7 @@
 
                         <div class="d-grid gap-2 d-md-block">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
-                            <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;">Search</button>
+                            <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;" onclick="search()">Search</button>
                         </div>
 
                         <button type="button" class="btn btn-outline-secondary" style="margin-top: -113px; margin-left: 250px;" onclick="$('#hiddenCard').toggle(100);">Filters</button>
@@ -199,7 +216,7 @@
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#tutti-tab-pane" type="button" role="tab" aria-controls="tutti-tab-pane" aria-selected="true">Results</button>
+                    <button class="nav-link active" id="tutti-tab" data-bs-toggle="tab" data-bs-target="#records_table_container" type="button" role="tab" aria-controls="records_table_container" aria-selected="true">Results</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="report-tab" data-bs-toggle="tab" data-bs-target="#report-tab-pane" type="button" role="tab" aria-controls="report-tab-pane" aria-selected="false">Report</button>
@@ -217,13 +234,13 @@
             <!-- Nav menu end -->
             <!-- Nav content start-->
             <div class="tab-content" id="myTabContent" style="height: 100%">
-                <div class="tab-pane fade show active" id="tutti-tab-pane" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
-                    <?=$records_table?>
+                <div class="tab-pane fade show active" id="records_table_container" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
+                    <?= $records_table ?>
                 </div>
 
                 <div class="tab-pane fade" id="report-tab-pane" style="height: 100%; width: 100%" role="tabpanel" aria-labelledby="report-tab" tabindex="0">
 
-                    
+
 
 
                 </div>

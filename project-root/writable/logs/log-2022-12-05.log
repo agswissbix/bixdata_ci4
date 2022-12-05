@@ -71,3 +71,66 @@ CRITICAL - 2022-12-05 03:35:15 --> Undefined variable $report
 #7 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 D:\xampp8110\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2022-12-05 04:18:04 --> Too few arguments to function App\Controllers\Bixcontroller::get_records(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:29:34 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:30:14 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:34:16 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:35:30 --> Undefined array key "table"
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp8.1.10\\...', 148)
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_records_table()
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-05 04:35:37 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:35:56 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:35:57 --> Too few arguments to function App\Controllers\Bixcontroller::get_records_table(), 0 passed in D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->get_records_table()
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-12-05 04:36:13 --> Undefined array key "table"
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp8.1.10\\...', 148)
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_records_table()
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-12-05 04:36:32 --> Undefined array key "table"
+#0 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp8.1.10\\...', 148)
+#1 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_records_table()
+#2 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#3 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp8.1.10\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
