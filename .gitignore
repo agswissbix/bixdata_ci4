@@ -3,3 +3,4 @@ project-root/.env
 project-root/.env
 project-root/.env
 .gitignore
+/project-root/writable
