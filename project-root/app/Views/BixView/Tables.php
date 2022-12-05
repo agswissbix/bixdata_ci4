@@ -359,7 +359,7 @@
 
                 </div>
 
-                <div class="tab-pane fade" id="gantt-tab-pane" role="tabpanel" aria-labelledby="gantt-tab" tabindex="0">
+                <!--<div class="tab-pane fade" id="gantt-tab-pane" role="tabpanel" aria-labelledby="gantt-tab" tabindex="0">
 
                     <link rel="stylesheet" href="../dist/frappe-gantt.css" />
                     <script src="../dist/frappe-gantt.js"></script>
@@ -449,17 +449,17 @@
                         });
                         console.log(gantt_chart);
                     </script>
+                    -->
 
 
 
-
-                </div>
             </div>
-            <!-- nav content end-->
         </div>
-        <!-- Results end-->
-
+        <!-- nav content end-->
     </div>
+    <!-- Results end-->
+
+</div>
 
 
 

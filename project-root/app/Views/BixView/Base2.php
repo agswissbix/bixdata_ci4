@@ -44,12 +44,13 @@ helper('base_helper');
         var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
     </script>
 
+    <!--
     <script>
         var controller_url = "<?php echo base_url('node_modules/frappe-gantt/dist/frappe-gantt.js'); ?>/";
     </script>
 
     <link var controller_url="<?php echo base_url('node_modules/frappe-gantt/dist/frappe-gantt.css'); ?>/" ;>
-
+-->
 </head>
 
 <body style="min-height: 100%; height: 100%;">
