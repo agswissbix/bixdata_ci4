@@ -30,10 +30,8 @@
 
 
     function search() {
-        var serialized_data = ['test'];
-        serialized_data.push({
-            table: '<?= $table ?>',
-        });
+        var serialized_data=[];
+        serialized_data.push({name: 'table', value: '<?=$table?>'});
         $("#records_table_container").load('Loading.php');
         $.ajax({
             type: "POST",
