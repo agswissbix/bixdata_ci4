@@ -50,7 +50,7 @@ class Bixcontroller extends BaseController
     public function load_base($content)
     {
         $data['wrapped_content'] = $content;
-        return view('BixView/Base2.php', $data);
+        return view('BixView/Base.php', $data);
     }
 
     public function get_bixdataOLD($content)
@@ -137,7 +137,21 @@ class Bixcontroller extends BaseController
     public function ajax_get_searchrecords($table)
     {
         $data = array();
+        
+        $data['records_table']=$this->get_records_table($table);
+        return view('BixView/SearchRecords.php', $data);
+    }
 
+    public function get_records_table($table)
+    {
+        $results = $this->get_records($table);
+        $data['columns'] = $results['columns'];
+        $data['records'] = $results['records'];
+        return view('BixView/Records/Records_table.php', $data);
+    }
+
+    public function get_records_report($table)
+    {
         $results = $this->get_records($table);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
@@ -150,18 +164,8 @@ class Bixcontroller extends BaseController
             'June',
         ];
         $data['report']['datay']=[0, 10, 5, 2, 20, 30, 45];
-        return view('BixView/SearchRecords.php', $data);
     }
 
-    public function ajax_get_tablesOLD()
-    {
-        return view('BixView/TablesOLD.php');
-    }
-
-    public function ajax_get_recordcardOLD()
-    {
-        return view('BixView/RecordCardOLD.php');
-    }
 
     public function test_restcall()
     {

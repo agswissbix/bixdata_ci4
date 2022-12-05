@@ -2,61 +2,89 @@
 helper('base_helper');
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en" data-layout-mode="fluid" data-topbar-color="dark" data-sidenav-color="light" data-sidenav-user="true" data-sidenav-size="default" style="overflow: hidden;min-height: 100%; height: 100%;">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Analytics Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="<?= assets_url() ?>/images/favicon.ico">
+
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="<?= assets_url() ?>/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css">
+
+    <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <!--Fullcalendar-->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
 
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Icons css -->
+    <link href="<?= assets_url() ?>/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Custom fonts for this template-->
-    <link href="http://localhost:8828/bixdata_ci4/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- App css -->
+    <link href="<?= assets_url() ?>/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-    <!-- Custom styles for this template-->
-    <link href="<?= public_url() ?>/css/sb-admin-2.css?v=<?= time(); ?>" rel="stylesheet">
-
-    <!-- Custom scripts for all pages-->
-    <script src="<?= public_url() ?>/js/sb-admin-2.js?v=<?= time(); ?>"></script>
+    <!-- Custom css -->
+    <link href="<?= assets_url() ?>/css/custom.css?v=<?= time(); ?>" rel="stylesheet" type="text/css" id="app-style" />
 
     <script type="text/javascript">
         var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";
-        $("#base_container").ready(function() {
-
-        });
-
-
-        function get_content_loading() {
-            $.ajax({
-                type: "url",
-                url: controller_url + 'get_view_loading',
-                success: function(response) {
-                    return response;
-                },
-                error: function() {
-                    return 'Errore';
-                }
-            });
-        }
     </script>
 
-    <title>BixData</title>
+    <!--
+    <script>
+        var controller_url = "<?php echo base_url('node_modules/frappe-gantt/dist/frappe-gantt.js'); ?>/";
+    </script>
+
+    <link var controller_url="<?php echo base_url('node_modules/frappe-gantt/dist/frappe-gantt.css'); ?>/" ;>
+-->
 </head>
 
-<body>
-    <div id="base_container">
-        <?= $content ?>
+<body style="min-height: 100%; height: 100%;">
+    <!-- Begin page -->
+    <div class="wrapper" style="height: 100%">
+        <?= $wrapped_content ?>
     </div>
+
+    <!-- Vendor js -->
+    <script src="<?= assets_url() ?>/js/vendor.min.js"></script>
+
+    <!-- Daterangepicker js -->
+    <script src="<?= assets_url() ?>/vendor/daterangepicker/moment.min.js"></script>
+    <script src="<?= assets_url() ?>/vendor/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Charts js -->
+    <script src="<?= assets_url() ?>/vendor/chart.js/chart.min.js"></script>
+    <!--<script src="<?= assets_url() ?>/vendor/apexcharts/apexcharts.min.js"></script>-->
+
+    <!--Fullcalendar-->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
+
+    <!-- Vector Map js -->
+    <script src="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- Analytics Dashboard App js -->
+    <!--<script src="<?= assets_url() ?>/js/pages/demo.dashboard-analytics.js"></script>-->
+
+    <!-- App js -->
+    <script src="<?= assets_url() ?>/js/app.min.js"></script>
+
+
 </body>
 
 </html>
