@@ -1,0 +1,18 @@
+CRITICAL - 2022-12-05 03:23:15 --> Invalid file: BixView/Tables.php
+#0 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('BixView/Tables....')
+#1 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/Tables....', Array, true)
+#2 D:\xampp8110\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(153): view('BixView/Tables....', Array)
+#3 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_tables('company')
+#4 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#5 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp8110\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-12-05 03:23:37 --> Invalid file: BixView/Tables.php
+#0 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('BixView/Tables....')
+#1 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('BixView/Tables....', Array, true)
+#2 D:\xampp8110\htdocs\bixdata_ci4\project-root\app\Controllers\Bixcontroller.php(153): view('BixView/Tables....', Array)
+#3 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Bixcontroller->ajax_get_tables('company')
+#4 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bixcontroller))
+#5 D:\xampp8110\htdocs\bixdata_ci4\project-root\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp8110\htdocs\bixdata_ci4\project-root\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

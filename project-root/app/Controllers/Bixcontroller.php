@@ -69,7 +69,7 @@ class Bixcontroller extends BaseController
         $data['archivi_raggruppati']['Project'] = ['Project', 'Task', 'Timesheet'];
         $data['content'] = $content;
         $data['tables_menu'] = $this->get_tables_menu();
-        return view('BixView/Bixdata2.php', $data);
+        return view('BixView/Bixdata.php', $data);
     }
 
     public function get_old()
@@ -134,7 +134,7 @@ class Bixcontroller extends BaseController
         return $this->load_base($content);
     }
 
-    public function ajax_get_tables($table)
+    public function ajax_get_searchrecords($table)
     {
         $data = array();
 
@@ -150,7 +150,7 @@ class Bixcontroller extends BaseController
             'June',
         ];
         $data['report']['datay']=[0, 10, 5, 2, 20, 30, 45];
-        return view('BixView/Tables.php', $data);
+        return view('BixView/SearchRecords.php', $data);
     }
 
     public function ajax_get_tablesOLD()
