@@ -210,7 +210,7 @@ class Bixcontroller extends BaseController
     {
         $data['previewcard_fields'] = $this->get_fissi();
         $data['labels'] = $this->get_record_labels();
-        $data['record_fields'] = $this->get_record_fields();
+        $data['record_fields'] = array();//$this->get_record_fields();
         return view('BixView/RecordCard.php', $data);
     }
 
