@@ -144,10 +144,9 @@ class Bixcontroller extends BaseController
 
     public function ajax_get_records_table()
     {
-        var_dump($_POST);
-        //$table = $post['table'];
-        //echo $table;
-        //echo $this->get_records_table($table);
+        $post=$_POST;
+        $table = $post['table'];
+        echo $this->get_records_table($table);
     }
 
     public function get_records_table($table)
