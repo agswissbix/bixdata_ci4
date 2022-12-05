@@ -53,6 +53,35 @@
         });
     }
 
+    $("#searchTerm").ready(function() {
+        $("input").keypress(function() {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                var serialized_data = [];
+                serialized_data.push({
+                    name: 'table',
+                    value: '<?= $table ?>'
+                });
+                serialized_data.push({
+                    name: 'searchTerm',
+                    value: $("#searchTerm").val()
+                });
+                $("#records_table_container").load('Loading.php');
+                $.ajax({
+                    type: "POST",
+                    url: controller_url + 'ajax_get_records_table',
+                    data: serialized_data,
+                    success: function(response) {
+                        $("#records_table_container").html(response);
+                    },
+                    error: function() {
+                        $("#records_table_container").html(response);
+                    }
+                });
+            }
+        });
+    });
+
 
 
 
@@ -239,7 +268,7 @@
             <!-- Nav menu end -->
             <!-- Nav content start-->
             <div class="tab-content" id="myTabContent" style="height: 100%">
-                <div class="tab-pane fade show active" id="records_table_container" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: scroll;">
+                <div class="tab-pane fade show active" id="records_table_container" role="tabpanel" aria-labelledby="tutti-tab" tabindex="0" style="height: 100%;overflow: hidden;">
                     <?= $records_table ?>
                 </div>
 
