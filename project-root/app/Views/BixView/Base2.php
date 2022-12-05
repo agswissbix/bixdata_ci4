@@ -68,7 +68,7 @@ helper('base_helper');
 
     <!-- Charts js -->
     <script src="<?= assets_url() ?>/vendor/chart.js/chart.min.js"></script>
-    <script src="<?= assets_url() ?>/vendor/apexcharts/apexcharts.min.js"></script>
+    <!--<script src="<?= assets_url() ?>/vendor/apexcharts/apexcharts.min.js"></script>-->
 
     <!--Fullcalendar-->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
@@ -79,7 +79,7 @@ helper('base_helper');
     <script src="<?= assets_url() ?>/vendor/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
 
     <!-- Analytics Dashboard App js -->
-    <script src="<?= assets_url() ?>/js/pages/demo.dashboard-analytics.js"></script>
+    <!--<script src="<?= assets_url() ?>/js/pages/demo.dashboard-analytics.js"></script>-->
 
     <!-- App js -->
     <script src="<?= assets_url() ?>/js/app.min.js"></script>
