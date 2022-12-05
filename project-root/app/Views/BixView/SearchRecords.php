@@ -30,8 +30,15 @@
 
 
     function search() {
-        var serialized_data=[];
-        serialized_data.push({name: 'table', value: '<?=$table?>'});
+        var serialized_data = [];
+        serialized_data.push({
+            name: 'table',
+            value: '<?= $table ?>'
+        });
+        serialized_data.push({
+            name: 'searchTerm',
+            value: $("#searchTerm").val()
+        });
         $("#records_table_container").load('Loading.php');
         $.ajax({
             type: "POST",
@@ -79,7 +86,7 @@
                     <div class="col">
 
                         <div class="d-grid gap-2 d-md-block">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;" id="searchTerm">
                             <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;" onclick="search()">Search</button>
                         </div>
 

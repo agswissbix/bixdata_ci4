@@ -306,7 +306,7 @@ helper('base_helper');
 
                     <form>
                         <div class="input-group">
-                            <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
+                            <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search" autocomplete="off">
                             <span class="mdi mdi-magnify search-icon"></span>
                             <button class="input-group-text btn btn-primary" type="submit" style="background-color: #ff5b5b; border: #ff5b5b">Search</button>
                         </div>
