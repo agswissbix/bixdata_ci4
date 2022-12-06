@@ -115,7 +115,7 @@
                     <div class="col">
 
                         <div class="d-grid gap-2 d-md-block">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;" id="searchTerm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50%;" id="searchTerm" autocomplete="off">
                             <button class="btn btn-outline-danger" type="submit" style="margin-top: -65px; margin-left: 90px;" onclick="search()">Search</button>
                         </div>
 
