@@ -88,7 +88,7 @@
 
 
 
-        <div class="container ">
+        <div class="container" style="height:auto">
             <div class="row row-cols-3 row-cols-md-2 row-cols-sm-1">
 
                 <?php
