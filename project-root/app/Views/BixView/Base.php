@@ -7,12 +7,12 @@ helper('base_helper');
 
 <head>
     <meta charset="utf-8" />
-    <title>Analytics Dashboard | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>BixData</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
+    <link rel="icon" href="swissbix.logo-removebg-preview.png">
 
-    
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -22,7 +22,7 @@ helper('base_helper');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="<?= assets_url() ?>/images/favicon.ico">
+    <link rel="shortcut icon" href="<?= assets_url() ?>swissbix.logo-removebg-preview.png">
 
     <!-- Plugin css -->
     <link rel="stylesheet" href="<?= assets_url() ?>/vendor/daterangepicker/daterangepicker.css">
