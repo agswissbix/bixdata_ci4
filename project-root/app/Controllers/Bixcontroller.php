@@ -144,15 +144,15 @@ class Bixcontroller extends BaseController
 
     public function ajax_get_records_table()
     {
-        $post=$_POST;
+        $post = $_POST;
         $table = $post['table'];
-        $searchTerm= $post['searchTerm'];
-        echo $this->get_records_table($table,$searchTerm);
+        $searchTerm = $post['searchTerm'];
+        echo $this->get_records_table($table, $searchTerm);
     }
 
-    public function get_records_table($table,$searchTerm='')
+    public function get_records_table($table, $searchTerm = '')
     {
-        $results = $this->get_records($table,$searchTerm);
+        $results = $this->get_records($table, $searchTerm);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
         return view('BixView/Records/Records_table.php', $data);
@@ -189,7 +189,7 @@ class Bixcontroller extends BaseController
         return $output_array;
     }
 
-    public function get_records($table,$searchTerm='')
+    public function get_records($table, $searchTerm = '')
     {
         $post['table'] = $table;
         $post['searchTerm'] = $searchTerm;
@@ -198,7 +198,7 @@ class Bixcontroller extends BaseController
         return $output_array;
     }
 
-    public function get_fissi()
+    public function get_previewcard_fields()
     {
         $output_array = $this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_fissi', array());
 
@@ -221,10 +221,17 @@ class Bixcontroller extends BaseController
 
     public function ajax_get_recordcard()
     {
-        $data['previewcard_fields'] = $this->get_fissi();
+        $data['previewcard'] = $this->get_previewcard();
         $data['labels'] = $this->get_record_labels();
         $data['record_fields'] = array(); //$this->get_record_fields();
         return view('BixView/RecordCard.php', $data);
+    }
+
+    public function get_previewcard()
+    {
+        $data = array();
+        $data['previewcard_fields'] = $this->get_previewcard_fields();
+        return view('BixView/Preview_card.php', $data);
     }
 
     public function get_view_dashboard()
@@ -296,7 +303,7 @@ class Bixcontroller extends BaseController
 
     public function test_array()
     {
-        $data['arrays'] = $this->get_fissi();
+        $data = array();
         return view('BixView/test_array', $data);
     }
 
