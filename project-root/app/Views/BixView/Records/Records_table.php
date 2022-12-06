@@ -2,6 +2,7 @@
     .container {
         padding: 1rem;
         margin: 1rem;
+        height: 100%;
     }
 
     .table-scroll {
@@ -11,10 +12,12 @@
 
         /* Decoration */
         border-spacing: 0;
-        border: 1px solid;
+
+        height: 100%
     }
 
-    .table-scroll thead {
+    .table-scroll thead,
+    tfoot {
         background-color: #f1f1f1;
         position: relative;
         display: block;
@@ -29,7 +32,8 @@
         width: 100%;
         overflow-y: scroll;
         /* Decoration */
-        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        height: 200px;
     }
 
     .table-scroll tr {
@@ -39,11 +43,14 @@
 
     .table-scroll td,
     .table-scroll th {
-        flex-basis: 100%;
+        flex-basis: 50%;
         flex-grow: 2;
         display: block;
-        padding: 1rem;
         text-align: left;
+    }
+
+    td {
+        width: 200px;
     }
 
     /* Other options */
@@ -58,9 +65,7 @@
         background-color: rgba(130, 130, 170, 0.1);
     }
 
-    .body-half-screen {
-        max-height: 50vh;
-    }
+
 
     .small-col {
         flex-basis: 10%;
@@ -87,26 +92,8 @@
             </tr>
         </thead>
 
-        <tfoot>
 
-            <tr>
-                <?php
-
-                foreach ($columns as $key => $column) {
-                    $column_desc = $column['desc'];
-                    if ($column_desc != 'recordid_' && $column_desc != 'recordstatus_' && $column_desc != 'recordcss_') {
-                ?>
-                        <th><?= $column_desc ?></th>
-                <?php
-                    }
-                }
-
-                ?>
-            </tr>
-
-        </tfoot>
-
-        <tbody class="body-half-screen">
+        <tbody class="body-half-screen" style="height: 87.2%">
             <?php
 
             foreach ($records as $key => $record) {
@@ -142,6 +129,26 @@
             ?>
             <tr>
         </tbody>
+
+
+        <tfoot>
+
+            <tr>
+                <?php
+
+                foreach ($columns as $key => $column) {
+                    $column_desc = $column['desc'];
+                    if ($column_desc != 'recordid_' && $column_desc != 'recordstatus_' && $column_desc != 'recordcss_') {
+                ?>
+                        <th><?= $column_desc ?></th>
+                <?php
+                    }
+                }
+
+                ?>
+            </tr>
+
+        </tfoot>
 
     </table>
 </div>
