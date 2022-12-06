@@ -1,79 +1,32 @@
 <style>
-    .container {
-        padding: 1rem;
-        margin: 1rem;
-        height: 100%;
+    tbody {
+        display: block;
+        height: 850px;
+        overflow: auto;
     }
 
-    .table-scroll {
-        /*width:100%; */
-        display: block;
-        empty-cells: show;
-
-        /* Decoration */
-        border-spacing: 0;
-
-        height: 100%
-    }
-
-    .table-scroll thead,
-    tfoot {
-        background-color: #f1f1f1;
-        position: relative;
-        display: block;
+    thead,
+    tfoot,
+    tbody tr {
+        display: table;
         width: 100%;
-        overflow-y: scroll;
+        table-layout: fixed;
     }
 
-    .table-scroll tbody {
-        /* Position */
-        display: block;
-        position: relative;
+    thead {
+        width: calc(100% - 1em);
+    }
+
+    table {
         width: 100%;
-        overflow-y: scroll;
-        /* Decoration */
-
-        height: 200px;
-    }
-
-    .table-scroll tr {
-        width: 100%;
-        display: flex;
-    }
-
-    .table-scroll td,
-    .table-scroll th {
-        flex-basis: 50%;
-        flex-grow: 2;
-        display: block;
-        text-align: left;
-    }
-
-    td {
-        width: 200px;
-    }
-
-    /* Other options */
-
-    .table-scroll.small-first-col td:first-child,
-    .table-scroll.small-first-col th:first-child {
-        flex-basis: 20%;
-        flex-grow: 1;
-    }
-
-    .table-scroll tbody tr:nth-child(2n) {
-        background-color: rgba(130, 130, 170, 0.1);
-    }
-
-
-
-    .small-col {
-        flex-basis: 10%;
     }
 </style>
 
-<div class="container">
-    <table class="table table-bordered table-scroll small-first-col" id="dataTable" style="width: 100%; height: 100%" cellspacing="0">
+
+
+
+<div class="col s12 m6 l6">
+    <table>
         <thead>
             <tr>
 
@@ -91,9 +44,7 @@
                 ?>
             </tr>
         </thead>
-
-
-        <tbody class="body-half-screen" style="height: 87.2%">
+        <tbody>
             <?php
 
             foreach ($records as $key => $record) {
@@ -129,8 +80,6 @@
             ?>
             <tr>
         </tbody>
-
-
         <tfoot>
 
             <tr>
@@ -149,6 +98,5 @@
             </tr>
 
         </tfoot>
-
     </table>
 </div>
