@@ -146,12 +146,13 @@ class Bixcontroller extends BaseController
     {
         $post=$_POST;
         $table = $post['table'];
-        echo $this->get_records_table($table);
+        $searchTerm= $post['searchTerm'];
+        echo $this->get_records_table($table,$searchTerm);
     }
 
-    public function get_records_table($table)
+    public function get_records_table($table,$searchTerm='')
     {
-        $results = $this->get_records($table);
+        $results = $this->get_records($table,$searchTerm);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
         return view('BixView/Records/Records_table.php', $data);
@@ -188,9 +189,10 @@ class Bixcontroller extends BaseController
         return $output_array;
     }
 
-    public function get_records($table)
+    public function get_records($table,$searchTerm='')
     {
         $post['table'] = $table;
+        $post['searchTerm'] = $searchTerm;
         $output_array = $this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_records', $post);
 
         return $output_array;
