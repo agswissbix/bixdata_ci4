@@ -1,7 +1,7 @@
 <style>
     tbody {
         display: block;
-        height: 850px;
+        height: 90%;
         overflow: auto;
     }
 
@@ -19,13 +19,14 @@
 
     table {
         width: 100%;
+        height: 100%;
     }
 </style>
 
 
 
 
-<div class="col s12 m6 l6">
+<div class="col s12 m6 l6" style="height: 100%;">
     <table>
         <thead>
             <tr>

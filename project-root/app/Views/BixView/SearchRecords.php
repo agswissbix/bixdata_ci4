@@ -246,7 +246,7 @@
         <!-- Filters end-->
 
         <!-- Results start-->
-        <div id="results" style="height: 100%">
+        <div id="results" style="height: 80%">
             <!-- Nav menu start -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">

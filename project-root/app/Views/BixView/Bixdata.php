@@ -508,7 +508,7 @@ helper('base_helper');
             <!-- Start Content-->
             <div id="bixdata_container" class="container-fluid" style="height: 100%">
                 <div class="row" style="height: 100%;">
-                    <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" style="height: 100%">
+                    <div id="bixdata_results_container" class="col-xl-8 col-md-8 mb-4" style="height: 100%; margin-bottom: 0px">
                         <?= $content ?>
                     </div>
                     <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" style="height: 100%">
