@@ -47,6 +47,54 @@ helper('base_helper');
         });
     }
 
+    function open_planner() {
+        $.ajax({
+            url: controller_url + 'ajax_get_planner',
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
+
+    function open_calendar() {
+        $.ajax({
+            url: controller_url + 'ajax_get_calendar',
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
+
+    function open_gantt() {
+        $.ajax({
+            url: controller_url + 'ajax_get_gantt',
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
+
+    function open_kanban() {
+        $.ajax({
+            url: controller_url + 'ajax_get_kanban',
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
+
 
 
 
@@ -492,6 +540,30 @@ helper('base_helper');
                         <span> Test content </span>
                     </a>
                 </li>
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" onclick="open_planner(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                        <iconify-icon icon="material-symbols:task"></iconify-icon>
+                        <span> Planner </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" onclick="open_calendar(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                        <i class="uil-calendar-alt"></i>
+                        <span> Calendar </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" onclick="open_gantt(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                        <i class="uil-calendar-alt"></i>
+                        <span> Gantt </span>
+                    </a>
+                </li>
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" onclick="open_kanban(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                        <i class="uil-calendar-alt"></i>
+                        <span> Kanban </span>
+                    </a>
+                </li>
 
 
                 <div class="clearfix"></div>
@@ -503,6 +575,7 @@ helper('base_helper');
     <!-- Start Page Content here -->
     <!-- ============================================================== -->
 
+    <!--test content-->
     <div class="content-page" style="min-height: 80%;height: 80%;">
         <div class="content" style="height: 100%;">
 
@@ -513,6 +586,26 @@ helper('base_helper');
                         <?= $content ?>
                     </div>
                     <div id="bixdata_recordcard_container" class="col-xl-4 col-md-4 mb-4" style="height: 100%">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--planner-->
+    <div class="content-page" style="min-height: 80%;height: 80%;">
+        <div class="content" style="height: 100%;">
+
+            <!-- Start Content-->
+            <div id="bixdata_container" class="container-fluid" style="height: 100%">
+                <div class="row" style="height: 100%;">
+                    <div id="bixdata_planner_container" class="col-xl-8 col-md-8 mb-4" style="height: 100%; margin-bottom: 0px">
+                        <?= $content ?>
+                    </div>
+                    <div id="bixdata_planner_container" class="col-xl-4 col-md-4 mb-4" style="height: 100%">
 
                     </div>
                 </div>

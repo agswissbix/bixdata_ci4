@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\Bixmodel;
+use PhpParser\Node\Expr\FuncCall;
 
 class Bixcontroller extends BaseController
 {
@@ -316,5 +317,29 @@ class Bixcontroller extends BaseController
     public function testtab()
     {
         return view('BixView/testtab');
+    }
+
+    public function ajax_get_planner()
+    {
+        $data = array();
+        return view('BixView/planner', $data);
+    }
+
+    public function ajax_get_calendar()
+    {
+        $data = array();
+        return view('BixView/calendar', $data);
+    }
+
+    public function ajax_get_gantt()
+    {
+        $data = array();
+        return view('BixView/gantt', $data);
+    }
+
+    public function ajax_get_kanban()
+    {
+        $data = array();
+        return view('BixView/kanban', $data);
     }
 }
