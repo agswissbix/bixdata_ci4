@@ -283,6 +283,7 @@ helper('base_helper');
                             <!-- item-->
                             <a href="javascript:void(0);" class="dropdown-item notify-item">
                                 <i class="mdi mdi-lifebuoy me-1"></i>
+
                                 <span>Support</span>
                             </a>
 
