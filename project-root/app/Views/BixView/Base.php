@@ -99,6 +99,9 @@ helper('base_helper');
     <script src="<?= assets_url() ?>/js/app.min.js"></script>
 
 
+
+
+
 </body>
 
 </html>
