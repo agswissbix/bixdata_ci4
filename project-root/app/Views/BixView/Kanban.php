@@ -29,13 +29,13 @@
     <div class="row">
         <div class="col-12">
             <div class="board">
-                <div class="tasks" data-plugin="dragula" data-containers='["task-list-one", "task-list-two", "task-list-three", "task-list-four"]'>
+                <div class="tasks" data-plugin="dragula" data-containers='["task-list-one", "task-list-two", "task-list-three", "task-list-four"]' data-status="todo">
                     <h5 class="mt-0 task-header">TODO (3)</h5>
 
                     <div id="task-list-one" class="task-list-items">
 
                         <!-- Task Item -->
-                        <div class="card mb-0">
+                        <div class="card mb-0" data-recordid="001">
                             <div class="card-body p-3">
                                 <small class="float-end text-muted">18 Jul 2018</small>
                                 <span class="badge bg-danger">High</span>
@@ -172,13 +172,13 @@
                     </div> <!-- end company-list-1-->
                 </div>
 
-                <div class="tasks">
+                <div class="tasks" data-status="in progress">
                     <h5 class="mt-0 task-header text-uppercase">In Progress (2)</h5>
 
                     <div id="task-list-two" class="task-list-items">
 
                         <!-- Task Item -->
-                        <div class="card mb-0">
+                        <div class="card mb-0" data-recordid="002">
                             <div class="card-body p-3">
                                 <small class="float-end text-muted">22 Jun 2018</small>
                                 <span class="badge bg-secondary text-light">Medium</span>
@@ -596,8 +596,23 @@
 
 
 <script>
-    
-    dragula([document.getElementById('task-list-one'), document.getElementById('task-list-two')]).on('drop', function (el) {
-        alert('test');
+    function update_status(el) {
+        alert($(el).data('recordid'));
+        var div_col = $(el).closest('.tasks');
+        alert($(div_col).data('status'));
+
+    }
+
+    var tsi_id = [];
+
+    $(".task-list-items").each(function(index) {
+        var element_id = $(this).attr("id");
+        tsi_id.push(document.getElementById(element_id));
+    });
+    console.log('Kanban debug:');
+    console.log(tsi_id);
+
+    dragula(tsi_id).on('drop', function(el) {
+        update_status(el);
     });
 </script>
