@@ -6,6 +6,7 @@
 -->
 
 
+
 <div class="container-fluid">
 
     <div class="row">
@@ -611,13 +612,14 @@
                 var i = r(this).data("handleclass");
                 i ? dragula(a, {
                     moves: function(t, a, n) {
-                        return n.classList.contains(i)
+                        return n.classList.contains(i);
                     }
                 }) : dragula(a)
             })
         }, r.Dragula = new t, r.Dragula.Constructor = t
     }(window.jQuery),
     function() {
+
         "use strict";
         window.jQuery.Dragula.init()
     }();
