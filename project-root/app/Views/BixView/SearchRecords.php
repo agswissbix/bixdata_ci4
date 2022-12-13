@@ -306,7 +306,7 @@
                 </div>
 
                 <div class="tab-pane fade" id="kanban-table-container" role="tabpanel" aria-labelledby="kanban-tab" tabindex="0">
-
+                    <?= $records_kanban ?>
 
                 </div>
 
