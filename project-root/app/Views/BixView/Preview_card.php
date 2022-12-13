@@ -4,8 +4,9 @@
     foreach ($previewcard_fields as $key => $array) {
         if ($key != 'recordid_jdoc') {
     ?>
+            <!-- pc = preview card -->
             <div class="col">
-                <span><b><?= $array['desc'] ?></b> : <?= $array['value'] ?></span><br />
+                <span class="span-pc"><b><?= $array['desc'] ?></b> : <?= $array['value'] ?></span><br />
             </div>
     <?php
         }

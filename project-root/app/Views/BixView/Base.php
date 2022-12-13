@@ -14,6 +14,8 @@ helper('base_helper');
     <link rel="icon" href="swissbix.logo-removebg-preview.png">
 
 
+
+
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -51,6 +53,9 @@ helper('base_helper');
 
     <!-- Custom css -->
     <link href="<?= assets_url() ?>/css/custom.css?v=<?= time(); ?>" rel="stylesheet" type="text/css" id="app-style" />
+
+    <!--Custom small css-->
+    <link href="<?= assets_url() ?>/css/custom-sm.css?v=<?= time(); ?>" rel="stylesheet" type="text/css" id="app-style" />
 
     <script type="text/javascript">
         var controller_url = "<?php echo base_url('project-root/public/Bixcontroller/'); ?>/";

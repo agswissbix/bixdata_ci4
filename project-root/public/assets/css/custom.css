@@ -1,4 +1,5 @@
-:root {
+@media screen and (max-width: 3440px) {
+  :root {
     --blue: #e74a3b;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -554,3 +555,5 @@ html[data-sidenav-size=condensed]:not(.authentication-bg) .logo span.logo-sm {
   --bs-popover-body-padding-y: .5rem;
 }
 
+
+}
