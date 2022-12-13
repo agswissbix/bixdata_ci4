@@ -36,8 +36,12 @@ helper('base_helper');
     }
 
     function open_test_content() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
+            type: "POST",
             url: controller_url + 'ajax_get_test_content',
+            data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
             },
@@ -48,8 +52,12 @@ helper('base_helper');
     }
 
     function open_planner() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
+            type: "POST",
             url: controller_url + 'ajax_get_planner',
+            data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
             },
@@ -60,8 +68,12 @@ helper('base_helper');
     }
 
     function open_calendar() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
+            type: "POST",
             url: controller_url + 'ajax_get_calendar',
+            data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
             },
@@ -72,8 +84,12 @@ helper('base_helper');
     }
 
     function open_gantt() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
+            type: "POST",
             url: controller_url + 'ajax_get_gantt',
+            data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
             },
@@ -84,8 +100,12 @@ helper('base_helper');
     }
 
     function open_kanban() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
         $.ajax({
+            type: "POST",
             url: controller_url + 'ajax_get_kanban',
+            data: serialized_data,
             success: function(response) {
                 $("#bixdata_results_container").html(response);
             },

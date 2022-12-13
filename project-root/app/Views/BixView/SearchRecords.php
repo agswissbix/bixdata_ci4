@@ -103,6 +103,22 @@
         });
 
     }
+
+    function open_kanban() {
+        var serialized_data = [];
+        $("#bixdata_recordcard_container").load('Loading.php');
+        $.ajax({
+            type: "POST",
+            url: controller_url + 'ajax_get_kanban',
+            data: serialized_data,
+            success: function(response) {
+                $("#bixdata_results_container").html(response);
+            },
+            error: function() {
+                $("#bixdata_results_container").html(response);
+            }
+        });
+    }
 </script>
 
 <!--Content tables start-->
@@ -259,7 +275,7 @@
                     <button class="nav-link" id="calendar-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" href="#calendar" aria-selected="false">Calendar</button>
                 </li>
                 <li id="nav-kanban" class="nav-item" role="presentation">
-                    <button class="nav-link" id="kanban-tab" data-bs-toggle="tab" data-bs-target="#kanban-tab-pane" type="button" role="tab" aria-controls="kanban-tab-pane" href="#kanban" aria-selected="false">Kanban</button>
+                    <button class="nav-link" id="kanban-tab" data-bs-toggle="tab" data-bs-target="#kanban-table-container" type="button" role="tab" aria-controls="kanban-tab-pane" href="#kanban" aria-selected="false">Kanban</button>
                 </li>
                 <li id="nav-gantt" class="nav-item" role="presentation">
                     <button class="nav-link" id="gantt-tab" data-bs-toggle="tab" data-bs-target="#gantt-tab-pane" type="button" role="tab" aria-controls="gantt-tab-pane" href="#gantt" aria-selected="false">Gantt</button>
@@ -289,7 +305,7 @@
 
                 </div>
 
-                <div class="tab-pane fade" id="kanban-tab-pane" role="tabpanel" aria-labelledby="kanban-tab" tabindex="0">
+                <div class="tab-pane fade" id="kanban-table-container" role="tabpanel" aria-labelledby="kanban-tab" tabindex="0">
 
 
                 </div>
