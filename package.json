@@ -11,6 +11,7 @@
     "chart.js": "^3.9.1",
     "frappe-gantt": "^0.6.1",
     "fullcalendar": "^5.11.3",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "vscode-coding-tracker-server": "^0.6.0"
   }
 }

@@ -569,7 +569,7 @@ helper('base_helper');
                 </li>
                 <li class="side-nav-item">
                     <a data-bs-toggle="collapse" onclick="open_planner(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <iconify-icon icon="material-symbols:task"></iconify-icon>
+                        <i class="uil-calendar-alt"></i>
                         <span> Planner </span>
                     </a>
                 </li>
