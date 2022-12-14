@@ -42,7 +42,18 @@
              }
          });*/
     }
+
+    if (screen.width <= 1280) {
+        if ($("html").attr("data-sidenav-size") == "condensed") {
+            $(".tabs-title").css("display", "none");
+            $(".tabs-icon").css("display", "block");
+        }
+    } else {
+        $(".tabs-title").css("display", "block");
+        $(".tabs-icon").css("display", "none");
+    }
 </script>
+
 
 <div id="RecordCard" class="card" style=" height: 100%; overflow: scroll">
     <div class="card-body">
@@ -99,12 +110,51 @@
 
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="fields-tab" data-bs-toggle="tab" data-bs-target="#fields-tab-pane" type="button" role="tab" aria-controls="fields-tab-pane" aria-selected="true">Fields</button>
-                <button class="nav-link" id="linked-tab" data-bs-toggle="tab" data-bs-target="#linked-tab-pane" type="button" role="tab" aria-controls="linked-tab-pane" aria-selected="false">Linked</button>
-                <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment-tab-pane" type="button" role="tab" aria-controls="attachment-tab-pane" aria-selected="false">Attachment</button>
-                <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane" type="button" role="tab" aria-controls="statistics-tab-pane" aria-selected="false">Statistics</button>
-                <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history-tab-pane" type="button" role="tab" aria-controls="history-tab-pane" aria-selected="false">History</button>
-                <button class="nav-link" id="workflow-tab" data-bs-toggle="tab" data-bs-target="#workflow-tab-pane" type="button" role="tab" aria-controls="workflow-tab-pane" aria-selected="false">Workflow</button>
+                <button class="nav-link active" id="fields-tab" data-bs-toggle="tab" data-bs-target="#fields-tab-pane" type="button" role="tab" aria-controls="fields-tab-pane" aria-selected="true">
+
+                    <p class="tabs-title">Fields</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="fields">
+                        text_fields
+                    </span>
+
+                </button>
+                <button class="nav-link" id="linked-tab" data-bs-toggle="tab" data-bs-target="#linked-tab-pane" type="button" role="tab" aria-controls="linked-tab-pane" aria-selected="false">
+
+                    <p class="tabs-title">Linked</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="linked">
+                        link
+                    </span>
+
+                </button>
+                <button class="nav-link" id="attachment-tab" data-bs-toggle="tab" data-bs-target="#attachment-tab-pane" type="button" role="tab" aria-controls="attachment-tab-pane" aria-selected="false">
+
+                    <p class="tabs-title">Attachment</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="attachment">
+                        attachment
+                    </span>
+                </button>
+                <button class="nav-link" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane" type="button" role="tab" aria-controls="statistics-tab-pane" aria-selected="false">
+
+                    <p class="tabs-title">Analytics</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="analytics">
+                        analytics
+                    </span>
+                </button>
+                <button class="nav-link" id="history-tab" data-bs-toggle="tab" data-bs-target="#history-tab-pane" type="button" role="tab" aria-controls="history-tab-pane" aria-selected="false">
+
+                    <p class="tabs-title">History</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="history">
+                        history
+                    </span>
+                </button>
+                </button>
+                <button class="nav-link" id="workflow-tab" data-bs-toggle="tab" data-bs-target="#workflow-tab-pane" type="button" role="tab" aria-controls="workflow-tab-pane" aria-selected="false">
+
+                    <p class="tabs-title">Workflow</p>
+                    <span class="material-symbols-outlined tabs-icon" data-bs-toggle="tooltip" data-bs-title="workflow">
+                        rebase
+                    </span>
+                </button>
             </div>
         </nav>
 

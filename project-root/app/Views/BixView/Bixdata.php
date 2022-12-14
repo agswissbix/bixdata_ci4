@@ -3,6 +3,12 @@ helper('base_helper');
 ?>
 
 <script type="text/javascript">
+    if (screen.width <= 1280) {
+        $("html").attr("data-sidenav-size", "condensed");
+        $(".tabs-title").attr("display", "none");
+        $(".tabs-icon").attr("display", "visible");
+    }
+
     $("#bixdata2").ready(function() {
 
         $("#toggle-menu").click(function() {
@@ -14,6 +20,7 @@ helper('base_helper');
             }
 
         });
+
 
 
     });
