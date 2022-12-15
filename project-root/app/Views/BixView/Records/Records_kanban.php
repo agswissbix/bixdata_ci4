@@ -27,22 +27,26 @@
         <div class="col-12">
             <div class="board">
                 <?php
-                foreach ($kanban_records as $kanban_state => $kanban_record) {
+                foreach ($kanban_records as $kanban_state => $kanban_state_records) {
 
                 ?>
                     <div class="tasks" data-plugin="dragula" data-containers='["task-list-one", "task-list-two", "task-list-three", "task-list-four"]'>
                         <h5 class="mt-0 task-header"><?= $kanban_state ?></h5>
-                    </div>
-                    <?php
-                    foreach ($kanban_record as $record => $record_key) {
-
-                    ?>
-                        <div class="card mb-0">
-                            <div class="card-body p-3">
+                        <?php
+                        foreach ($kanban_state_records as $kanban_state_record_key => $kanban_recordcard_mini) {
+                        ?>
+                            <div class="card mb-0">
+                                <div class="card-body p-3">
+                                    <?= $kanban_recordcard_mini ?>
+                                </div>
                             </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
+
+
+                    </div>
                 <?php
-                    }
                 }
                 ?>
 

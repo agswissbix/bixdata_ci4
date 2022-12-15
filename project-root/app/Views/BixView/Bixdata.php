@@ -529,71 +529,71 @@ helper('base_helper');
                                 <span class="menu-arrow"></span>
                                 <span><?= $workspace_name ?><br /></span>
                             </a>
-                            <?php
-                            foreach ($workspace as $key => $table) {
-                            ?>
-                                <div class="collapse" id="sidebar<?= $workspace_name ?>">
-                                    <ul class="side-nav-second-level">
+
+                            <div class="collapse" id="sidebar<?= $workspace_name ?>">
+                                <ul class="side-nav-second-level">
+                                    <?php
+                                    foreach ($workspace as $key => $table) {
+                                    ?>
                                         <li>
                                             <a onclick="ajax_get_searchrecords('<?= $table['id'] ?>')"><?= $table['description'] ?><br /></a>
                                         </li>
-                                    </ul>
-                                </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
                         </li>
-
                     <?php
-                            }
-                    ?>
-                <?php
                     }
-                ?>
+                    ?>
 
-                <!--- End Sidemenu -->
+                    <!--- End Sidemenu -->
 
-                <!-- Help Box -->
+                    <!-- Help Box -->
 
-                <!-- end Help Box -->
-                <li class="side-nav-title side-nav-item">Systems</li>
+                    <!-- end Help Box -->
+                    <li class="side-nav-title side-nav-item">Systems</li>
 
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-home-alt"></i>
-                        <span> Settings </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" onclick="open_test_content(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-home-alt"></i>
-                        <span> Test content </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" onclick="open_planner(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-calendar-alt"></i>
-                        <span> Planner </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" onclick="open_calendar(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-calendar-alt"></i>
-                        <span> Calendar </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" onclick="open_gantt(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-calendar-alt"></i>
-                        <span> Gantt </span>
-                    </a>
-                </li>
-                <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" onclick="open_kanban(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
-                        <i class="uil-calendar-alt"></i>
-                        <span> Kanban </span>
-                    </a>
-                </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-home-alt"></i>
+                            <span> Settings </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" onclick="open_test_content(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-home-alt"></i>
+                            <span> Test content </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" onclick="open_planner(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-calendar-alt"></i>
+                            <span> Planner </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" onclick="open_calendar(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-calendar-alt"></i>
+                            <span> Calendar </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" onclick="open_gantt(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-calendar-alt"></i>
+                            <span> Gantt </span>
+                        </a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" onclick="open_kanban(this)" aria-expanded="false" aria-controls="sidebarSettings" class="side-nav-link">
+                            <i class="uil-calendar-alt"></i>
+                            <span> Kanban </span>
+                        </a>
+                    </li>
 
 
-                <div class="clearfix"></div>
+                    <div class="clearfix"></div>
             </div>
         </div>
     </div>
