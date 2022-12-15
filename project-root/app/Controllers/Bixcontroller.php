@@ -157,6 +157,7 @@ class Bixcontroller extends BaseController
         $results = $this->get_records($table, $searchTerm);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
+        
         return view('BixView/Records/Records_table.php', $data);
     }
 
@@ -165,6 +166,13 @@ class Bixcontroller extends BaseController
         $results = $this->get_records($table, $searchTerm);
         $data['columns'] = $results['columns'];
         $data['records'] = $results['records'];
+        $kanban_records=array();
+        foreach ($results['records'] as $record_key => $record) {
+            $dealstage=$record[14];
+            $kanban_records[$dealstage]=$this->get_recordcard_mini();
+        }
+        $data['kanban_records']=$kanban_records;
+
         return view('BixView/Records/Records_kanban.php', $data);
     }
 
@@ -235,6 +243,12 @@ class Bixcontroller extends BaseController
         $data['labels'] = $this->get_record_labels();
         $data['record_fields'] = array(); //$this->get_record_fields();
         return view('BixView/RecordCard.php', $data);
+    }
+
+    public function get_recordcard_mini()
+    {
+        $data['record_fields'] = array(); 
+        return view('BixView/RecordCard_mini.php', $data);
     }
 
     public function get_previewcard()

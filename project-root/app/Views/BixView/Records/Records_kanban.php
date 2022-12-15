@@ -8,7 +8,7 @@
 
 
 <div class="container-fluid">
-
+    <?=var_dump($kanban_records)?>
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
