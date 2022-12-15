@@ -169,7 +169,7 @@ class Bixcontroller extends BaseController
         $kanban_records=array();
         foreach ($results['records'] as $record_key => $record) {
             $dealstage=$record[14];
-            $kanban_records[$dealstage]=$this->get_recordcard_mini();
+            $kanban_records[$dealstage][]=$this->get_recordcard_mini();
         }
         $data['kanban_records']=$kanban_records;
 
