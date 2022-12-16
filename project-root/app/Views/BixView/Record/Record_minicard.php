@@ -3,7 +3,8 @@
 $i = 0;
 foreach ($record_fields as $key => $array) {
     $i  += 1;
-    if ($i <= 6) {
+    if ($i <= 6 and $key != 'id') {
+        // 'id' error
 
 
 ?>
