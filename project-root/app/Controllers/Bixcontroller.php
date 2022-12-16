@@ -169,7 +169,7 @@ class Bixcontroller extends BaseController
         $kanban_records = array();
         foreach ($results['records'] as $record_key => $record) {
             $dealstage = $record[14];
-            $kanban_records[$dealstage][] = $this->get_recordcard_mini();
+            $kanban_records[$dealstage][] = $this->get_recordcard_mini($record[0]);
         }
         $data['kanban_records'] = $kanban_records;
 
@@ -230,9 +230,11 @@ class Bixcontroller extends BaseController
         return $output_array;
     }
 
-    public function get_record_fields()
+    public function get_record_fields($recordid)
     {
-        $output_array = $this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields', array());
+        $post['table']='deal';
+        $post['recordid']=$recordid;
+        $output_array = $this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields', $post);
 
         return $output_array;
     }
@@ -245,10 +247,12 @@ class Bixcontroller extends BaseController
         return view('BixView/RecordCard.php', $data);
     }
 
-    public function get_recordcard_mini()
+    public function get_recordcard_mini($recordid)
     {
-        $data['record_fields'] = array();
-        return view('BixView/RecordCard_mini.php', $data);
+        $data['record_fields'] = $this->get_record_fields($recordid);
+        $data['recordid']=$recordid;
+        //return view('BixView/Record/Record_minicard.php', $data);
+        return view('BixView/Record/Custom/Record_minicard_deal.php', $data);
     }
 
     public function get_previewcard()
