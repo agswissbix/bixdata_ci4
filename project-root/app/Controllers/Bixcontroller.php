@@ -232,8 +232,8 @@ class Bixcontroller extends BaseController
 
     public function get_record_fields($recordid)
     {
-        $post['table']='deal';
-        $post['recordid']=$recordid;
+        $post['table'] = 'deal';
+        $post['recordid'] = $recordid;
         $output_array = $this->callAPI('http://10.0.0.133:8822/bixdata/index.php/rest_controller/get_record_fields', $post);
 
         return $output_array;
@@ -250,9 +250,9 @@ class Bixcontroller extends BaseController
     public function get_recordcard_mini($recordid)
     {
         $data['record_fields'] = $this->get_record_fields($recordid);
-        $data['recordid']=$recordid;
-        //return view('BixView/Record/Record_minicard.php', $data);
-        return view('BixView/Record/Custom/Record_minicard_deal.php', $data);
+        $data['recordid'] = $recordid;
+        return view('BixView/Record/Record_minicard.php', $data);
+        //return view('BixView/Record/Custom/Record_minicard_deal.php', $data);
     }
 
     public function get_previewcard()
