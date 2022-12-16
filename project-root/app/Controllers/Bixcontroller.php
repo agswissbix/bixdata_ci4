@@ -251,8 +251,8 @@ class Bixcontroller extends BaseController
     {
         $data['record_fields'] = $this->get_record_fields($recordid);
         $data['recordid'] = $recordid;
-        return view('BixView/Record/Record_minicard.php', $data);
-        //return view('BixView/Record/Custom/Record_minicard_deal.php', $data);
+        //return view('BixView/Record/Record_minicard.php', $data);
+        return view('BixView/Record/Custom/Record_minicard_deal.php', $data);
     }
 
     public function get_previewcard()

@@ -2,15 +2,18 @@
 <?php
 $i = 0;
 foreach ($record_fields as $key => $array) {
+
     $i  += 1;
-    if ($i <= 6 and $key != 'id') {
-        // 'id' error
+    $id_jdoc = 'recordidcompany_jdoc';
+    $pos = strpos($key, $id_jdoc);
+
+    if ($i <= 6 and $pos === false) {
 
 
 ?>
         <div>
             <b>
-                <p><?= $key ?>
+                <p><?= $array['description'] ?>
             </b>
             <?= " ", $array['value'] ?></p>
 
