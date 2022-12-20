@@ -140,6 +140,7 @@ class Bixcontroller extends BaseController
         $data = array();
         $data['table'] = $table;
         $data['records_table'] = $this->get_records_table($table);
+        $data['records_calendar'] = $this->get_records_calendar($table);
         $data['records_kanban'] = $this->get_records_kanban($table);
         return view('BixView/SearchRecords.php', $data);
     }
@@ -159,6 +160,15 @@ class Bixcontroller extends BaseController
         $data['records'] = $results['records'];
 
         return view('BixView/Records/Records_table.php', $data);
+    }
+
+    public function get_records_calendar($table, $searchTerm = '')
+    {
+        $results = $this->get_records($table, $searchTerm);
+        $data['columns'] = $results['columns'];
+        $data['records'] = $results['records'];
+
+        return view('BixView/Records/Records_calendar.php', $data);
     }
 
     public function get_records_kanban($table, $searchTerm = '')
