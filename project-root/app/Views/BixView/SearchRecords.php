@@ -10,13 +10,6 @@
 
 
 
-        $("#nav-calendar")[0].addEventListener('shown.bs.tab', function(event) {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        })
 
     })
 
@@ -297,7 +290,7 @@
 
                 <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
 
-                    <div id="calendar"></div>
+                    <?= $records_calendar ?>
 
 
 

@@ -2,7 +2,7 @@
 helper('base_helper');
 ?>
 
-<div class="record_minicard_deal" data-recordid="<?= $recordid ?>">
+<div class="record_minicard_deal" data-recordid="<?= $recordid ?>" data-status="todo">
     <h5><span class="badge bg-secondary">medium</span></h5>
 
     <b>
